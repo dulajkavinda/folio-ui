@@ -1,0 +1,247 @@
+.folio-project {
+  @include br3;
+  @include p2;
+
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+
+  width: 20rem;
+
+  &-header {
+    @include br2;
+    display: flex;
+    flex-direction: row;
+
+    &--img {
+      @include center;
+      @include br2;
+      @include bg-black;
+      width: 6rem;
+      height: 6rem;
+    }
+    &--detials {
+      width: 8rem;
+      height: 6rem;
+    }
+    &--stack {
+      @include center;
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  &-body {
+    @include pt3;
+    @include pb1;
+    @include t11;
+    @include primary-font;
+    @include tertiary-black;
+    @include lhx2;
+    @include medium;
+
+    box-sizing: border-box;
+    text-align: justify;
+    max-height: 7em;
+  }
+
+  &-footer {
+    @include pt3;
+    @include center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.folio-project--small {
+  width: 16rem;
+
+  .folio-project-header {
+    &--img {
+      width: 5rem;
+      height: 5rem;
+    }
+    &--detials {
+      width: 6rem;
+      height: 5rem;
+    }
+    &--stack {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .folio-project-header--detials {
+    &--title {
+      @include t10;
+    }
+
+    &--url {
+      @include t12;
+      @include medium;
+    }
+
+    &--date {
+      @include t13;
+    }
+  }
+
+  .folio-project-body {
+    @include t12;
+    @include lhx1;
+    @include medium;
+    max-height: 8em;
+  }
+
+  .folio-project-media {
+    &--img {
+      img {
+        @include br2;
+        @include no-drag;
+
+        overflow: hidden;
+        display: flex;
+
+        max-width: inherit;
+        max-height: inherit;
+        height: inherit;
+        width: inherit;
+        object-fit: cover;
+
+        height: 3rem;
+        width: 5rem;
+      }
+    }
+
+    &--button {
+      height: 3rem;
+      width: 5rem;
+
+      &--count {
+        @include t11;
+      }
+
+      &--text {
+        @include t13;
+        @include bold;
+      }
+    }
+  }
+}
+
+.folio-project-header--img img {
+  @include no-drag;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.folio-project-header--detials {
+  @include pl1;
+  @include pr1;
+  @include primary-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &--title {
+    @include t9;
+    @include bold;
+    @include secondary-black;
+  }
+
+  &--url {
+    @include t12;
+    @include semi-bold;
+    @include black;
+    @include tertiary-black;
+
+    a {
+      @include tertiary-black;
+      text-decoration: none;
+    }
+  }
+
+  &--date {
+    @include t12;
+    @include semi-bold;
+    @include black;
+    @include tertiary-black;
+  }
+}
+
+.folio-project-media {
+  @include pt1;
+  @include center;
+
+  flex-direction: row;
+  justify-content: space-between;
+  &--img {
+    @include no-drag;
+    @include br2;
+
+    img {
+      @include br2;
+      @include no-drag;
+
+      overflow: hidden;
+      display: flex;
+
+      max-width: inherit;
+      max-height: inherit;
+      height: inherit;
+      width: inherit;
+      object-fit: cover;
+
+      height: 4rem;
+      width: 6rem;
+    }
+  }
+
+  &--button {
+    @include bs1;
+    @include primary-font;
+    @include t11;
+    @include bold;
+    @include center;
+    @include secondary-black;
+    @include br2;
+    @include clickable;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      @include transition-press;
+    }
+
+    &:hover {
+      @include op6;
+    }
+
+    flex-direction: column;
+
+    height: 4rem;
+    width: 6rem;
+
+    &--count {
+      @include t11;
+      @include bold;
+      @include black;
+      @include secondary-black;
+      @include lhx1;
+    }
+
+    &--text {
+      @include t12;
+      @include semi-bold;
+      @include black;
+      @include tertiary-black;
+      @include lhx1;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+$short: 0.2s;
+$medium: 0.5s;
+$long: 1s;
+$ease-out: cubic-bezier(0.15, 0.44, 0.47, 0.99);
+
+$op1: 0.1;
+$op2: 0.2;
+$op3: 0.3;
+$op4: 0.4;
+$op5: 0.5;
+$op6: 0.6;
+$op7: 0.7;
+$op8: 0.8;
+$op9: 0.9;
+
+@mixin op1 {
+  opacity: $op1;
+}
+
+@mixin op2 {
+  opacity: $op2;
+}
+
+@mixin op3 {
+  opacity: $op3;
+}
+
+@mixin op4 {
+  opacity: $op4;
+}
+
+@mixin op5 {
+  opacity: $op5;
+}
+
+@mixin op6 {
+  opacity: $op6;
+}
+
+@mixin op7 {
+  opacity: $op7;
+}
+
+@mixin op8 {
+  opacity: $op8;
+}
+
+@mixin op9 {
+  opacity: $op9;
+}
+
+@mixin transition-colors {
+  -webkit-transition-property: color, background-color, border-color, fill;
+  -webkit-transition-duration: $short;
+  -webkit-transition-timing-function: $ease-out;
+  transition-property: color, background-color, border-color, fill;
+  transition-duration: $short;
+  transition-timing-function: $ease-out;
+}
+
+@mixin transition-opacity {
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: $short;
+  -webkit-transition-timing-function: $ease-out;
+  transition-property: opacity;
+  transition-duration: $short;
+  transition-timing-function: $ease-out;
+}
+
+@mixin transition-press {
+  -webkit-transition-duration: $short;
+  transform: matrix(0.99, 0, 0, 0.99, 0, 0);
+  transition-timing-function: $ease-out;
+  transition-duration: $short;
+}

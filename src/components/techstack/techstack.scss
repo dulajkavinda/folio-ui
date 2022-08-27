@@ -1,0 +1,83 @@
+.folio-tstack {
+  @include center-wrap;
+  @include br2;
+  @include bs1;
+
+  justify-content: space-between;
+
+  width: 6rem;
+  height: 6rem;
+
+  &--medium {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &--large {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  &--small {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  &--bar {
+    @include px1;
+    @include py1;
+    @include br2;
+
+    width: max-content;
+    height: max-content;
+    flex-direction: row;
+  }
+}
+
+.folio-tstack-item {
+  @include center;
+
+  width: 2rem;
+  height: 2rem;
+
+  &--medium {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &--large {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &--small {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  // TODO: need to add ability to set radius based on the cols and rows
+  &-icon--0 {
+    border-top-left-radius: 10px;
+  }
+
+  &-icon--2 {
+    border-top-right-radius: 10px;
+  }
+
+  &-icon--6 {
+    border-bottom-left-radius: 10px;
+  }
+
+  &-icon--8 {
+    border-bottom-right-radius: 10px;
+  }
+
+  &--disabled {
+    @include op6;
+  }
+
+  &:hover {
+    @include transition-opacity;
+    @include op6;
+  }
+}

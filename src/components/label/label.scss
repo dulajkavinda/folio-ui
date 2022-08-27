@@ -1,0 +1,33 @@
+.folio-label {
+  @include center;
+  @include px1;
+  @include primary-font;
+  @include medium;
+  @include br1;
+  @include secondary-black;
+  @include bg-tertiary-white;
+
+  font-size: 0.8rem;
+
+  max-width: fit-content;
+  max-height: fit-content;
+
+  &--small {
+    @include t13;
+    @include br1;
+  }
+
+  &--large {
+    @include t11;
+    @include br1;
+  }
+
+  &--light {
+    @include bg-tertiary-white;
+  }
+
+  &--dark {
+    @include secondary-white;
+    @include bg-tertiary-black;
+  }
+}

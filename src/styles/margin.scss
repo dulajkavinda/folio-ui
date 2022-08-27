@@ -1,0 +1,554 @@
+$m0: 0px;
+$m1: 0.4rem;
+$m2: 2 * $m1;
+$m3: 3 * $m1;
+$m4: 4 * $m1;
+$m5: 5 * $m1;
+$m6: 6 * $m1;
+$m7: 7 * $m1;
+$m8: 8 * $m1;
+$m9: 9 * $m1;
+$m10: 10 * $m1;
+$m12: 12 * $m1;
+$m15: 15 * $m1;
+$m20: 20 * $m1;
+$m25: 25 * $m1;
+
+/// Removes margins of an element
+@mixin m0 {
+  margin: $m0;
+}
+
+/// Gives a `4px` margin to an element
+@mixin m1 {
+  margin: $m1;
+}
+
+/// Gives a `8px` margin to an element
+@mixin m2 {
+  margin: $m2;
+}
+
+/// Gives a `12px` margin to an element
+@mixin m3 {
+  margin: $m3;
+}
+
+/// Gives a `16px` margin to an element
+@mixin m4 {
+  margin: $m4;
+}
+
+/// Gives a `20px` margin to an element
+@mixin m5 {
+  margin: $m5;
+}
+
+/// Gives a `24px` margin to an element
+@mixin m6 {
+  margin: $m6;
+}
+
+/// Gives a `28px` margin to an element
+@mixin m7 {
+  margin: $m7;
+}
+
+/// Gives a `32px` margin to an element
+@mixin m8 {
+  margin: $m8;
+}
+
+/// Gives a `36px` margin to an element
+@mixin m9 {
+  margin: $m9;
+}
+
+/// Gives a `40px` margin to an element
+@mixin m10 {
+  margin: $m10;
+}
+
+/// Gives a `48px` margin to an element
+@mixin m12 {
+  margin: $m12;
+}
+
+/// Gives a `60px` margin to an element
+@mixin m15 {
+  margin: $m15;
+}
+
+/// Gives a `80px` margin to an element
+@mixin m20 {
+  margin: $m20;
+}
+
+/// Gives a `100px` margin to an element
+@mixin m25 {
+  margin: $m25;
+}
+
+/// Removes the left and right margin of an element
+@mixin mx0 {
+  margin-left: $m0;
+  margin-right: $m0;
+}
+
+/// Giv
+@mixin mx1 {
+  margin-left: $m1;
+  margin-right: $m1;
+}
+
+/// Giv
+@mixin mx2 {
+  margin-left: $m2;
+  margin-right: $m2;
+}
+
+/// Give
+@mixin mx3 {
+  margin-left: $m3;
+  margin-right: $m3;
+}
+
+/// Give
+@mixin mx4 {
+  margin-left: $m4;
+  margin-right: $m4;
+}
+
+/// Give
+@mixin mx5 {
+  margin-left: $m5;
+  margin-right: $m5;
+}
+
+/// Give
+@mixin mx6 {
+  margin-left: $m6;
+  margin-right: $m6;
+}
+
+/// Give
+@mixin mx7 {
+  margin-left: $m7;
+  margin-right: $m7;
+}
+
+/// Give
+@mixin mx8 {
+  margin-left: $m8;
+  margin-right: $m8;
+}
+
+/// Give
+@mixin mx9 {
+  margin-left: $m9;
+  margin-right: $m9;
+}
+
+/// Give
+@mixin mx10 {
+  margin-left: $m10;
+  margin-right: $m10;
+}
+
+/// Give
+@mixin mx12 {
+  margin-left: $m12;
+  margin-right: $m12;
+}
+
+/// Give
+@mixin mx15 {
+  margin-left: $m15;
+  margin-right: $m15;
+}
+
+/// Give
+@mixin mx20 {
+  margin-left: $m20;
+  margin-right: $m20;
+}
+
+/// Gives
+@mixin mx25 {
+  margin-left: $m25;
+  margin-right: $m25;
+}
+
+/// Remoses the top and bottom margin of an element
+@mixin my0 {
+  margin-top: $m0;
+  margin-bottom: $m0;
+}
+
+/// Gives a `4px` top and bottom margin to an element
+@mixin my1 {
+  margin-top: $m1;
+  margin-bottom: $m1;
+}
+
+/// Gives a `8px` top and bottom margin to an element
+@mixin my2 {
+  margin-top: $m2;
+  margin-bottom: $m2;
+}
+
+/// Gives a `12px` top and bottom margin to an element
+@mixin my3 {
+  margin-top: $m3;
+  margin-bottom: $m3;
+}
+
+/// Gives a `16px` top and bottom margin to an element
+@mixin my4 {
+  margin-top: $m4;
+  margin-bottom: $m4;
+}
+
+/// Gives a `20px` top and bottom margin to an element
+@mixin my5 {
+  margin-top: $m5;
+  margin-bottom: $m5;
+}
+
+/// Gives a `24px` top and bottom margin to an element
+@mixin my6 {
+  margin-top: $m6;
+  margin-bottom: $m6;
+}
+
+/// Gives a `28px` top and bottom margin to an element
+@mixin my7 {
+  margin-top: $m7;
+  margin-bottom: $m7;
+}
+
+/// Gives a `32px` top and bottom margin to an element
+@mixin my8 {
+  margin-top: $m8;
+  margin-bottom: $m8;
+}
+
+/// Gives a `36px` top and bottom margin to an element
+@mixin my9 {
+  margin-top: $m9;
+  margin-bottom: $m9;
+}
+
+/// Gives a `40px` top and bottom margin to an element
+@mixin my10 {
+  margin-top: $m10;
+  margin-bottom: $m10;
+}
+
+/// Gives a `48px` top and bottom margin to an element
+@mixin my12 {
+  margin-top: $m12;
+  margin-bottom: $m12;
+}
+
+/// Gives a `60px` top and bottom margin to an element
+@mixin my15 {
+  margin-top: $m15;
+  margin-bottom: $m15;
+}
+
+/// Gives a `80px` top and bottom margin to an element
+@mixin my20 {
+  margin-top: $m20;
+  margin-bottom: $m20;
+}
+
+/// Gives a `100px` top and bottom margin to an element
+@mixin my25 {
+  margin-top: $m25;
+  margin-bottom: $m25;
+}
+
+/// Removes the top margin of an element
+@mixin mt0 {
+  margin-top: $p0;
+}
+
+/// Gives a `4px` top margin to an element
+@mixin mt1 {
+  margin-top: $p1;
+}
+
+/// Gives a `8px` top margin to an element
+@mixin mt2 {
+  margin-top: $p2;
+}
+
+/// Gives a `12px` top margin to an element
+@mixin mt3 {
+  margin-top: $p3;
+}
+
+/// Gives a `16px` top margin to an element
+@mixin mt4 {
+  margin-top: $p4;
+}
+
+/// Gives a `20px` top margin to an element
+@mixin mt5 {
+  margin-top: $p5;
+}
+
+/// Gives a `24px` top margin to an element
+@mixin mt6 {
+  margin-top: $p6;
+}
+
+/// Gives a `28px` top margin to an element
+@mixin mt7 {
+  margin-top: $p7;
+}
+
+/// Gives a `32px` top margin to an element
+@mixin mt8 {
+  margin-top: $p8;
+}
+
+/// Gives a `36px` top margin to an element
+@mixin mt9 {
+  margin-top: $p9;
+}
+
+/// Gives a `40px` top margin to an element
+@mixin mt10 {
+  margin-top: $p10;
+}
+
+/// Gives a `48px` top margin to an element
+@mixin mt12 {
+  margin-top: $p12;
+}
+
+/// Gives a `60px` top margin to an element
+@mixin mt15 {
+  margin-top: $p15;
+}
+
+/// Gives a `80px` top margin to an element
+@mixin mt20 {
+  margin-top: $p20;
+}
+
+/// Gives a `100px` top margin to an element
+@mixin mt25 {
+  margin-top: $p25;
+}
+
+/// Removes the bottom margin of an element
+@mixin mb0 {
+  margin-bottom: $p0;
+}
+
+/// Gives a `4px` bottom margin to an element
+@mixin mb1 {
+  margin-bottom: $p1;
+}
+
+/// Gives a `8px` bottom margin to an element
+@mixin mb2 {
+  margin-bottom: $p2;
+}
+
+/// Gives a `12px` bottom margin to an element
+@mixin mb3 {
+  margin-bottom: $p3;
+}
+
+/// Gives a `16px` bottom margin to an element
+@mixin mb4 {
+  margin-bottom: $p4;
+}
+
+/// Gives a `20px` bottom margin to an element
+@mixin mb5 {
+  margin-bottom: $p5;
+}
+
+/// Gives a `24px` bottom margin to an element
+@mixin mb6 {
+  margin-bottom: $p6;
+}
+
+/// Gives a `28px` bottom margin to an element
+@mixin mb7 {
+  margin-bottom: $p7;
+}
+
+/// Gives a `32px` bottom margin to an element
+@mixin mb8 {
+  margin-bottom: $p8;
+}
+
+/// Gives a `36px` bottom margin to an element
+@mixin mb9 {
+  margin-bottom: $p9;
+}
+
+/// Gives a `40px` bottom margin to an element
+@mixin mb10 {
+  margin-bottom: $p10;
+}
+
+/// Gives a `48px` bottom margin to an element
+@mixin mb12 {
+  margin-bottom: $p12;
+}
+
+/// Gives a `60px` bottom margin to an element
+@mixin mb15 {
+  margin-bottom: $p15;
+}
+
+/// Gives a `80px` bottom margin to an element
+@mixin mb20 {
+  margin-bottom: $p20;
+}
+
+/// Gives a `100px` bottom margin to an element
+@mixin mb25 {
+  margin-bottom: $p25;
+}
+
+/// Removes the left margin of an element
+@mixin ml0 {
+  margin-left: $p0;
+}
+
+/// Gives a `4px` left margin to an element
+@mixin ml1 {
+  margin-left: $p1;
+}
+
+/// Gives a `8px` left margin to an element
+@mixin ml2 {
+  margin-left: $p2;
+}
+
+/// Gives a `12px` left margin to an element
+@mixin ml3 {
+  margin-left: $p3;
+}
+
+/// Gives a `16px` left margin to an element
+@mixin ml4 {
+  margin-left: $p4;
+}
+
+/// Gives a `20px` left margin to an element
+@mixin ml5 {
+  margin-left: $p5;
+}
+
+/// Gives a `24px` left margin to an element
+@mixin ml6 {
+  margin-left: $p6;
+}
+
+/// Gives a `28px` left margin to an element
+@mixin ml7 {
+  margin-left: $p7;
+}
+
+/// Gives a `32px` left margin to an element
+@mixin ml8 {
+  margin-left: $p8;
+}
+
+/// Gives a `36px` left margin to an element
+@mixin ml9 {
+  margin-left: $p9;
+}
+
+/// Gives a `40px` left margin to an element
+@mixin ml10 {
+  margin-left: $p10;
+}
+
+/// Gives a `48px` left margin to an element
+@mixin ml12 {
+  margin-left: $p12;
+}
+
+/// Gives a `60px` left margin to an element
+@mixin ml15 {
+  margin-left: $p15;
+}
+
+/// Gives a `80px` left margin to an element
+@mixin ml20 {
+  margin-left: $p20;
+}
+
+/// Gives a `100px` left margin to an element
+@mixin ml25 {
+  margin-left: $p25;
+}
+
+/// Removes the right margin of an element
+@mixin mr0 {
+  margin-right: $p0;
+}
+@mixin mr1 {
+  margin-right: $p1;
+}
+@mixin mr2 {
+  margin-right: $p2;
+}
+
+@mixin mr3 {
+  margin-right: $p3;
+}
+
+@mixin mr4 {
+  margin-right: $p4;
+}
+
+@mixin mr5 {
+  margin-right: $p5;
+}
+
+@mixin mr6 {
+  margin-right: $p6;
+}
+
+@mixin mr7 {
+  margin-right: $p7;
+}
+
+@mixin mr8 {
+  margin-right: $p8;
+}
+
+@mixin mr9 {
+  margin-right: $p9;
+}
+
+@mixin mr10 {
+  margin-right: $p10;
+}
+
+@mixin mr12 {
+  margin-right: $p12;
+}
+
+@mixin mr15 {
+  margin-right: $p15;
+}
+
+@mixin mr20 {
+  margin-right: $p20;
+}
+
+@mixin mr25 {
+  margin-right: $p25;
+}

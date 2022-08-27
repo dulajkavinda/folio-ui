@@ -1,0 +1,103 @@
+$br0: 0rem;
+$br1: 0.4rem;
+$br2: 2 * $br1;
+$br3: 3 * $br1;
+$br4: 4 * $br1;
+$br5: 5 * $br1;
+$br6: 6 * $br1;
+$br7: 7 * $br1;
+$br8: 8 * $br1;
+$br9: 9 * $br1;
+$br10: 10 * $br1;
+$br12: 12 * $br1;
+$br15: 15 * $br1;
+$br20: 20 * $br1;
+$br25: 25 * $br1;
+
+@mixin borderless {
+  border: none;
+}
+
+@mixin bordered {
+  border: solid 0.1rem;
+}
+
+@mixin dashed {
+  border-style: dashed;
+}
+
+@mixin rounded {
+  border-radius: 100px;
+}
+
+@mixin b1 {
+  border-width: 0.1rem;
+}
+
+@mixin b2 {
+  border-width: 0.2rem;
+}
+
+@mixin b3 {
+  border-width: 0.3rem;
+}
+
+@mixin br0 {
+  border-radius: $br0;
+}
+
+@mixin br1 {
+  border-radius: $br1;
+}
+
+@mixin br2 {
+  border-radius: $br2;
+}
+
+@mixin br3 {
+  border-radius: $br3;
+}
+
+@mixin br4 {
+  border-radius: $br4;
+}
+
+@mixin br5 {
+  border-radius: $br5;
+}
+
+@mixin br7 {
+  border-radius: $br7;
+}
+
+@mixin br8 {
+  border-radius: $br8;
+}
+
+@mixin br9 {
+  border-radius: $br9;
+}
+
+@mixin br10 {
+  border-radius: $br10;
+}
+
+@mixin br12 {
+  border-radius: $br12;
+}
+
+@mixin br15 {
+  border-radius: $br15;
+}
+
+@mixin br20 {
+  border-radius: $br20;
+}
+
+@mixin br25 {
+  border-radius: $br25;
+}
+
+@mixin bs1 {
+  box-shadow: rgba(103, 103, 103, 0.3) 0px 0px 0px 0.5px;
+}
