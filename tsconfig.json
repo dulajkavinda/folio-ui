@@ -29,6 +29,7 @@
 
   "include": [
     "src/**/*.ts" /* Include all .ts files in the project. */,
-    "src/**/*.tsx" /* Include all .tsx files in the project. */
+    "src/**/*.tsx" /* Include all .tsx files in the project. */,
+    "./*.js"
   ]
 }
