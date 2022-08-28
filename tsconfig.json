@@ -30,6 +30,7 @@
   "include": [
     "src/**/*.ts" /* Include all .ts files in the project. */,
     "src/**/*.tsx" /* Include all .tsx files in the project. */,
-    "./*.js"
+    "rollup.config.js", // yep needed these here for now :D
+    "jest.config.js"
   ]
 }

@@ -1,0 +1,10 @@
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+declare const _default: ComponentMeta<React.FunctionComponent<import("./button").Props>>;
+export default _default;
+export declare const Primary: ComponentStory<React.FunctionComponent<import("./button").Props>>;
+export declare const Disabled: ComponentStory<React.FunctionComponent<import("./button").Props>>;
+export declare const Large: ComponentStory<React.FunctionComponent<import("./button").Props>>;
+export declare const Small: ComponentStory<React.FunctionComponent<import("./button").Props>>;
+export declare const IconButton: ComponentStory<React.FunctionComponent<import("./button").Props>>;
+export declare const IconButtonTransparent: ComponentStory<React.FunctionComponent<import("./button").Props>>;

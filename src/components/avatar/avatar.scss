@@ -1,0 +1,182 @@
+$base-size: 0.4rem; //   4px
+$size2: 2 * $base-size; //   8px
+$size3: 3 * $base-size; //   12px
+$size4: 3.3 * $base-size; //   16px
+$size5: 5 * $base-size; //   20px
+$size6: 6 * $base-size; //   24px
+$size7: 7 * $base-size; //   28px
+$size8: 8 * $base-size; //   32px
+$size9: 9 * $base-size; //   36px
+$size10: 10 * $base-size; // 40px
+$size11: 11 * $base-size; // 44px
+$size12: 12 * $base-size; // 48px
+$size15: 15 * $base-size; // 60px
+$size20: 20 * $base-size; // 80px
+$size25: 25 * $base-size; // 100px
+$size30: 30 * $base-size; // 120px
+
+.folio-avatar {
+  @include no-drag;
+
+  &--circle {
+    img {
+      border-radius: 50%; // br5 not working
+    }
+  }
+
+  &--square {
+    img {
+      @include br1;
+    }
+  }
+}
+
+.folio-avatar--2 {
+  width: $size2;
+  height: $size2;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--3 {
+  width: $size3;
+  height: $size3;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--4 {
+  width: $size4;
+  height: $size4;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--5 {
+  width: $size5;
+  height: $size5;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--6 {
+  width: $size6;
+  height: $size6;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--7 {
+  width: $size7;
+  height: $size7;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--8 {
+  width: $size8;
+  height: $size8;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--9 {
+  width: $size9;
+  height: $size9;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--10 {
+  width: $size10;
+  height: $size10;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--11 {
+  width: $size11;
+  height: $size11;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--12 {
+  width: $size12;
+  height: $size12;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--15 {
+  width: $size15;
+  height: $size15;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--20 {
+  width: $size20;
+  height: $size20;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--25 {
+  width: $size25;
+  height: $size25;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}
+
+.folio-avatar--30 {
+  width: $size30;
+  height: $size30;
+
+  img {
+    @include image-fit;
+    object-fit: contain;
+  }
+}

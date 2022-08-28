@@ -9,3 +9,11 @@
 @mixin clickable {
   cursor: pointer;
 }
+
+@mixin image-fit {
+  max-width: inherit;
+  max-height: inherit;
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+}

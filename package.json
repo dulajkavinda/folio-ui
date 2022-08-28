@@ -1,6 +1,6 @@
 {
   "name": "folio-ui",
-  "version": "1.0.5",
+  "version": "1.1.1",
   "description": "",
   "scripts": {
     "build": "rollup -c",
@@ -29,6 +29,7 @@
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.4.0",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -82,6 +83,7 @@
     "source-map-loader": "^4.0.0",
     "style-loader": "2",
     "ts-jest": "^28.0.8",
+    "tslib": "^2.4.0",
     "typescript": "^4.8.2",
     "webpack": "^5.74.0"
   },

@@ -5,16 +5,28 @@ import { SizeTypes, ColorTypesDL } from "../types";
 
 export interface Props {
   id?: string;
+  customStyles?: {};
   onClick?: Function;
   color?: ColorTypesDL;
   size?: SizeTypes;
   disabled?: boolean;
   children: React.ReactNode;
   icon?: React.ReactNode;
+  classname?: string;
 }
 
 const Button: React.FunctionComponent<Props> = (props: Props) => {
-  const { onClick, color, size, disabled, children, icon, id } = props;
+  const {
+    onClick,
+    color,
+    size,
+    disabled,
+    children,
+    icon,
+    id,
+    customStyles,
+    classname,
+  } = props;
 
   const buttonPress = (e: React.MouseEvent) => {
     if (!onClick) return;
@@ -28,6 +40,7 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
     {
       "folio-button--disabled": disabled,
     },
+    classname,
   );
 
   return (
@@ -37,6 +50,7 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
       id={id}
       onClick={buttonPress}
       className={styles}
+      style={{ ...customStyles }}
     >
       {icon && <div className="folio-button__icon">{icon}</div>}
       {children}
@@ -51,6 +65,8 @@ Button.defaultProps = {
   id: "0",
   onClick: () => null,
   icon: null,
+  customStyles: "",
+  classname: "",
 };
 
 export default Button;
