@@ -8,3 +8,4 @@ export declare const Large: ComponentStory<React.FunctionComponent<import("./but
 export declare const Small: ComponentStory<React.FunctionComponent<import("./button").Props>>;
 export declare const IconButton: ComponentStory<React.FunctionComponent<import("./button").Props>>;
 export declare const IconButtonTransparent: ComponentStory<React.FunctionComponent<import("./button").Props>>;
+export declare const IconButtonTransparentSmall: ComponentStory<React.FunctionComponent<import("./button").Props>>;

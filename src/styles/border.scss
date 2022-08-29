@@ -101,3 +101,15 @@ $br25: 25 * $br1;
 @mixin bs1 {
   box-shadow: rgba(103, 103, 103, 0.3) 0px 0px 0px 0.5px;
 }
+
+@mixin db1 {
+  border: 1px solid $tertiary-white;
+}
+
+@mixin db2 {
+  border: 2px solid $tertiary-white;
+}
+
+@mixin db3 {
+  border: 3px solid $tertiary-white;
+}

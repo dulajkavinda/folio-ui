@@ -4,6 +4,9 @@ import * as classnames from "classnames";
 import GraphQL from "../../assets/icons/graphql.svg";
 import Github from "../../assets/icons/github.svg";
 import Link from "../../assets/icons/link.svg";
+import LinkedIn from "../../assets/icons/linkedin.svg";
+import Email from "../../assets/icons/email.svg";
+import Dark from "../../assets/icons/dark.svg";
 import { ColorTypesDL } from "../../types";
 
 export type IconSize =
@@ -24,7 +27,13 @@ export type IconSize =
   | "25"
   | "30";
 
-export type IconSymbol = "graphql" | "github" | "link";
+export type IconSymbol =
+  | "graphql"
+  | "github"
+  | "link"
+  | "linkedin"
+  | "email"
+  | "dark";
 
 export interface Props {
   id?: string;
@@ -38,6 +47,9 @@ const images = {
   graphql: GraphQL,
   github: Github,
   link: Link,
+  linkedin: LinkedIn,
+  email: Email,
+  dark: Dark,
 };
 
 const Icon: React.FC<Props> = (props) => {

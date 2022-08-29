@@ -3,7 +3,8 @@
   @include bold;
   @include t11;
   @include center;
-  @include borderless;
+  @include tertiary-white;
+  @include db1;
   @include transition-colors;
   @include transition-opacity;
 
@@ -33,28 +34,35 @@
   @include black;
   @include px3;
   @include py2;
-  @include bs1;
+}
+
+.folio-button--dark {
+  @include db2;
+  @include bg-white;
+  @include tertiary-white;
+  @include px3;
+  @include py2;
 }
 
 .folio-button--small {
   @include lhx4;
-  @include px2;
+  @include px1;
   @include t12;
   @include br1;
 
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  height: 1.6rem;
+  height: 2rem;
 }
 
 .folio-button--medium {
   @include br1;
-  @include lhx4;
+  @include lhx3;
   @include px2;
 
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
-  min-height: 2.2rem;
+  min-height: 2.3rem;
 }
 
 .folio-button--large {

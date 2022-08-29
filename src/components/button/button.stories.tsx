@@ -21,6 +21,7 @@ export const Large = Template.bind({});
 export const Small = Template.bind({});
 export const IconButton = Template.bind({});
 export const IconButtonTransparent = Template.bind({});
+export const IconButtonTransparentSmall = Template.bind({});
 
 Primary.args = {
   id: "string",
@@ -71,10 +72,21 @@ IconButton.args = {
 IconButtonTransparent.args = {
   id: "string",
   onClick: action("onClick"),
-  color: "light",
+  color: "dark",
   size: "medium",
   disabled: false,
   children: "Send Email",
   customStyles: { backgroundColor: "transparent" },
   icon: <Icon symbol="graphql" size="4" />,
+};
+
+IconButtonTransparentSmall.args = {
+  id: "string",
+  onClick: action("onClick"),
+  color: "dark",
+  size: "small",
+  disabled: false,
+  children: "Send Email",
+  customStyles: { backgroundColor: "transparent" },
+  icon: <Icon symbol="graphql" size="3" />,
 };

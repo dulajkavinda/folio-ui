@@ -1,0 +1,12 @@
+.folio-contact {
+  @include center;
+
+  width: fit-content;
+  flex-direction: row;
+}
+
+.folio-contact--item {
+  @include center;
+  padding: 0.2rem;
+  flex-direction: row;
+}
