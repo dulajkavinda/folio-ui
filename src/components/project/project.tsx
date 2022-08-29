@@ -113,7 +113,8 @@ const Project: React.FC<ProjectProps> = (props) => {
       <div className="folio-project-footer">
         <div className="folio-project-footer--button">
           <Button onClick={buttonPress?.onClickCaseStudy} size={size}>
-            {size === sizeConstants.SMALL
+            {size === sizeConstants.SMALL &&
+            projectConstants.PROJECT_CASE_BTN_TEXT.length > 10
               ? shortenLabel(projectConstants.PROJECT_CASE_BTN_TEXT)
               : projectConstants.PROJECT_CASE_BTN_TEXT}
           </Button>
