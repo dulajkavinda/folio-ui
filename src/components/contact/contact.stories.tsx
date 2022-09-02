@@ -51,5 +51,13 @@ Large.args = {
       type: "linkedin",
       link: "tel:+1-123-456-7890",
     },
+    {
+      type: "linkedin",
+      link: "tel:+1-123-456-7890",
+    },
+    {
+      type: "linkedin",
+      link: "tel:+1-123-456-7890",
+    },
   ],
 };

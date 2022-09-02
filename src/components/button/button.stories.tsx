@@ -76,7 +76,6 @@ IconButtonTransparent.args = {
   size: "medium",
   disabled: false,
   children: "Send Email",
-  customStyles: { backgroundColor: "transparent" },
   icon: <Icon symbol="graphql" size="4" />,
 };
 
@@ -87,6 +86,5 @@ IconButtonTransparentSmall.args = {
   size: "small",
   disabled: false,
   children: "Send Email",
-  customStyles: { backgroundColor: "transparent" },
   icon: <Icon symbol="graphql" size="3" />,
 };
