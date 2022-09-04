@@ -20,14 +20,14 @@ $size30: 30 * $base-size; // 120px
 
   &--circle {
     img {
-      @include db2;
+      @include dbo3;
       border-radius: 50%; // br5 not working
     }
   }
 
   &--square {
     img {
-      @include db2;
+      @include dbo3;
       @include br1;
     }
   }

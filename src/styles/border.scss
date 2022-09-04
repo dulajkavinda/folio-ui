@@ -117,3 +117,7 @@ $br25: 25 * $br1;
 @mixin db4 {
   outline: 4px solid $tertiary-white;
 }
+
+@mixin dbo3 {
+  outline: 3px solid $tertiary-white;
+}
