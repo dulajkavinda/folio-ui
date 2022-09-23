@@ -1,12 +1,13 @@
-$black: #0f1116;
-$secondary-black: #1b1818;
-$tertiary-black: #5e5e5e;
-$white: #ffffff;
-$secondary-white: #fbfaf8;
-$tertiary-white: #dddddd;
+$black: #0e141b;
+$secondary-black: #18222c;
+$tertiary-black: #1e262f;
+
+$white: #f2f5f7;
+$secondary-white: #d3d3d3;
+$tertiary-white: #7e8c9a;
 
 @mixin bg-white {
-  background-color: secondary-white;
+  background-color: $secondary-white;
 }
 
 @mixin bg-white {
@@ -35,14 +36,6 @@ $tertiary-white: #dddddd;
 
 @mixin bg-tertiary-black {
   background-color: $tertiary-black;
-}
-
-@mixin white {
-  color: $secondary-white;
-}
-
-@mixin white {
-  color: $white;
 }
 
 @mixin white {
