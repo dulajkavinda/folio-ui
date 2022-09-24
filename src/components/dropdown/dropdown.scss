@@ -1,0 +1,46 @@
+.folio-dropdown {
+  &_container {
+    @include center;
+    @include db3;
+    @include br2;
+    @include clickable;
+    @include transition-opacity;
+    @include transition-colors;
+
+    flex-direction: column;
+    width: 200px;
+
+    .folio-dropdown_item {
+      @include center;
+      @include clickable;
+      @include primary-font;
+      @include secondary-white;
+      @include t11;
+      @include semi-bold;
+      @include p1;
+
+      width: 100%;
+
+      &__close {
+        color: rgb(225, 97, 23);
+      }
+    }
+
+    .folio-dropdown_title {
+      @include center;
+      width: 100%;
+    }
+
+    .folio-dropdown_item:hover {
+      opacity: 0.5;
+    }
+
+    span {
+      @include primary-font;
+      @include secondary-white;
+      @include t11;
+      @include semi-bold;
+      @include p1;
+    }
+  }
+}

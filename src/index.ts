@@ -8,5 +8,16 @@ import Project from "./components/project";
 import Avatar from "./components/avatar";
 import Contact from "./components/contact";
 import Blog from "./components/blog";
+import Dropdown from "./components/dropdown";
 
-export { Icon, Button, Label, TechStack, Project, Avatar, Contact, Blog };
+export {
+  Icon,
+  Button,
+  Label,
+  TechStack,
+  Project,
+  Avatar,
+  Contact,
+  Blog,
+  Dropdown,
+};
