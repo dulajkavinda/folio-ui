@@ -8,7 +8,7 @@
     @include transition-colors;
 
     flex-direction: column;
-    width: 200px;
+    position: relative;
 
     .folio-dropdown_item {
       @include center;

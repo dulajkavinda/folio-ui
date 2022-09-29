@@ -8,6 +8,7 @@ import LinkedIn from "../../assets/icons/linkedin.svg";
 import Email from "../../assets/icons/email.svg";
 import Dark from "../../assets/icons/dark.svg";
 import Read from "../../assets/icons/read.svg";
+import Search from "../../assets/icons/search.svg";
 import { ColorTypesDL } from "../../types";
 
 export type IconSize =
@@ -35,7 +36,8 @@ export type IconSymbol =
   | "linkedin"
   | "email"
   | "dark"
-  | "read";
+  | "read"
+  | "search";
 
 export interface Props {
   id?: string;
@@ -53,6 +55,7 @@ const images = {
   email: Email,
   dark: Dark,
   read: Read,
+  search: Search,
 };
 
 const Icon: React.FC<Props> = (props) => {
@@ -71,7 +74,7 @@ const Icon: React.FC<Props> = (props) => {
 
 Icon.defaultProps = {
   size: "6",
-  color: "light",
+  color: "dark",
   className: "",
   id: "",
 };

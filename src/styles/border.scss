@@ -110,6 +110,10 @@ $br25: 25 * $br1;
   border: 2px solid $tertiary-white;
 }
 
+@mixin dbo2 {
+  outline: 2px solid $tertiary-white;
+}
+
 @mixin db3 {
   border: 3px solid $tertiary-white;
 }

@@ -1,10 +1,10 @@
 {
   "name": "folio-ui",
-  "version": "1.2.3",
+  "version": "1.2.9",
   "description": "",
   "scripts": {
     "build": "rollup -c",
-    "storybook": "start-storybook -p 6006 -s public",
+    "sb": "start-storybook -p 6006 -s public",
     "test": "jest -u",
     "coverage": "jest --coverage",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",

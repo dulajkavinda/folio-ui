@@ -1,0 +1,36 @@
+.folio-search {
+  @include center;
+  @include db3;
+  @include br2;
+  @include clickable;
+  @include transition-opacity;
+  @include transition-colors;
+
+  &__container {
+    @include center;
+    @include primary-font;
+    @include t11;
+    @include px1;
+
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__input {
+    @include semi-bold;
+    @include primary-font;
+    @include br2;
+    @include t11;
+    @include secondary-white;
+    background-color: transparent;
+    width: 98%;
+  }
+
+  input {
+    border: 0;
+    outline: 0;
+  }
+  input:focus {
+    outline: none !important;
+  }
+}

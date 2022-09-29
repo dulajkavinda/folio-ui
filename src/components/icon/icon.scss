@@ -100,9 +100,9 @@ $size30: 30 * $base-size; // 120px
 }
 
 .folio-icon--light {
-  @include fill-white;
+  filter: invert(1);
 }
 
 .folio-icon--dark {
-  @include fill-black;
+  filter: invert(0);
 }

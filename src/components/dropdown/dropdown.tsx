@@ -3,6 +3,7 @@ import * as classnames from "classnames";
 
 export type DropdownProps = {
   data: DropdownData[];
+  value?: Function;
 };
 
 export type DropdownData = {
@@ -23,7 +24,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
     }
   };
 
-  const { data } = props;
+  const { data, value } = props;
 
   return (
     <div className={styles}>
@@ -42,6 +43,10 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
             role="presentation"
             className="folio-dropdown_item"
             onClick={() => {
+              if (value) {
+                value(item.value);
+              }
+
               setSeltectedItem(item);
               setDropdownItems([]);
             }}
@@ -69,6 +74,6 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   );
 };
 
-Dropdown.defaultProps = {};
+Dropdown.defaultProps = { value: () => {} };
 
 export default Dropdown;

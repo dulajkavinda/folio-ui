@@ -8,4 +8,5 @@ import Avatar from "./components/avatar";
 import Contact from "./components/contact";
 import Blog from "./components/blog";
 import Dropdown from "./components/dropdown";
-export { Icon, Button, Label, TechStack, Project, Avatar, Contact, Blog, Dropdown, };
+import Search from "./components/search/Search";
+export { Icon, Button, Label, TechStack, Project, Avatar, Contact, Blog, Dropdown, Search, };

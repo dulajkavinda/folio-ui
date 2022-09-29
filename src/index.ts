@@ -9,6 +9,8 @@ import Avatar from "./components/avatar";
 import Contact from "./components/contact";
 import Blog from "./components/blog";
 import Dropdown from "./components/dropdown";
+import Search from "./components/search/Search";
+import Experience from "./components/experience";
 
 export {
   Icon,
@@ -20,4 +22,6 @@ export {
   Contact,
   Blog,
   Dropdown,
+  Search,
+  Experience,
 };

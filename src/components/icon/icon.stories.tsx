@@ -19,7 +19,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   id: "string",
   className: "string",
-  color: "light",
+  color: "dark",
   symbol: "graphql",
   size: "8",
 };

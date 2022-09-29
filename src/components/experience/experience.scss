@@ -1,0 +1,97 @@
+.folio-experience {
+  @include white;
+  @include primary-font;
+}
+
+.conatiner {
+  @include white;
+  @include p2;
+  @include br2;
+  @include db3;
+
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 600px;
+}
+
+.experience {
+  &_header {
+    display: flex;
+
+    height: 6em;
+    justify-content: space-between;
+    flex-direction: row;
+
+    &__image {
+      height: 100%;
+      width: 6em;
+
+      margin-right: 0.5em;
+
+      img {
+        @include br2;
+        @include dbo2;
+        @include no-drag;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      height: 100%;
+
+      &__title {
+        @include t10;
+        @include bold;
+      }
+
+      &__company {
+        @include t8;
+        @include semi-bold;
+        @include secondary-white;
+
+        &__link {
+          @include t12;
+          @include regular;
+          @include clickable;
+        }
+
+        &__link:hover {
+          opacity: 0.5;
+        }
+      }
+
+      &__duration {
+        @include t11;
+        @include semi-bold;
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &_description {
+    @include semi-bold;
+    @include mt2;
+  }
+
+  &_products {
+    ul {
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+    }
+  }
+}
