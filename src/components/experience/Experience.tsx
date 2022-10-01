@@ -1,43 +1,97 @@
 import React from "react";
 import classnames from "classnames";
+import Icon, { IconSymbol } from "../icon/icon";
+import WindowSize from "../types/window-size";
+import useWindowSize from "../../lib/useWindowSize";
+
+type ImageProp = {
+  src: string;
+  alt: string;
+};
+
+type DurationProp = {
+  start: string;
+  end: string | "Present";
+};
+
+type TechnologiesProp = {
+  displayName: string;
+  icon: IconSymbol;
+};
 
 export interface ExperienceProps {
+  logo: ImageProp;
+  position: string;
+  company: string;
+  duration: DurationProp;
+  website: string;
+  description: string;
+  technologies: TechnologiesProp[];
   classname?: string;
   customStyles?: {};
 }
 
 const Experience: React.FC<ExperienceProps> = (props) => {
-  const { classname, customStyles } = props;
+  const size = useWindowSize();
+
+  const {
+    classname,
+    customStyles,
+    logo,
+    position,
+    company,
+    website,
+    duration,
+    description,
+    technologies,
+  } = props;
 
   const styles = classnames("folio-experience", classname);
+
+  const renderTechnologies = (technologiesItems: TechnologiesProp[]) => {
+    return technologiesItems.map((technology: TechnologiesProp) => {
+      return (
+        <div
+          key={technology.displayName}
+          className="experience_header__technologies__item"
+        >
+          <Icon symbol={technology.icon} size="2" />
+          {size !== WindowSize.MEDIUM && <span> {technology.displayName}</span>}
+        </div>
+      );
+    });
+  };
+
   return (
     <div style={{ ...customStyles }} className={styles}>
       <div className="conatiner">
         <div className="experience_header">
           <div className="experience_header__container">
             <div className="experience_header__image">
-              <img
-                alt="alt"
-                src="https://media-exp1.licdn.com/dms/image/C4D0BAQG7pPQLZgMiIQ/company-logo_200_200/0/1634631707525?e=2147483647&v=beta&t=jM8utsbp83fFpExWDqzBvX3Ib6KqFGr36F0ZlscsVKA"
-              />
+              <img src={logo.src} alt={logo.alt} />
             </div>
             <div className="experience_header__info">
-              <div className="experience_header__info__title">
-                Software Engineer
-              </div>
-              <div className="experience_header__info__company">:Different</div>
+              <div className="experience_header__info__title">{position}</div>
+              <div className="experience_header__info__company">{company}</div>
               <div className="experience_header__info__company__link">
-                different.com.au
+                {website}
               </div>
               <div className="experience_header__info__duration">
-                01/21 - 02/22
+                {duration.start} - {duration.end}
               </div>
             </div>
           </div>
 
-          {/* <div className="experience_header__technologies">
-            <div>Used Technologies</div>
-          </div> */}
+          {size !== WindowSize.MOBILE && (
+            <div className="experience_header__technologies">
+              <div className="experience_header__technologies__description">
+                {description}
+              </div>
+              <div className="experience_header__technologies__items">
+                {renderTechnologies(technologies)}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

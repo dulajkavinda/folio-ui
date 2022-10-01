@@ -11,7 +11,6 @@
 
   justify-content: flex-start;
   flex-direction: column;
-  width: 600px;
 }
 
 .experience {
@@ -73,10 +72,67 @@
     }
 
     &__container {
+      @include mr2;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       height: 100%;
+      min-width: 17em;
+    }
+
+    &__technologies {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 70%;
+
+      &__title {
+        @include t11;
+        @include semi-bold;
+      }
+      &__items {
+        @include center;
+        @include mb1;
+        justify-content: flex-start;
+        flex-direction: row;
+        height: 1em;
+        gap: 1em;
+      }
+
+      &__description {
+        @include secondary-white;
+        @include t11;
+        @include regular;
+        @include center;
+        @include lhx3;
+        letter-spacing: 0.1em;
+      }
+
+      &__items > div {
+        @include center;
+        @include db1;
+        @include br1;
+        @include p1;
+        @include t13;
+        @include regular;
+        @include secondary-white;
+        letter-spacing: 0.15em;
+      }
+
+      &__item {
+        @include center;
+        height: 100%;
+
+        &__icon {
+          @include mr1;
+          @include t12;
+        }
+
+        span {
+          @include ml1;
+        }
+      }
     }
   }
 
@@ -93,5 +149,19 @@
     li {
       margin: 0;
     }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .experience_header__technologies__description {
+    @include t13;
+    @include lhx1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .experience_header__technologies__description {
+    @include t13;
+    @include lhx1;
   }
 }

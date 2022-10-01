@@ -9,4 +9,5 @@ import Contact from "./components/contact";
 import Blog from "./components/blog";
 import Dropdown from "./components/dropdown";
 import Search from "./components/search/Search";
-export { Icon, Button, Label, TechStack, Project, Avatar, Contact, Blog, Dropdown, Search, };
+import Experience from "./components/experience";
+export { Icon, Button, Label, TechStack, Project, Avatar, Contact, Blog, Dropdown, Search, Experience, };
