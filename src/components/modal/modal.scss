@@ -1,0 +1,56 @@
+.folio-modal {
+  @include center;
+  z-index: 1000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#1e262f, 0.8);
+
+  &__container {
+    @include br2;
+    width: 40em;
+    background-color: #0e141b;
+    padding: 10px;
+    max-width: 90vw;
+
+    &--max {
+      width: auto;
+    }
+    &--small {
+      width: 396px;
+    }
+    &--medium {
+      width: 568px;
+    }
+    &--large {
+      width: 768px;
+    }
+  }
+
+  &__header {
+    @include center;
+    @include primary-font;
+    @include secondary-white;
+    @include semi-bold;
+    @include t10;
+    @include py2;
+
+    height: 2em;
+  }
+
+  &__body {
+    @include center;
+  }
+
+  &__footer {
+    @include center;
+    @include pt3;
+    justify-content: flex-end;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+}

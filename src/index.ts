@@ -11,6 +11,7 @@ import Blog from "./components/blog";
 import Dropdown from "./components/dropdown";
 import Search from "./components/search/Search";
 import Experience from "./components/experience";
+import Modal from "./components/modal";
 
 export {
   Icon,
@@ -24,4 +25,5 @@ export {
   Dropdown,
   Search,
   Experience,
+  Modal,
 };
