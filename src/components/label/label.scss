@@ -23,6 +23,7 @@
   }
 
   &--light {
+    @include secondary-black;
     @include bg-tertiary-white;
   }
 

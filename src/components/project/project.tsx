@@ -76,7 +76,9 @@ const Project: React.FC<ProjectProps> = (props) => {
           <div className="folio-project-header--detials--url">
             <a href="https://google.lk">{url}</a>
           </div>
-          <Label size={size}>{category}</Label>
+          <Label color="light" size={size}>
+            {category}
+          </Label>
           <div className="folio-project-header--detials--date">{date}</div>
         </div>
         <div className="folio-project-header--stack">
@@ -112,7 +114,11 @@ const Project: React.FC<ProjectProps> = (props) => {
       </div>
       <div className="folio-project-footer">
         <div className="folio-project-footer--button">
-          <Button onClick={buttonPress?.onClickCaseStudy} size={size}>
+          <Button
+            color="dark"
+            onClick={buttonPress?.onClickCaseStudy}
+            size={size}
+          >
             {size === sizeConstants.SMALL &&
             projectConstants.PROJECT_CASE_BTN_TEXT.length > 10
               ? shortenLabel(projectConstants.PROJECT_CASE_BTN_TEXT)
@@ -121,6 +127,7 @@ const Project: React.FC<ProjectProps> = (props) => {
         </div>
         <div className="folio-project-footer--button">
           <Button
+            color="dark"
             onClick={buttonPress?.onClickGithub}
             icon={<Icon size="3" symbol="github" />}
             size={size}
@@ -130,6 +137,7 @@ const Project: React.FC<ProjectProps> = (props) => {
         </div>
         <div className="folio-project-footer--button">
           <Button
+            color="dark"
             onClick={buttonPress?.onClickLink}
             icon={<Icon size="3" symbol="link" />}
             size={size}

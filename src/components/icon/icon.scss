@@ -98,11 +98,3 @@ $size30: 30 * $base-size; // 120px
   width: $size30;
   height: $size30;
 }
-
-.folio-icon--light {
-  filter: invert(1);
-}
-
-.folio-icon--dark {
-  filter: invert(0);
-}

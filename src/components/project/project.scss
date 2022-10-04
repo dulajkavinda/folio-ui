@@ -1,7 +1,7 @@
 .folio-project {
   @include br3;
   @include p2;
-  @include db4;
+  @include db3;
 
   display: flex;
   flex-direction: column;
@@ -50,6 +50,79 @@
     @include center;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.folio-project-media {
+  @include pt1;
+  @include center;
+
+  flex-direction: row;
+  justify-content: space-between;
+  &--img {
+    @include no-drag;
+    @include br2;
+
+    img {
+      @include br2;
+      @include no-drag;
+
+      overflow: hidden;
+      display: flex;
+
+      max-width: inherit;
+      max-height: inherit;
+      height: inherit;
+      width: inherit;
+      object-fit: cover;
+
+      height: 4rem;
+      width: 6rem;
+    }
+  }
+
+  &--button {
+    @include bs1;
+    @include primary-font;
+    @include t11;
+    @include bold;
+    @include center;
+    @include secondary-white;
+    @include br2;
+    @include clickable;
+    @include dbo2;
+
+    background-color: transparent;
+    border: none;
+
+    &:active {
+      @include transition-press;
+    }
+
+    &:hover {
+      @include op6;
+    }
+
+    flex-direction: column;
+
+    height: 3.7rem;
+    width: 6rem;
+
+    &--count {
+      @include t11;
+      @include bold;
+      @include white;
+      @include secondary-white;
+      @include lhx1;
+    }
+
+    &--text {
+      @include t12;
+      @include semi-bold;
+      @include white;
+      @include secondary-white;
+      @include lhx1;
+    }
   }
 }
 
@@ -114,8 +187,9 @@
     }
 
     &--button {
-      height: 3rem;
+      height: 2.7rem;
       width: 5rem;
+      border-radius: 0.7em;
 
       &--count {
         @include t11;
@@ -167,79 +241,5 @@
     @include semi-bold;
     @include black;
     @include tertiary-white;
-  }
-}
-
-.folio-project-media {
-  @include pt1;
-  @include center;
-
-  flex-direction: row;
-  justify-content: space-between;
-  &--img {
-    @include no-drag;
-    @include br2;
-
-    img {
-      @include br2;
-      @include no-drag;
-
-      overflow: hidden;
-      display: flex;
-
-      max-width: inherit;
-      max-height: inherit;
-      height: inherit;
-      width: inherit;
-      object-fit: cover;
-
-      height: 4rem;
-      width: 6rem;
-    }
-  }
-
-  &--button {
-    @include bs1;
-    @include primary-font;
-    @include t11;
-    @include bold;
-    @include center;
-    @include secondary-black;
-    @include br2;
-    @include clickable;
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      @include transition-press;
-    }
-
-    &:hover {
-      @include op6;
-    }
-
-    flex-direction: column;
-
-    height: 4rem;
-    width: 6rem;
-
-    &--count {
-      @include t11;
-      @include bold;
-      @include black;
-      @include secondary-black;
-      @include lhx1;
-    }
-
-    &--text {
-      @include t12;
-      @include semi-bold;
-      @include black;
-      @include tertiary-black;
-      @include lhx1;
-    }
   }
 }
