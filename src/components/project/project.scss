@@ -36,7 +36,7 @@
     @include pb1;
     @include t11;
     @include primary-font;
-    @include white;
+    @include secondary-white;
     @include lhx2;
     @include medium;
 
@@ -222,7 +222,7 @@
   &--title {
     @include t9;
     @include bold;
-    @include white;
+    @include secondary-white;
   }
 
   &--url {
