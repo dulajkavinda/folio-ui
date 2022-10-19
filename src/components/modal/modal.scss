@@ -10,9 +10,10 @@
 
   &__container {
     @include br2;
+    @include px3;
+    @include py3;
     width: 40em;
     background-color: #0e141b;
-    padding: 10px;
     max-width: 90vw;
 
     &--max {
@@ -37,7 +38,16 @@
     @include t10;
     @include py2;
 
-    height: 2em;
+    flex-direction: column;
+    &__subtitle {
+      @include t11;
+      @include tertiary-white;
+      @include regular;
+      @include mt1;
+
+      line-height: 1.2em;
+      text-align: center;
+    }
   }
 
   &__body {

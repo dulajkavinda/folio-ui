@@ -1,10 +1,12 @@
 import React from "react";
 import classnames from "classnames";
-
+import { SizeTypes } from "../types";
 import Button from "../button";
 
 export interface ModalProps {
   title: string;
+  size?: SizeTypes | "max";
+  subtitle?: string;
   classname?: string;
   customStyles?: {};
   onClose?: Function;
@@ -12,14 +14,24 @@ export interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = (props) => {
-  const { classname, customStyles, children, onClose, title } = props;
+  const { classname, customStyles, children, onClose, title, subtitle, size } =
+    props;
 
-  const styles = classnames("folio-modal", classname);
+  const styles = classnames(
+    "folio-modal__container",
+    `folio-modal__container--${size}`,
+    classname,
+  );
   return (
-    <div style={{ ...customStyles }} className={styles}>
-      <div className="folio-modal__container">
+    <div
+      className="folio-modal"
+      role="presentation"
+      onClick={() => (onClose ? onClose() : null)}
+    >
+      <div style={{ ...customStyles }} className={styles}>
         <div className="folio-modal__header">
           <div className="folio-modal__header__title">{title}</div>
+          <div className="folio-modal__header__subtitle">{subtitle}</div>
         </div>
         <div className="folio-modal__body">{children}</div>
         {onClose && (
@@ -39,6 +51,8 @@ Modal.defaultProps = {
   onClose: () => {},
   classname: "",
   children: null,
+  subtitle: "",
+  size: "medium",
 };
 
 export default Modal;
