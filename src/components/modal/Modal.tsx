@@ -12,11 +12,20 @@ export interface ModalProps {
   customStyles?: {};
   onClose?: Function;
   children?: React.ReactNode;
+  showCloseButton?: boolean;
 }
 
 const Modal: React.FC<ModalProps> = (props) => {
-  const { classname, customStyles, children, onClose, title, subtitle, size } =
-    props;
+  const {
+    classname,
+    customStyles,
+    children,
+    onClose,
+    title,
+    subtitle,
+    size,
+    showCloseButton,
+  } = props;
 
   const styles = classnames(
     "folio-modal__container",
@@ -39,7 +48,7 @@ const Modal: React.FC<ModalProps> = (props) => {
           <div className="folio-modal__header__subtitle">{subtitle}</div>
         </div>
         <div className="folio-modal__body">{children}</div>
-        {onClose && (
+        {onClose && showCloseButton && (
           <div className="folio-modal__footer">
             <Button onClick={() => onClose()} color="dark">
               Close
@@ -58,6 +67,7 @@ Modal.defaultProps = {
   children: null,
   subtitle: "",
   size: "medium",
+  showCloseButton: true,
 };
 
 export default Modal;
