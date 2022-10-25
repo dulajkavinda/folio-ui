@@ -12,6 +12,7 @@
     @include br2;
     @include px3;
     @include py3;
+
     width: 40em;
     background-color: #0e141b;
     max-width: 90vw;
@@ -47,6 +48,18 @@
 
       line-height: 1.2em;
       text-align: center;
+    }
+
+    &__close {
+      @include center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 2em;
+
+      div:hover {
+        @include clickable;
+        opacity: 0.8;
+      }
     }
   }
 

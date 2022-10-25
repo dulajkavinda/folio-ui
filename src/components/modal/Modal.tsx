@@ -2,6 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import { SizeTypes } from "../types";
 import Button from "../button";
+import Icon from "../icon";
 
 export interface ModalProps {
   title: string;
@@ -23,12 +24,16 @@ const Modal: React.FC<ModalProps> = (props) => {
     classname,
   );
   return (
-    <div
-      className="folio-modal"
-      role="presentation"
-      onClick={() => (onClose ? onClose() : null)}
-    >
+    <div className="folio-modal" role="presentation">
       <div style={{ ...customStyles }} className={styles}>
+        <div className="folio-modal__header__close">
+          <div
+            role="presentation"
+            onClick={onClose ? () => onClose() : () => null}
+          >
+            <Icon size="5" symbol="close" />
+          </div>
+        </div>
         <div className="folio-modal__header">
           <div className="folio-modal__header__title">{title}</div>
           <div className="folio-modal__header__subtitle">{subtitle}</div>

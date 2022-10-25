@@ -9,6 +9,7 @@ import Email from "../../assets/icons/email.svg";
 import Dark from "../../assets/icons/dark.svg";
 import Read from "../../assets/icons/read.svg";
 import Search from "../../assets/icons/search.svg";
+import Close from "../../assets/icons/close.svg";
 import { ColorTypesDL } from "../../types";
 
 export type IconSize =
@@ -37,7 +38,8 @@ export type IconSymbol =
   | "email"
   | "dark"
   | "read"
-  | "search";
+  | "search"
+  | "close";
 
 export interface Props {
   id?: string;
@@ -56,6 +58,7 @@ const images = {
   dark: Dark,
   read: Read,
   search: Search,
+  close: Close,
 };
 
 const Icon: React.FC<Props> = (props) => {
