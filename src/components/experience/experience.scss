@@ -6,8 +6,8 @@
 .conatiner {
   @include white;
   @include p2;
-  @include br2;
-  @include db3;
+  @include br3;
+  @include bg-secondary-black;
 
   justify-content: flex-start;
   flex-direction: column;
@@ -103,10 +103,10 @@
       &__description {
         @include secondary-white;
         @include t11;
-        @include regular;
+        @include semi-bold;
         @include center;
         @include lhx3;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.05em;
       }
 
       &__items > div {
@@ -115,9 +115,9 @@
         @include br1;
         @include p1;
         @include t13;
-        @include regular;
+        @include semi-bold;
         @include secondary-white;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.1em;
       }
 
       &__item {

@@ -1,6 +1,6 @@
 {
   "name": "folio-ui",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "",
   "scripts": {
     "build": "rollup -c",

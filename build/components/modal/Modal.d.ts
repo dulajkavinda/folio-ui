@@ -8,6 +8,7 @@ export interface ModalProps {
     customStyles?: {};
     onClose?: Function;
     children?: React.ReactNode;
+    showCloseButton?: boolean;
 }
 declare const Modal: React.FC<ModalProps>;
 export default Modal;
