@@ -25,6 +25,7 @@ export type ProjectProps = {
     onClickViewMore?: Function;
   };
   category?: string;
+  showMedia?: boolean;
 };
 
 type Image = {
@@ -56,6 +57,7 @@ const Project: React.FC<ProjectProps> = (props) => {
     previews,
     buttonPress,
     category,
+    showMedia,
   } = props;
   const styles = classNames.default("folio-project", `folio-project--${size}`);
 
@@ -66,7 +68,7 @@ const Project: React.FC<ProjectProps> = (props) => {
   };
 
   return (
-    <div className={styles}>
+    <div style={{ border: "none" }} className={styles}>
       <div className="folio-project-header">
         <div className="folio-project-header--img">
           <img alt={alt} src={src} />
@@ -92,26 +94,28 @@ const Project: React.FC<ProjectProps> = (props) => {
       <div className="folio-project-body">
         {description?.substring(0, projectConstants.MAX_CHARACTERS_DESCRIPTION)}
       </div>
-      <div className="folio-project-media">
-        {previews && previews.length === 3 && renderPreviews(previews)}
-        {previews && previews.length > 3 && (
-          <>
-            {renderPreviews(previews.slice(0, 2))}
-            <button
-              onClick={onClickViewMore}
-              type="button"
-              className="folio-project-media--button"
-            >
-              <span className="folio-project-media--button--count">
-                {previews.length - 2}
-              </span>
-              <span className="folio-project-media--button--text">
-                {projectConstants.PROJECT_VIEW_MORE_TEXT}
-              </span>
-            </button>
-          </>
-        )}
-      </div>
+      {showMedia && (
+        <div className="folio-project-media">
+          {previews && previews.length === 3 && renderPreviews(previews)}
+          {previews && previews.length > 3 && (
+            <>
+              {renderPreviews(previews.slice(0, 2))}
+              <button
+                onClick={onClickViewMore}
+                type="button"
+                className="folio-project-media--button"
+              >
+                <span className="folio-project-media--button--count">
+                  {previews.length - 2}
+                </span>
+                <span className="folio-project-media--button--text">
+                  {projectConstants.PROJECT_VIEW_MORE_TEXT}
+                </span>
+              </button>
+            </>
+          )}
+        </div>
+      )}
       <div className="folio-project-footer">
         <div className="folio-project-footer--button">
           <Button
@@ -162,6 +166,7 @@ Project.defaultProps = {
     onClickLink: () => {},
   },
   category: "",
+  showMedia: true,
 };
 
 export default Project;

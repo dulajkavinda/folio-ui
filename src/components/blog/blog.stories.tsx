@@ -11,6 +11,8 @@ export default {
 const Template: ComponentStory<typeof Blog> = (args) => <Blog {...args} />;
 
 export const Primary = Template.bind({});
+export const Small = Template.bind({});
+export const Medium = Template.bind({});
 
 Primary.args = {
   title:
@@ -21,4 +23,27 @@ Primary.args = {
   category: "🧳 News and Media",
   stack: ["graphql", "graphql", "graphql", "graphql", "graphql", "graphql"],
   link: "/get",
+  size: "large",
+};
+
+Small.args = {
+  title:
+    "How I Built a Multi-Player Online card game using React and WebSockets!",
+  date: "14 Aug",
+  description: "",
+  category: "🧳 News and Media",
+  stack: ["graphql", "graphql", "graphql", "graphql", "graphql", "graphql"],
+  link: "/get",
+  size: "small",
+};
+
+Medium.args = {
+  title:
+    "How I Built a Multi-Player Online card game using React and WebSockets!",
+  date: "14 Aug",
+  description: "",
+  category: "🧳 News and Media",
+  stack: ["graphql", "graphql", "graphql", "graphql", "graphql", "graphql"],
+  link: "/get",
+  size: "medium",
 };

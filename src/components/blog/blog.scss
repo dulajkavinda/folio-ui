@@ -10,6 +10,38 @@
     @include clickable;
     height: max-content;
 
+    &--small {
+      width: 20rem;
+      @include lhx3;
+      .blogpost_main__title {
+        @include t11;
+      }
+      .blogpost_main__info {
+        padding: 0;
+        @include mt2;
+      }
+      .blogpost_main__description {
+        padding: 0;
+        @include mt2;
+      }
+    }
+
+    &--medium {
+      width: 30rem;
+      @include lhx3;
+      .blogpost_main__title {
+        @include t11;
+      }
+      .blogpost_main__info {
+        padding: 0;
+        @include mt2;
+      }
+      .blogpost_main__description {
+        padding: 0;
+        @include mt2;
+      }
+    }
+
     &:hover {
       @include transition-opacity;
 

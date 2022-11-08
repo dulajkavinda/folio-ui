@@ -6,6 +6,7 @@ import Button from "../button";
 import Icon from "../icon";
 import { ColorTypesDL } from "../types";
 import { IconSymbol } from "../icon/icon";
+import { SizeTypes } from "../../types";
 
 export interface Props {
   title: string;
@@ -16,20 +17,33 @@ export interface Props {
   color?: ColorTypesDL;
   classname?: string;
   link: string;
+  size?: SizeTypes;
+  customStyles?: React.CSSProperties;
 }
 
 const Blog: React.FunctionComponent<Props> = (props: Props) => {
-  const { classname, color, title, description, category, date, stack, link } =
-    props;
+  const {
+    classname,
+    color,
+    title,
+    description,
+    category,
+    date,
+    stack,
+    link,
+    size,
+    customStyles,
+  } = props;
 
   const styles = classnames(
     "blogpost_container",
     `blogpost_container--${color}`,
+    `blogpost_container--${size}`,
     classname,
   );
 
   return (
-    <div className={styles}>
+    <div style={customStyles} className={styles}>
       <div className="blogpost_main">
         <div className="blogpost_main__title">{title}</div>
         <div className="blogpost_main__info">
@@ -37,18 +51,23 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
           <Label>{category}</Label>
         </div>
 
-        <div className="blogpost_main__description">{description}</div>
-        <div className="blogpost_main__footer">
-          <a style={{ textDecoration: "none" }} href={link}>
-            <Button icon={<Icon size="4" symbol="read" />} color="dark">
-              Read More
-            </Button>
-          </a>
+        {description?.length > 0 && (
+          <div className="blogpost_main__description">{description}</div>
+        )}
 
-          {stack?.length !== 0 && (
-            <TechStack size="small" type="bar" icons={stack || []} />
-          )}
-        </div>
+        {size === "large" && (
+          <div className="blogpost_main__footer">
+            <a style={{ textDecoration: "none" }} href={link}>
+              <Button icon={<Icon size="4" symbol="read" />} color="dark">
+                Read More
+              </Button>
+            </a>
+
+            {stack?.length !== 0 && (
+              <TechStack size="small" type="bar" icons={stack || []} />
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -58,6 +77,8 @@ Blog.defaultProps = {
   color: "light",
   classname: "",
   stack: [],
+  size: "small",
+  customStyles: {},
 };
 
 export default Blog;

@@ -32,6 +32,7 @@ Primary.args = {
     "graphql",
   ],
   disable: [],
+  showMedia: false,
   size: "medium",
   image: { src: "https://via.placeholder.com/300x200", alt: "sided logo" },
   previews: [

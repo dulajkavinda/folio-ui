@@ -18,6 +18,7 @@ export declare type ProjectProps = {
         onClickViewMore?: Function;
     };
     category?: string;
+    showMedia?: boolean;
 };
 declare type Image = {
     src: string;

@@ -111,12 +111,11 @@
 
       &__items > div {
         @include center;
-        @include db1;
         @include br1;
         @include p1;
         @include t13;
         @include semi-bold;
-        @include secondary-white;
+        @include bg-black;
         letter-spacing: 0.1em;
       }
 
