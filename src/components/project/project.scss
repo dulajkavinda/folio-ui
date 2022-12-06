@@ -46,7 +46,7 @@
   }
 
   &-footer {
-    @include pt1;
+    @include pt3;
     @include center;
     flex-direction: row;
     justify-content: space-between;
@@ -91,9 +91,6 @@
     @include br2;
     @include clickable;
     @include dbo2;
-
-    background-color: transparent;
-    border: none;
 
     &:active {
       @include transition-press;

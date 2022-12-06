@@ -122,6 +122,7 @@ const Project: React.FC<ProjectProps> = (props) => {
             color="dark"
             onClick={buttonPress?.onClickCaseStudy}
             size={size}
+            customStyles={{ backgroundColor: "#1e262f" }}
           >
             {size === sizeConstants.SMALL &&
             projectConstants.PROJECT_CASE_BTN_TEXT.length > 10
@@ -135,6 +136,7 @@ const Project: React.FC<ProjectProps> = (props) => {
             onClick={buttonPress?.onClickGithub}
             icon={<Icon size="3" symbol="github" />}
             size={size}
+            customStyles={{ backgroundColor: "#1e262f" }}
           >
             {projectConstants.PROJECT_GITHUB_BTN_TEXT}
           </Button>
@@ -145,6 +147,7 @@ const Project: React.FC<ProjectProps> = (props) => {
             onClick={buttonPress?.onClickLink}
             icon={<Icon size="3" symbol="link" />}
             size={size}
+            customStyles={{ backgroundColor: "#1e262f" }}
           >
             {projectConstants.PROJECT_LINK_BTN_TEXT}
           </Button>

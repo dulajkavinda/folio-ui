@@ -43,15 +43,7 @@
     }
 
     &:hover {
-      @include transition-opacity;
-
-      .blogpost_main__title {
-        @include op6;
-      }
-
-      .blogpost_main__info {
-        @include op6;
-      }
+      @include hover(1.001, 0.3s, 0.9);
     }
   }
 

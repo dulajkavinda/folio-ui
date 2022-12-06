@@ -2,6 +2,7 @@ import React from "react";
 export declare type DropdownProps = {
     data: DropdownData[];
     value?: Function;
+    customStyles?: {};
 };
 export declare type DropdownData = {
     label: string;

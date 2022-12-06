@@ -26,7 +26,7 @@ const Search: React.FC<SearchProps> = (props) => {
   return (
     <div style={{ ...customStyles }} className={styles}>
       <div className="folio-search__container">
-        <Icon color="light" symbol="search" size="2" />
+        <Icon symbol="search" size="2" />
         <input
           onChange={onChangeText}
           placeholder="Search"

@@ -61,7 +61,7 @@
         }
 
         &__link:hover {
-          opacity: 0.5;
+          @include hover(1);
         }
       }
 
@@ -115,7 +115,9 @@
         @include p1;
         @include t13;
         @include semi-bold;
-        @include bg-black;
+        @include bg-tertiary-black;
+
+        border: 1px dashed $tertiary-white;
         letter-spacing: 0.1em;
       }
 

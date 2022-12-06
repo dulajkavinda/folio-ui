@@ -6,6 +6,11 @@ $white: #f2f5f7;
 $secondary-white: #d3d3d3;
 $tertiary-white: #7e8c9a;
 
+$success: #59ce8f;
+$error: #f96666;
+$warning: #ffff00;
+$casual: #2772bd;
+
 @mixin bg-white {
   background-color: $secondary-white;
 }

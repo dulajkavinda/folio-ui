@@ -1,16 +1,17 @@
 .folio-search {
   @include center;
-  @include db3;
   @include br2;
   @include clickable;
   @include transition-opacity;
   @include transition-colors;
+  @include bg-tertiary-black;
 
   &__container {
     @include center;
     @include primary-font;
     @include t11;
-    @include px1;
+    @include p1;
+    @include px2;
 
     width: 100%;
     justify-content: space-between;
@@ -22,6 +23,7 @@
     @include br2;
     @include t11;
     @include secondary-white;
+
     background-color: transparent;
     width: 98%;
   }

@@ -4,7 +4,6 @@
   @include t11;
   @include center;
   @include tertiary-white;
-  @include db1;
   @include transition-colors;
   @include transition-opacity;
 
@@ -22,11 +21,13 @@
 
   &:active {
     @include transition-press;
+    transition-duration: 0.2s;
+    outline: dashed 1px $secondary-white;
   }
 }
 
 .folio-button:hover {
-  @include op6;
+  @include op7;
 }
 
 .folio-button--light {
@@ -37,12 +38,12 @@
 }
 
 .folio-button--dark {
-  @include db2;
   @include bg-white;
-  @include tertiary-white;
+  @include bg-secondary-black;
+  @include secondary-white;
   @include px3;
   @include py2;
-  background-color: transparent;
+  border: none;
 }
 
 .folio-button--small {

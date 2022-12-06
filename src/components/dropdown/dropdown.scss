@@ -1,11 +1,11 @@
 .folio-dropdown {
   &_container {
     @include center;
-    @include db3;
     @include br2;
     @include clickable;
     @include transition-opacity;
     @include transition-colors;
+    @include bg-tertiary-black;
 
     flex-direction: column;
     position: relative;

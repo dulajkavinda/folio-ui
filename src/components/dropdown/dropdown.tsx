@@ -4,6 +4,7 @@ import * as classnames from "classnames";
 export type DropdownProps = {
   data: DropdownData[];
   value?: Function;
+  customStyles?: {};
 };
 
 export type DropdownData = {
@@ -24,10 +25,10 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
     }
   };
 
-  const { data, value } = props;
+  const { data, value, customStyles } = props;
 
   return (
-    <div className={styles}>
+    <div style={{ ...customStyles }} className={styles}>
       <div className="folio-dropdown_container">
         <span
           role="presentation"
@@ -74,6 +75,6 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   );
 };
 
-Dropdown.defaultProps = { value: () => {} };
+Dropdown.defaultProps = { value: () => {}, customStyles: {} };
 
 export default Dropdown;

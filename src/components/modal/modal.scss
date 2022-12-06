@@ -1,3 +1,23 @@
+@keyframes fadein {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bg-color {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(#1e262f, 0.6);
+  }
+}
+
 .folio-modal {
   @include center;
   z-index: 1000000;
@@ -6,12 +26,16 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(#1e262f, 0.8);
+  background-color: rgba(#1e262f, 0.6);
+
+  animation: bg-color 0.3s;
 
   &__container {
     @include br2;
     @include px3;
     @include py3;
+
+    animation: fadein 0.2s;
 
     width: 40em;
     background-color: #0e141b;
@@ -58,7 +82,7 @@
 
       div:hover {
         @include clickable;
-        opacity: 0.8;
+        opacity: 0.6;
       }
     }
   }

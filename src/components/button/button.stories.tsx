@@ -26,7 +26,7 @@ export const IconButtonTransparentSmall = Template.bind({});
 Primary.args = {
   id: "string",
   onClick: action("onClick"),
-  color: "light",
+  color: "dark",
   size: "medium",
   disabled: false,
   children: "Send Email",
@@ -35,7 +35,7 @@ Primary.args = {
 Large.args = {
   id: "string",
   onClick: action("onClick"),
-  color: "light",
+  color: "dark",
   size: "large",
   disabled: false,
   children: "Send Email",

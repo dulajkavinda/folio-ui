@@ -18,6 +18,7 @@ export const Square = Template.bind({});
 export const Large = Template.bind({});
 
 Primary.args = {
+  customStyles: { width: "200px" },
   data: [
     {
       label: "💼 News and Media",
