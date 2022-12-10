@@ -32,6 +32,8 @@ import DotsHexagon from "../../assets/icons/dots-hexagon.svg";
 import DotsSquare from "../../assets/icons/dots-square.svg";
 import DotsTriangle from "../../assets/icons/dots-triangle.svg";
 import DotsVertical from "../../assets/icons/dots-vertical.svg";
+import Send from "../../assets/icons/send.svg";
+
 import { ColorTypesDL } from "../../types";
 
 export type IconSize =
@@ -83,7 +85,8 @@ export type IconSymbol =
   | "dotshexagon"
   | "dotssquare"
   | "dotstriangle"
-  | "dotsvertical";
+  | "dotsvertical"
+  | "send";
 
 export interface Props {
   id?: string;
@@ -125,6 +128,7 @@ const images = {
   dotssquare: DotsSquare,
   dotstriangle: DotsTriangle,
   dotsvertical: DotsVertical,
+  send: Send,
 };
 
 const Icon: React.FC<Props> = (props) => {
