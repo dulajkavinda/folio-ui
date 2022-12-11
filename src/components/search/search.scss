@@ -12,9 +12,13 @@
     @include t11;
     @include p1;
     @include px2;
-
+    @include br2;
     width: 100%;
     justify-content: space-between;
+
+    &:hover {
+      border: 1px dashed $tertiary-white;
+    }
   }
 
   &__input {

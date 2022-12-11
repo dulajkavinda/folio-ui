@@ -29,7 +29,12 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
 
   return (
     <div style={{ ...customStyles }} className={styles}>
-      <div className="folio-dropdown_container">
+      <div
+        style={{
+          border: dropdownItems.length > 0 ? "1px dashed #7e8c9a" : "",
+        }}
+        className="folio-dropdown_container"
+      >
         <span
           role="presentation"
           className="folio-dropdown_title"
