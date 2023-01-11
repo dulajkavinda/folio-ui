@@ -33,6 +33,7 @@ import DotsSquare from "../../assets/icons/dots-square.svg";
 import DotsTriangle from "../../assets/icons/dots-triangle.svg";
 import DotsVertical from "../../assets/icons/dots-vertical.svg";
 import Send from "../../assets/icons/send.svg";
+import Youtube from "../../assets/icons/youtube.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -86,7 +87,8 @@ export type IconSymbol =
   | "dotssquare"
   | "dotstriangle"
   | "dotsvertical"
-  | "send";
+  | "send"
+  | "youtube";
 
 export interface Props {
   id?: string;
@@ -129,6 +131,7 @@ const images = {
   dotstriangle: DotsTriangle,
   dotsvertical: DotsVertical,
   send: Send,
+  youtube: Youtube,
 };
 
 const Icon: React.FC<Props> = (props) => {

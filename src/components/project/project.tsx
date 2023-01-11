@@ -19,10 +19,10 @@ export type ProjectProps = {
   description?: string;
   previews?: Image[];
   buttonPress?: {
-    onClickCaseStudy?: Function;
-    onClickGithub?: Function;
-    onClickLink?: Function;
-    onClickViewMore?: Function;
+    onClickCaseStudy?: Function | undefined;
+    onClickGithub?: Function | undefined;
+    onClickLink?: Function | undefined;
+    onClickViewMore?: Function | undefined;
   };
   category?: string;
   showMedia?: boolean;
@@ -105,11 +105,11 @@ const Project: React.FC<ProjectProps> = (props) => {
                 type="button"
                 className="folio-project-media--button"
               >
-                <span className="folio-project-media--button--count">
+                {/* <span className="folio-project-media--button--count">
                   {previews.length - 2}
-                </span>
+                </span> */}
                 <span className="folio-project-media--button--text">
-                  {projectConstants.PROJECT_VIEW_MORE_TEXT}
+                  <Icon size="6" symbol="youtube" />
                 </span>
               </button>
             </>
@@ -131,15 +131,28 @@ const Project: React.FC<ProjectProps> = (props) => {
           </Button>
         </div>
         <div className="folio-project-footer--button">
-          <Button
-            color="dark"
-            onClick={buttonPress?.onClickGithub}
-            icon={<Icon size="3" symbol="github" />}
-            size={size}
-            customStyles={{ backgroundColor: "#1e262f" }}
-          >
-            {projectConstants.PROJECT_GITHUB_BTN_TEXT}
-          </Button>
+          {buttonPress?.onClickGithub ? (
+            <Button
+              color="dark"
+              onClick={buttonPress?.onClickGithub}
+              icon={<Icon size="3" symbol="github" />}
+              size={size}
+              customStyles={{ backgroundColor: "#1e262f" }}
+            >
+              {projectConstants.PROJECT_GITHUB_BTN_TEXT}
+            </Button>
+          ) : (
+            <Button
+              color="dark"
+              onClick={buttonPress?.onClickGithub}
+              icon={<Icon size="3" symbol="github" />}
+              size={size}
+              disabled
+              customStyles={{ backgroundColor: "#1e262f", opacity: 0.5 }}
+            >
+              Private
+            </Button>
+          )}
         </div>
         <div className="folio-project-footer--button">
           <Button
@@ -164,9 +177,9 @@ Project.defaultProps = {
   description: "",
   previews: [],
   buttonPress: {
-    onClickCaseStudy: () => {},
-    onClickGithub: () => {},
-    onClickLink: () => {},
+    onClickCaseStudy: undefined,
+    onClickGithub: undefined,
+    onClickLink: undefined,
   },
   category: "",
   showMedia: true,

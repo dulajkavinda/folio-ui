@@ -15,10 +15,6 @@
     @include br2;
     width: 100%;
     justify-content: space-between;
-
-    &:hover {
-      border: 1px dashed $tertiary-white;
-    }
   }
 
   &__input {

@@ -12,10 +12,10 @@ export declare type ProjectProps = {
     description?: string;
     previews?: Image[];
     buttonPress?: {
-        onClickCaseStudy?: Function;
-        onClickGithub?: Function;
-        onClickLink?: Function;
-        onClickViewMore?: Function;
+        onClickCaseStudy?: Function | undefined;
+        onClickGithub?: Function | undefined;
+        onClickLink?: Function | undefined;
+        onClickViewMore?: Function | undefined;
     };
     category?: string;
     showMedia?: boolean;

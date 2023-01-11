@@ -32,9 +32,12 @@ Primary.args = {
     "graphql",
   ],
   disable: [],
-  showMedia: false,
+
   size: "medium",
-  image: { src: "https://via.placeholder.com/300x200", alt: "sided logo" },
+  image: {
+    src: "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e0d398ad-6cff-4c02-95f4-b3c9c7e2000e/unnamed.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230111%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230111T070725Z&X-Amz-Expires=3600&X-Amz-Signature=74610371b793cb95b6cf957da2aabd3b5ac1f1d5f5625c630bc034aacbbdbf97&X-Amz-SignedHeaders=host&x-id=GetObject",
+    alt: "sided logo",
+  },
   previews: [
     { src: "https://via.placeholder.com/300x200", alt: "sided logo" },
     { src: "https://via.placeholder.com/300x200", alt: "sided logo" },
@@ -43,7 +46,6 @@ Primary.args = {
   ],
   buttonPress: {
     onClickCaseStudy: action("onClickCaseStudy"),
-    onClickGithub: action("onClickGithub"),
     onClickLink: action("onClickLink"),
     onClickViewMore: action("onClickViewMore"),
   },

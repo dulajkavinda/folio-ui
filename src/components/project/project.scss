@@ -20,7 +20,12 @@
       @include bg-black;
       width: 6rem;
       height: 6rem;
+
+      img {
+        @include br2;
+      }
     }
+
     &--detials {
       width: 8rem;
       height: 6rem;
@@ -90,7 +95,9 @@
     @include secondary-white;
     @include br2;
     @include clickable;
-    @include dbo2;
+
+    background-color: #233242;
+    border: none;
 
     &:active {
       @include transition-press;
