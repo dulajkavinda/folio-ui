@@ -43,6 +43,8 @@ import Node from "../../assets/icons/nodejs.svg";
 import Mocha from "../../assets/icons/mocha.svg";
 import Jest from "../../assets/icons/jest.svg";
 import Aws from "../../assets/icons/aws.svg";
+import TS from "../../assets/icons/ts.svg";
+import JS from "../../assets/icons/js.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -106,7 +108,9 @@ export type IconSymbol =
   | "node"
   | "mocha"
   | "jest"
-  | "aws";
+  | "aws"
+  | "ts"
+  | "js";
 
 export interface Props {
   id?: string;
@@ -159,6 +163,8 @@ const images = {
   mocha: Mocha,
   jest: Jest,
   aws: Aws,
+  ts: TS,
+  js: JS,
 };
 
 const Icon: React.FC<Props> = (props) => {
