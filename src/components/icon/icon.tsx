@@ -34,6 +34,15 @@ import DotsTriangle from "../../assets/icons/dots-triangle.svg";
 import DotsVertical from "../../assets/icons/dots-vertical.svg";
 import Send from "../../assets/icons/send.svg";
 import Youtube from "../../assets/icons/youtube.svg";
+import Scss from "../../assets/icons/scss.svg";
+import Docker from "../../assets/icons/docker.svg";
+import Python from "../../assets/icons/python.svg";
+import ReactJS from "../../assets/icons/react.svg";
+import NextJS from "../../assets/icons/nextjs.svg";
+import Node from "../../assets/icons/nodejs.svg";
+import Mocha from "../../assets/icons/mocha.svg";
+import Jest from "../../assets/icons/jest.svg";
+import Aws from "../../assets/icons/aws.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -88,7 +97,16 @@ export type IconSymbol =
   | "dotstriangle"
   | "dotsvertical"
   | "send"
-  | "youtube";
+  | "youtube"
+  | "scss"
+  | "docker"
+  | "python"
+  | "reactjs"
+  | "nextjs"
+  | "node"
+  | "mocha"
+  | "jest"
+  | "aws";
 
 export interface Props {
   id?: string;
@@ -132,6 +150,15 @@ const images = {
   dotsvertical: DotsVertical,
   send: Send,
   youtube: Youtube,
+  scss: Scss,
+  docker: Docker,
+  python: Python,
+  reactjs: ReactJS,
+  nextjs: NextJS,
+  node: Node,
+  mocha: Mocha,
+  jest: Jest,
+  aws: Aws,
 };
 
 const Icon: React.FC<Props> = (props) => {
