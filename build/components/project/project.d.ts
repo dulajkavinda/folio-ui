@@ -16,6 +16,8 @@ export declare type ProjectProps = {
         onClickGithub?: Function | undefined;
         onClickLink?: Function | undefined;
         onClickViewMore?: Function | undefined;
+        onClickYoutube?: Function | undefined;
+        onClickImages?: Function | undefined;
     };
     category?: string;
     showMedia?: boolean;

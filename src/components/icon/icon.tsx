@@ -45,6 +45,7 @@ import Jest from "../../assets/icons/jest.svg";
 import Aws from "../../assets/icons/aws.svg";
 import TS from "../../assets/icons/ts.svg";
 import JS from "../../assets/icons/js.svg";
+import Images from "../../assets/icons/images.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -110,7 +111,8 @@ export type IconSymbol =
   | "jest"
   | "aws"
   | "ts"
-  | "js";
+  | "js"
+  | "images";
 
 export interface Props {
   id?: string;
@@ -165,6 +167,7 @@ const images = {
   aws: Aws,
   ts: TS,
   js: JS,
+  images: Images,
 };
 
 const Icon: React.FC<Props> = (props) => {

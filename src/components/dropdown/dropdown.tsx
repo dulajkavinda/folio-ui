@@ -68,6 +68,10 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
             role="presentation"
             className="folio-dropdown_item folio-dropdown_item__close"
             onClick={() => {
+              if (value) {
+                value(null);
+              }
+
               setDropdownItems([]);
               setSeltectedItem(null);
             }}

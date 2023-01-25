@@ -23,6 +23,8 @@ export type ProjectProps = {
     onClickGithub?: Function | undefined;
     onClickLink?: Function | undefined;
     onClickViewMore?: Function | undefined;
+    onClickYoutube?: Function | undefined;
+    onClickImages?: Function | undefined;
   };
   category?: string;
   showMedia?: boolean;
@@ -59,11 +61,18 @@ const Project: React.FC<ProjectProps> = (props) => {
     category,
     showMedia,
   } = props;
+
   const styles = classNames.default("folio-project", `folio-project--${size}`);
 
-  const onClickViewMore = (e: MouseEvent) => {
-    if (buttonPress?.onClickViewMore) {
-      buttonPress.onClickViewMore(e, props);
+  const onClickYoutube = (e: MouseEvent) => {
+    if (buttonPress?.onClickYoutube) {
+      buttonPress.onClickYoutube(e, props);
+    }
+  };
+
+  const onClickImages = (e: MouseEvent) => {
+    if (buttonPress?.onClickImages) {
+      buttonPress.onClickImages(e, props);
     }
   };
 
@@ -91,31 +100,42 @@ const Project: React.FC<ProjectProps> = (props) => {
           />
         </div>
       </div>
+
       <div className="folio-project-body">
         {description?.substring(0, projectConstants.MAX_CHARACTERS_DESCRIPTION)}
       </div>
+
       {showMedia && (
         <div className="folio-project-media">
           {previews && previews.length === 3 && renderPreviews(previews)}
           {previews && previews.length > 3 && (
             <>
-              {renderPreviews(previews.slice(0, 2))}
               <button
-                onClick={onClickViewMore}
+                onClick={onClickYoutube}
                 type="button"
-                className="folio-project-media--button"
+                className="folio-project-media--button--main"
               >
                 {/* <span className="folio-project-media--button--count">
-                  {previews.length - 2}
+                  Screenshots
                 </span> */}
                 <span className="folio-project-media--button--text">
                   <Icon size="6" symbol="youtube" />
+                </span>
+              </button>
+              <button
+                onClick={onClickImages}
+                type="button"
+                className="folio-project-media--button"
+              >
+                <span className="folio-project-media--button--text">
+                  <Icon size="5" symbol="images" />
                 </span>
               </button>
             </>
           )}
         </div>
       )}
+
       <div className="folio-project-footer">
         <div className="folio-project-footer--button">
           <Button
@@ -180,6 +200,9 @@ Project.defaultProps = {
     onClickCaseStudy: undefined,
     onClickGithub: undefined,
     onClickLink: undefined,
+    onClickViewMore: undefined,
+    onClickYoutube: undefined,
+    onClickImages: undefined,
   },
   category: "",
   showMedia: true,
