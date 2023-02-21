@@ -43,7 +43,7 @@
     }
 
     &:hover {
-      @include hover(1.001, 0.3s, 0.9);
+      @include hover(1, 0.3s, 0.9);
     }
   }
 
