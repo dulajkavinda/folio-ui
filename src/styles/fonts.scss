@@ -103,9 +103,9 @@ $lh-base: 0.4rem;
 }
 
 @mixin lhx4 {
-  line-height: 4 * $lh-base;
+  line-height: 3.5 * $lh-base;
 }
 
 @mixin lhx5 {
-  line-height: 5 * $lh-base;
+  line-height: 4 * $lh-base;
 }

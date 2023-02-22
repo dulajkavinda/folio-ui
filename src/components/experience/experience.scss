@@ -46,7 +46,7 @@
 
       &__title {
         @include t10;
-        @include bold;
+        @include semi-bold;
       }
 
       &__company {
@@ -85,7 +85,7 @@
       flex-direction: column;
       justify-content: space-between;
 
-      width: 70%;
+      width: 60%;
 
       &__title {
         @include t11;

@@ -46,6 +46,8 @@ import Aws from "../../assets/icons/aws.svg";
 import TS from "../../assets/icons/ts.svg";
 import JS from "../../assets/icons/js.svg";
 import Images from "../../assets/icons/images.svg";
+import Plus from "../../assets/icons/plus.svg";
+import Minus from "../../assets/icons/minus.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -112,7 +114,9 @@ export type IconSymbol =
   | "aws"
   | "ts"
   | "js"
-  | "images";
+  | "images"
+  | "plus"
+  | "minus";
 
 export interface Props {
   id?: string;
@@ -168,6 +172,8 @@ const images = {
   ts: TS,
   js: JS,
   images: Images,
+  plus: Plus,
+  minus: Minus,
 };
 
 const Icon: React.FC<Props> = (props) => {

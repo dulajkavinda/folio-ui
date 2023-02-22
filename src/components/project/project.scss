@@ -43,10 +43,9 @@
     @include t11;
     @include primary-font;
     @include secondary-white;
-    @include lhx2;
+    @include lhx3;
     @include medium;
-
-    text-align: justify;
+    text-align: left;
     max-height: 7em;
   }
 
@@ -210,9 +209,10 @@
 
   .folio-project-body {
     @include t12;
-    @include lhx1;
+    @include lhx2;
     @include medium;
     max-height: 8em;
+    letter-spacing: 0.05em;
   }
 
   .folio-project-media {

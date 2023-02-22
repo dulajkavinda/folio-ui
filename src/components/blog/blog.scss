@@ -6,7 +6,7 @@
     @include white;
     @include p3;
     @include primary-font;
-    @include lhx4;
+    @include lhx3;
     @include clickable;
     height: max-content;
 
@@ -52,7 +52,7 @@
       @include white;
       @include semi-bold;
       @include t10;
-      text-align: justify;
+      text-align: start;
     }
 
     &__info {
@@ -70,7 +70,7 @@
       @include t11;
       @include py1;
       @include medium;
-      text-align: justify;
+      text-align: start;
     }
 
     &__footer {
