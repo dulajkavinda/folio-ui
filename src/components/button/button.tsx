@@ -5,13 +5,13 @@ import { SizeTypes, ColorTypesDL } from "../types";
 
 export interface Props {
   id?: string;
-  customStyles?: {};
   onClick?: Function;
   color?: ColorTypesDL;
   size?: SizeTypes;
   disabled?: boolean;
   children: React.ReactNode;
   icon?: React.ReactNode;
+  customStyles?: {};
   classname?: string;
 }
 
@@ -51,6 +51,7 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
       onClick={buttonPress}
       className={styles}
       style={{ ...customStyles }}
+      data-testid="folio-button"
     >
       {icon && <div className="folio-button__icon">{icon}</div>}
       {children}

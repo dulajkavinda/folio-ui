@@ -187,7 +187,15 @@ const Icon: React.FC<Props> = (props) => {
 
   const Image = images[symbol];
 
-  return <img alt={symbol} id={id} className={styles} src={Image} />;
+  return (
+    <img
+      data-testid="folio-icon"
+      alt={symbol}
+      id={id}
+      className={styles}
+      src={Image}
+    />
+  );
 };
 
 Icon.defaultProps = {
