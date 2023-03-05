@@ -19,7 +19,11 @@ const Label: React.FC<LabelProps> = (props) => {
     classname,
   );
 
-  return <div className={styles}>{children}</div>;
+  return (
+    <div data-testid="folio-label" className={styles}>
+      {children}
+    </div>
+  );
 };
 
 Label.defaultProps = {

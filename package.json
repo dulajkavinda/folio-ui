@@ -5,11 +5,11 @@
   "scripts": {
     "build": "rollup -c",
     "sb": "start-storybook -p 6006 -s public",
-    "test": "jest -u",
-    "coverage": "jest --coverage",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint ./src --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest -u",
+    "coverage": "jest --coverage"
   },
   "engines": {
     "node": ">=16.17.0",

@@ -31,6 +31,7 @@
     "src/**/*.ts" /* Include all .ts files in the project. */,
     "src/**/*.tsx" /* Include all .tsx files in the project. */,
     "rollup.config.js", // yep needed these here for now :D
-    "jest.config.js"
+    "jest.config.js",
+    "src/setupTests.js"
   ]
 }

@@ -2,10 +2,11 @@ import * as React from "react";
 import * as classnames from "classnames";
 
 export type AvatarProps = {
+  img: string;
   shape?: "circle" | "square";
   size?: AvatarSize;
-  img: string;
   className?: string;
+  customStyle?: React.CSSProperties;
 };
 
 export type AvatarSize =
@@ -27,7 +28,7 @@ export type AvatarSize =
   | "30";
 
 const Avatar: React.FC<AvatarProps> = (props) => {
-  const { size, shape, img, className } = props;
+  const { size, shape, img, className, customStyle } = props;
 
   const styles = classnames.default(
     "folio-avatar",
@@ -37,7 +38,7 @@ const Avatar: React.FC<AvatarProps> = (props) => {
   );
 
   return (
-    <div className={styles}>
+    <div data-testid="folio-avatar" style={customStyle} className={styles}>
       <img alt="avatar" src={img} />
     </div>
   );
@@ -47,6 +48,7 @@ Avatar.defaultProps = {
   size: "5",
   shape: "circle",
   className: "",
+  customStyle: {},
 };
 
 export default Avatar;

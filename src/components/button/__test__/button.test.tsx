@@ -7,9 +7,11 @@ describe("components/button", () => {
   const btnText = "Hello";
 
   it("should render a button", () => {
-    render(<Button>{btnText}</Button>);
+    const { asFragment } = render(<Button>{btnText}</Button>);
     const primaryButton = screen.getByRole("button");
+
     expect(primaryButton).toHaveClass("folio-button");
+    expect(asFragment).toMatchSnapshot();
   });
 
   it("button should be rendered with a given text", () => {
