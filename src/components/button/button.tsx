@@ -53,7 +53,7 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
       style={{ ...customStyles }}
       data-testid="folio-button"
     >
-      {icon && <div className="folio-button__icon">{icon}</div>}
+      {icon && <div className="folio-button--icon">{icon}</div>}
       {children}
     </button>
   );

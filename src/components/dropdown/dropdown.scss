@@ -1,5 +1,5 @@
 .folio-dropdown {
-  &_container {
+  &-container {
     @include center;
     @include br2;
     @include clickable;
@@ -10,7 +10,7 @@
     flex-direction: column;
     position: relative;
 
-    .folio-dropdown_item {
+    .folio-dropdown-item {
       @include center;
       @include clickable;
       @include primary-font;
@@ -21,17 +21,17 @@
 
       width: 100%;
 
-      &__close {
+      &--close {
         color: rgb(225, 97, 23);
       }
     }
 
-    .folio-dropdown_title {
+    .folio-dropdown-title {
       @include center;
       width: 100%;
     }
 
-    .folio-dropdown_item:hover {
+    .folio-dropdown-item:hover {
       opacity: 0.5;
     }
 

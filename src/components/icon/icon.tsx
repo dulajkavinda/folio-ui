@@ -119,11 +119,11 @@ export type IconSymbol =
   | "minus";
 
 export interface Props {
-  id?: string;
-  className?: string;
+  symbol: IconSymbol;
   size?: IconSize;
   color?: ColorTypesDL;
-  symbol: IconSymbol;
+  className?: string;
+  customStyles?: React.CSSProperties;
 }
 
 const images = {
@@ -177,7 +177,8 @@ const images = {
 };
 
 const Icon: React.FC<Props> = (props) => {
-  const { id, className, size, color, symbol } = props;
+  const { symbol, size, color, className, customStyles } = props;
+
   const styles = classnames.default(
     "folio-icon",
     `folio-icon--${size}`,
@@ -191,9 +192,9 @@ const Icon: React.FC<Props> = (props) => {
     <img
       data-testid="folio-icon"
       alt={symbol}
-      id={id}
       className={styles}
       src={Image}
+      style={{ ...customStyles }}
     />
   );
 };
@@ -202,7 +203,7 @@ Icon.defaultProps = {
   size: "6",
   color: "dark",
   className: "",
-  id: "",
+  customStyles: {},
 };
 
 export default Icon;

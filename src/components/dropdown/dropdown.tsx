@@ -47,12 +47,12 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
         style={{
           border: dropdownItems.length > 0 ? "1px dashed #7e8c9a" : "",
         }}
-        className="folio-dropdown_container"
+        className="folio-dropdown-container"
       >
         <span
           role="presentation"
-          className="folio-dropdown_title"
-          data-testid="folio-dropdown--title"
+          className="folio-dropdown-title"
+          data-testid="folio-dropdown-title"
           onKeyDown={() => openOrCloseDropdownMenu(data)}
           onClick={() => openOrCloseDropdownMenu(data)}
         >
@@ -62,8 +62,8 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
           // eslint-disable-next-line react/jsx-key
           <div
             role="presentation"
-            className="folio-dropdown_item"
-            data-testid={`folio-dropdown--item-${index + 1}`}
+            className="folio-dropdown-item"
+            data-testid={`folio-dropdown-item--${index + 1}`}
             onClick={() => {
               if (value) {
                 value(item.value);
@@ -82,7 +82,8 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
         {dropdownItems.length > 0 && (
           <div
             role="presentation"
-            className="folio-dropdown_item folio-dropdown_item__close"
+            className="folio-dropdown-item folio-dropdown-item--close"
+            data-testid="folio-dropdown-item--close"
             onClick={() => {
               if (value) {
                 value(null);
