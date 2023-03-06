@@ -43,8 +43,8 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
   );
 
   return (
-    <a data-testid="folio-blog" style={{ textDecoration: "none" }} href={link}>
-      <div style={customStyles} className={styles}>
+    <a style={{ textDecoration: "none" }} href={link}>
+      <div data-testid="folio-blog" style={customStyles} className={styles}>
         <div className="folio-blog_main">
           <div className="folio-blog_main__title">{title}</div>
           <div className="folio-blog_main__info">
@@ -53,7 +53,12 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
           </div>
 
           {description?.length > 0 && (
-            <div className="folio-blog_main__description">{description}</div>
+            <div
+              data-testid="folio-blog-description"
+              className="folio-blog_main__description"
+            >
+              {description}
+            </div>
           )}
 
           {size === "large" && (

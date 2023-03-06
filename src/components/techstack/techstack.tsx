@@ -57,7 +57,11 @@ const TechStack: React.FC<TechStackProps> = (props) => {
     `folio-tstack--${type}`,
     className,
   );
-  return <div className={styles}>{renderIcons(icons, size, disable)}</div>;
+  return (
+    <div data-testid="folio-tstack" className={styles}>
+      {renderIcons(icons, size, disable)}
+    </div>
+  );
 };
 
 TechStack.defaultProps = {
