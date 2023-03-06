@@ -15,20 +15,34 @@ export type DropdownData = {
 const Dropdown: React.FC<DropdownProps> = (props) => {
   const [dropdownItems, setDropdownItems] = useState<DropdownData[]>([]);
   const [selectedItem, setSeltectedItem] = useState<DropdownData | null>(null);
+
   const styles = classnames.default("folio-dropdown");
 
   const openOrCloseDropdownMenu = (data: DropdownData[]) => {
     if (dropdownItems.length > 0) {
       setDropdownItems([]);
     } else {
-      setDropdownItems(data);
+      const dataCopy = [...data];
+      if (selectedItem) {
+        const index = data.findIndex(
+          (item: DropdownData) => item.value === selectedItem.value,
+        );
+        dataCopy.splice(index, 1);
+        setDropdownItems(dataCopy);
+      } else {
+        setDropdownItems(data);
+      }
     }
   };
 
   const { data, value, customStyles } = props;
 
   return (
-    <div style={{ ...customStyles }} className={styles}>
+    <div
+      data-testid="folio-dropdown"
+      style={{ ...customStyles }}
+      className={styles}
+    >
       <div
         style={{
           border: dropdownItems.length > 0 ? "1px dashed #7e8c9a" : "",
@@ -38,16 +52,18 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
         <span
           role="presentation"
           className="folio-dropdown_title"
+          data-testid="folio-dropdown--title"
           onKeyDown={() => openOrCloseDropdownMenu(data)}
           onClick={() => openOrCloseDropdownMenu(data)}
         >
           {selectedItem ? selectedItem.label : "Select Category"}
         </span>
-        {dropdownItems.map((item: DropdownData) => (
+        {dropdownItems.map((item: DropdownData, index) => (
           // eslint-disable-next-line react/jsx-key
           <div
             role="presentation"
             className="folio-dropdown_item"
+            data-testid={`folio-dropdown--item-${index + 1}`}
             onClick={() => {
               if (value) {
                 value(item.value);

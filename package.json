@@ -8,7 +8,7 @@
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint ./src --fix",
     "prepare": "husky install",
-    "test": "jest -u",
+    "test": "jest -u --silent",
     "coverage": "jest --coverage"
   },
   "engines": {
