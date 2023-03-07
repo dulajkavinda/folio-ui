@@ -1,7 +1,11 @@
 {
   "name": "folio-ui",
-  "version": "1.7.10",
+  "version": "1.7.12",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "github.com/dulajkavinda/folio-ui"
+  },
   "scripts": {
     "build": "rollup -c",
     "sb": "start-storybook -p 6006 -s public",
