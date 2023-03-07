@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: 📚 checkout
         uses: actions/checkout@v2.1.1
+      - name: ACTIONS_ALLOW_UNSECURE_COMMANDS
+        run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
       - name: 🟢 node
         uses: actions/setup-node@v1.4.2
         with:
