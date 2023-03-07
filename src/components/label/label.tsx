@@ -3,14 +3,15 @@ import * as classnames from "classnames";
 import { ColorTypesDL, SizeTypes } from "../types";
 
 export type LabelProps = {
-  classname?: string;
   children: React.ReactNode;
   color?: ColorTypesDL;
   size?: SizeTypes;
+  classname?: string;
+  customStyles?: React.CSSProperties;
 };
 
 const Label: React.FC<LabelProps> = (props) => {
-  const { classname, children, color, size } = props;
+  const { children, color, size, classname, customStyles } = props;
 
   const styles = classnames.default(
     "folio-label",
@@ -20,7 +21,11 @@ const Label: React.FC<LabelProps> = (props) => {
   );
 
   return (
-    <div data-testid="folio-label" className={styles}>
+    <div
+      data-testid="folio-label"
+      className={styles}
+      style={{ ...customStyles }}
+    >
       {children}
     </div>
   );
@@ -30,6 +35,7 @@ Label.defaultProps = {
   classname: "",
   color: "light",
   size: "medium",
+  customStyles: {},
 };
 
 export default Label;

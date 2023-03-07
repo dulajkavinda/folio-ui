@@ -1,3 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/blog should render 1`] = `[Function]`;
+exports[`components/blog should render blog 1`] = `
+<a
+  href="link"
+  style={
+    {
+      "textDecoration": "none",
+    }
+  }
+>
+  <div
+    className="folio-blog folio-blog--light folio-blog--small"
+    data-testid="folio-blog"
+    style={{}}
+  >
+    <div
+      className="folio-blog_main"
+    >
+      <div
+        className="folio-blog_main__title"
+      >
+        title
+      </div>
+      <div
+        className="folio-blog_main__info"
+      >
+        <div
+          className="folio-blog_main__date"
+        >
+          date
+        </div>
+        <div
+          className="folio-label folio-label--light folio-label--medium"
+          data-testid="folio-label"
+          style={{}}
+        >
+          category
+        </div>
+      </div>
+      <div
+        className="folio-blog_main__description"
+        data-testid="folio-blog-description"
+      >
+        description
+      </div>
+    </div>
+  </div>
+</a>
+`;

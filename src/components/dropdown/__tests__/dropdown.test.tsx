@@ -1,31 +1,32 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import React from "react";
+import renderer from "react-test-renderer";
 import Dropdown from "../dropdown";
 
 describe("components/dropdown", () => {
   it("should render a dropdown", () => {
-    const { asFragment } = render(
-      <Dropdown
-        data={[
-          {
-            label: "💼 News and Media",
-            value: "category-1",
-          },
-          {
-            label: "🦊 NPM Packages",
-            value: "category-2",
-          },
-          {
-            label: "👛 Case Studies",
-            value: "category-3",
-          },
-        ]}
-      />,
-    );
-    const primaryButton = screen.getByTestId("folio-dropdown");
+    const dropdown = renderer
+      .create(
+        <Dropdown
+          data={[
+            {
+              label: "💼 News and Media",
+              value: "category-1",
+            },
+            {
+              label: "🦊 NPM Packages",
+              value: "category-2",
+            },
+            {
+              label: "👛 Case Studies",
+              value: "category-3",
+            },
+          ]}
+        />,
+      )
+      .toJSON();
 
-    expect(primaryButton).toHaveClass("folio-dropdown");
-    expect(asFragment).toMatchSnapshot();
+    expect(dropdown).toMatchSnapshot();
   });
 
   it("dropdown should be closed by default", () => {

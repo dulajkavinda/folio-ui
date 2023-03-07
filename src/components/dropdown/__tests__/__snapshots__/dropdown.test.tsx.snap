@@ -1,3 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/dropdown should render a dropdown 1`] = `[Function]`;
+exports[`components/dropdown should render a dropdown 1`] = `
+<div
+  className="folio-dropdown"
+  data-testid="folio-dropdown"
+  style={{}}
+>
+  <div
+    className="folio-dropdown-container"
+    style={
+      {
+        "border": "",
+      }
+    }
+  >
+    <span
+      className="folio-dropdown-title"
+      data-testid="folio-dropdown-title"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="presentation"
+    >
+      Select Category
+    </span>
+  </div>
+</div>
+`;

@@ -1,14 +1,13 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
 import Icon from "../icon";
 
 describe("components/icon", () => {
   it("should render a icon", () => {
-    const { asFragment } = render(<Icon symbol="ts" />);
-    const icon = screen.getByRole("img");
+    const icon = renderer.create(<Icon symbol="ts" />).toJSON();
 
-    expect(icon).toHaveClass("folio-icon");
-    expect(asFragment).toMatchSnapshot();
+    expect(icon).toMatchSnapshot();
   });
 
   it("icon should have a size of 6 by default", () => {
