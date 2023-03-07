@@ -1,16 +1,14 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
 import Avatar from "../avatar";
 
 describe("components/avatar", () => {
   const img = "https://avatars.githubusercontent.com/u/25279263?v=4";
 
   it("should render a avatar", () => {
-    const { asFragment } = render(<Avatar img={img} />);
-    const primaryButton = screen.getByTestId("folio-avatar");
-
-    expect(primaryButton).toHaveClass("folio-avatar");
-    expect(asFragment).toMatchSnapshot();
+    const avatar = renderer.create(<Avatar img={img} />).toJSON();
+    expect(avatar).toMatchSnapshot();
   });
 
   it("avatar should have a circle shape by default", () => {

@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/icon should render a icon 1`] = `[Function]`;
+exports[`components/icon should render a icon 1`] = `
+<img
+  alt="ts"
+  className="folio-icon folio-icon--6 folio-icon--dark"
+  data-testid="folio-icon"
+  src=""
+  style={{}}
+/>
+`;

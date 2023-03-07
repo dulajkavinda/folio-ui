@@ -1,21 +1,22 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
 import Blog from "../blog";
 
 describe("components/blog", () => {
-  it("should render", () => {
-    const { asFragment } = render(
-      <Blog
-        title="title"
-        description="description"
-        category="category"
-        date="date"
-        link="link"
-      />,
-    );
-    expect(screen.getByTestId("folio-blog")).toBeInTheDocument();
-    expect(screen).toBeDefined();
-    expect(asFragment).toMatchSnapshot();
+  it("should render blog", () => {
+    const blog = renderer
+      .create(
+        <Blog
+          title="title"
+          description="description"
+          category="category"
+          date="date"
+          link="link"
+        />,
+      )
+      .toJSON();
+    expect(blog).toMatchSnapshot();
   });
 
   it("should render with a given required text props", () => {

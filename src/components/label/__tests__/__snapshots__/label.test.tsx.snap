@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`conponents/Label should render the label 1`] = `
+<div
+  className="folio-label folio-label--light folio-label--medium"
+  data-testid="folio-label"
+  style={{}}
+>
+  Test
+</div>
+`;

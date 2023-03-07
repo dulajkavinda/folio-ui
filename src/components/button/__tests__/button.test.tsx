@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
 import Button from "../button";
 import Icon from "../../icon";
 
@@ -7,11 +8,8 @@ describe("components/button", () => {
   const btnText = "Hello";
 
   it("should render a button", () => {
-    const { asFragment } = render(<Button>{btnText}</Button>);
-    const primaryButton = screen.getByRole("button");
-
-    expect(primaryButton).toHaveClass("folio-button");
-    expect(asFragment).toMatchSnapshot();
+    const button = renderer.create(<Button>{btnText}</Button>).toJSON();
+    expect(button).toMatchSnapshot();
   });
 
   it("button should be rendered with a given text", () => {
