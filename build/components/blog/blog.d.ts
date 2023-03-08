@@ -7,11 +7,11 @@ export interface Props {
     description: string;
     category: string;
     date: string;
+    link: string;
     stack?: IconSymbol[];
     color?: ColorTypesDL;
-    classname?: string;
-    link: string;
     size?: SizeTypes;
+    classname?: string;
     customStyles?: React.CSSProperties;
 }
 declare const Blog: React.FunctionComponent<Props>;
