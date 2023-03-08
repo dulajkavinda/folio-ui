@@ -6,7 +6,7 @@
   @include transition-colors;
   @include bg-tertiary-black;
 
-  &__container {
+  &-container {
     @include center;
     @include primary-font;
     @include t11;
@@ -17,7 +17,7 @@
     justify-content: space-between;
   }
 
-  &__input {
+  &-input {
     @include semi-bold;
     @include primary-font;
     @include br2;
@@ -25,7 +25,7 @@
     @include secondary-white;
 
     background-color: transparent;
-    width: 98%;
+    width: 90%;
   }
 
   input {
@@ -34,5 +34,15 @@
   }
   input:focus {
     outline: none !important;
+  }
+
+  &--medium {
+    @include p1;
+    @include px3;
+    width: 20em;
+
+    input {
+      @include t10;
+    }
   }
 }

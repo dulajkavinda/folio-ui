@@ -5,12 +5,14 @@ import Icon, { IconSymbol, IconSize } from "../icon/icon";
 export type ContactType = {
   type: IconSymbol;
   link: string;
+  customStyles?: React.CSSProperties;
 };
 
 export type ContactProps = {
   contacts: ContactType[];
   size?: IconSize;
   className?: string;
+  customStyles?: React.CSSProperties;
 };
 
 const renderContact = (contacts: ContactType[], size: IconSize = "5") => {
@@ -20,7 +22,11 @@ const renderContact = (contacts: ContactType[], size: IconSize = "5") => {
       "folio-contact--item",
     );
     return (
-      <div key={contact.type} className={styles}>
+      <div
+        data-testid={`folio-contact--item-${contact}`}
+        key={contact.type}
+        className={styles}
+      >
         <Icon size={size} symbol={contact.type} />
       </div>
     );
@@ -28,7 +34,7 @@ const renderContact = (contacts: ContactType[], size: IconSize = "5") => {
 };
 
 const Contact: React.FC<ContactProps> = (props) => {
-  const { size, contacts, className } = props;
+  const { size, contacts, className, customStyles } = props;
 
   const styles = classnames.default(
     "folio-contact",
@@ -36,12 +42,21 @@ const Contact: React.FC<ContactProps> = (props) => {
     className,
   );
 
-  return <div className={styles}>{renderContact(contacts, size)}</div>;
+  return (
+    <div
+      className={styles}
+      style={{ ...customStyles }}
+      data-testid="folio-contact"
+    >
+      {renderContact(contacts, size)}
+    </div>
+  );
 };
 
 Contact.defaultProps = {
   size: "5",
   className: "",
+  customStyles: {},
 };
 
 export default Contact;
