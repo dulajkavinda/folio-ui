@@ -1,3 +1,3 @@
-import Template from "./search";
+import Search from "./search";
 
-export default Template;
+export default Search;
