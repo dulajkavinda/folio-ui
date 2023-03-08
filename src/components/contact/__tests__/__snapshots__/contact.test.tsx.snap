@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/contact renders contact 1`] = `
+<div
+  className="folio-contact folio-contact--5"
+  data-testid="folio-contact"
+  style={{}}
+>
+  <div
+    className="folio-contact--item-[object Object] folio-contact--item"
+    data-testid="folio-contact--item-[object Object]"
+  >
+    <img
+      alt="linkedin"
+      className="folio-icon folio-icon--5 folio-icon--dark"
+      data-testid="folio-icon"
+      src=""
+      style={{}}
+    />
+  </div>
+  <div
+    className="folio-contact--item-[object Object] folio-contact--item"
+    data-testid="folio-contact--item-[object Object]"
+  >
+    <img
+      alt="linkedin"
+      className="folio-icon folio-icon--5 folio-icon--dark"
+      data-testid="folio-icon"
+      src=""
+      style={{}}
+    />
+  </div>
+</div>
+`;

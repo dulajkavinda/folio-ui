@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/search renders search 1`] = `
+<div
+  className="folio-search folio-search--small"
+  data-testid="folio-search"
+  style={{}}
+>
+  <div
+    className="folio-search-container"
+  >
+    <img
+      alt="search"
+      className="folio-icon folio-icon--2 folio-icon--dark"
+      data-testid="folio-icon"
+      src=""
+      style={{}}
+    />
+    <input
+      className="folio-search-input"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+    />
+  </div>
+</div>
+`;
