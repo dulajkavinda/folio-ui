@@ -9,7 +9,7 @@ describe("components/search", () => {
     expect(search).toMatchSnapshot();
   });
 
-  it("renders with correct size", () => {
+  it("renders with correct size search", () => {
     render(<Search size="medium" />);
     const search = screen.getByTestId("folio-search");
     expect(search).toHaveClass("folio-search--medium");
