@@ -17,7 +17,6 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-  id: "string",
   className: "string",
   color: "dark",
   symbol: "graphql",

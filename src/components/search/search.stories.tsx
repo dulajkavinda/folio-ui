@@ -14,8 +14,13 @@ const Template: ComponentStory<typeof Search> = (args) => (
 );
 
 export const Primary = Template.bind({});
+export const Medium = Template.bind({});
 
 Primary.args = {
   customStyles: { width: "240px" },
   classname: "text-red-500",
+};
+
+Medium.args = {
+  size: "medium",
 };
