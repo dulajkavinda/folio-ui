@@ -29,8 +29,6 @@ const Search: React.FC<SearchProps> = (props) => {
   ) => {
     const { value: newValue } = event.target;
 
-    console.log("newValue", newValue);
-
     if (onChange) {
       onChange(event, newValue.trim(), props);
     }
