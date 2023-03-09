@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import * as classnames from "classnames";
+import { SizeTypes } from "../types";
 
 export type DropdownProps = {
   data: DropdownData[];
   value?: Function;
+  size?: SizeTypes;
   customStyles?: {};
 };
 
@@ -16,91 +18,92 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   const [dropdownItems, setDropdownItems] = useState<DropdownData[]>([]);
   const [selectedItem, setSeltectedItem] = useState<DropdownData | null>(null);
 
-  const styles = classnames.default("folio-dropdown");
+  const { data, size, value, customStyles } = props;
 
-  const openOrCloseDropdownMenu = (data: DropdownData[]) => {
+  const styles = classnames.default(
+    "folio-dropdown",
+    `folio-dropdown--${size}`,
+  );
+
+  const openOrCloseDropdownMenu = (ddData: DropdownData[]) => {
     if (dropdownItems.length > 0) {
       setDropdownItems([]);
     } else {
-      const dataCopy = [...data];
+      const dataCopy = [...ddData];
       if (selectedItem) {
-        const index = data.findIndex(
+        const index = ddData.findIndex(
           (item: DropdownData) => item.value === selectedItem.value,
         );
         dataCopy.splice(index, 1);
         setDropdownItems(dataCopy);
       } else {
-        setDropdownItems(data);
+        setDropdownItems(ddData);
       }
     }
   };
 
-  const { data, value, customStyles } = props;
-
   return (
     <div
       data-testid="folio-dropdown"
-      style={{ ...customStyles }}
+      style={{
+        ...customStyles,
+        border: dropdownItems.length > 0 ? "1px dashed #7e8c9a" : "",
+      }}
       className={styles}
     >
-      <div
-        style={{
-          border: dropdownItems.length > 0 ? "1px dashed #7e8c9a" : "",
-        }}
-        className="folio-dropdown-container"
+      <span
+        role="presentation"
+        className="folio-dropdown-title"
+        data-testid="folio-dropdown-title"
+        onKeyDown={() => openOrCloseDropdownMenu(data)}
+        onClick={() => openOrCloseDropdownMenu(data)}
       >
-        <span
+        {selectedItem ? selectedItem.label : "Select Category"}
+      </span>
+      {dropdownItems.map((item: DropdownData, index) => (
+        // eslint-disable-next-line react/jsx-key
+        <div
           role="presentation"
-          className="folio-dropdown-title"
-          data-testid="folio-dropdown-title"
-          onKeyDown={() => openOrCloseDropdownMenu(data)}
-          onClick={() => openOrCloseDropdownMenu(data)}
-        >
-          {selectedItem ? selectedItem.label : "Select Category"}
-        </span>
-        {dropdownItems.map((item: DropdownData, index) => (
-          // eslint-disable-next-line react/jsx-key
-          <div
-            role="presentation"
-            className="folio-dropdown-item"
-            data-testid={`folio-dropdown-item--${index + 1}`}
-            onClick={() => {
-              if (value) {
-                value(item.value);
-              }
+          className="folio-dropdown-item"
+          data-testid={`folio-dropdown-item--${index + 1}`}
+          onClick={() => {
+            if (value) {
+              value(item.value);
+            }
 
-              setSeltectedItem(item);
-              setDropdownItems([]);
-            }}
-          >
+            setSeltectedItem(item);
+            setDropdownItems([]);
+          }}
+        >
+          <span>
             {`${item.label.split(" ")[0]}  ${item.label
               .split(" ")
               .slice(1)
               .join(" ")}`}
-          </div>
-        ))}
-        {dropdownItems.length > 0 && (
-          <div
-            role="presentation"
-            className="folio-dropdown-item folio-dropdown-item--close"
-            data-testid="folio-dropdown-item--close"
-            onClick={() => {
-              if (value) {
-                value(null);
-              }
+          </span>
+        </div>
+      ))}
+      {dropdownItems.length > 0 && (
+        <div
+          role="presentation"
+          className="folio-dropdown-item folio-dropdown-item--close"
+          data-testid="folio-dropdown-item--close"
+          onClick={() => {
+            if (value) {
+              value(null);
+            }
 
-              setDropdownItems([]);
-              setSeltectedItem(null);
-            }}
-          >
-            Clear
-          </div>
-        )}
-      </div>
+            setDropdownItems([]);
+            setSeltectedItem(null);
+          }}
+        >
+          <span>Clear</span>
+        </div>
+      )}
     </div>
   );
 };
 
-Dropdown.defaultProps = { value: () => {}, customStyles: {} };
+Dropdown.defaultProps = { value: () => {}, customStyles: {}, size: "small" };
 
 export default Dropdown;

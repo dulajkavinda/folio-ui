@@ -1,46 +1,63 @@
 .folio-dropdown {
-  &-container {
+  @include center;
+  @include br2;
+  @include clickable;
+  @include transition-opacity;
+  @include transition-colors;
+  @include bg-tertiary-black;
+  @include p1;
+  @include px3;
+
+  flex-direction: column;
+  position: relative;
+
+  .folio-dropdown-item {
     @include center;
-    @include br2;
     @include clickable;
-    @include transition-opacity;
-    @include transition-colors;
-    @include bg-tertiary-black;
+    @include primary-font;
+    @include secondary-white;
+    @include t11;
+    @include semi-bold;
+    @include p1;
 
-    flex-direction: column;
-    position: relative;
+    width: 100%;
 
-    .folio-dropdown-item {
-      @include center;
-      @include clickable;
-      @include primary-font;
-      @include secondary-white;
-      @include t11;
-      @include semi-bold;
-      @include p1;
-
-      width: 100%;
-
-      &--close {
-        color: rgb(225, 97, 23);
-      }
+    &--close span {
+      color: rgb(225, 97, 23);
     }
+  }
 
-    .folio-dropdown-title {
-      @include center;
-      width: 100%;
-    }
+  .folio-dropdown-title {
+    @include center;
+    width: 100%;
+  }
 
-    .folio-dropdown-item:hover {
-      opacity: 0.5;
+  .folio-dropdown-item:not(.folio-dropdown-item--close):hover {
+    @include bg-black;
+    border-radius: 1em;
+  }
+
+  .folio-dropdown-item {
+    &:hover {
+      opacity: 0.6;
     }
+  }
+
+  span {
+    @include primary-font;
+    @include secondary-white;
+    @include t11;
+    @include semi-bold;
+    @include p1;
+  }
+
+  &--medium {
+    @include p1;
+    @include px3;
+    width: 20em;
 
     span {
-      @include primary-font;
-      @include secondary-white;
-      @include t11;
-      @include semi-bold;
-      @include p1;
+      @include t10;
     }
   }
 }

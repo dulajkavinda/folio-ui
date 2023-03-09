@@ -2,27 +2,22 @@
 
 exports[`components/dropdown should render a dropdown 1`] = `
 <div
-  className="folio-dropdown"
+  className="folio-dropdown folio-dropdown--small"
   data-testid="folio-dropdown"
-  style={{}}
->
-  <div
-    className="folio-dropdown-container"
-    style={
-      {
-        "border": "",
-      }
+  style={
+    {
+      "border": "",
     }
+  }
+>
+  <span
+    className="folio-dropdown-title"
+    data-testid="folio-dropdown-title"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
   >
-    <span
-      className="folio-dropdown-title"
-      data-testid="folio-dropdown-title"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="presentation"
-    >
-      Select Category
-    </span>
-  </div>
+    Select Category
+  </span>
 </div>
 `;

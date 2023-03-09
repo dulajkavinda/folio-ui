@@ -14,7 +14,7 @@ const Template: ComponentStory<typeof Dropdown> = (args) => (
 );
 
 export const Primary = Template.bind({});
-export const Square = Template.bind({});
+export const Medium = Template.bind({});
 export const Large = Template.bind({});
 
 Primary.args = {
@@ -33,4 +33,22 @@ Primary.args = {
       value: "category-3",
     },
   ],
+};
+
+Medium.args = {
+  data: [
+    {
+      label: "💼 News and Media",
+      value: "category-1",
+    },
+    {
+      label: "🦊 NPM Packages",
+      value: "category-2",
+    },
+    {
+      label: "👛 Case Studies",
+      value: "category-3",
+    },
+  ],
+  size: "medium",
 };
