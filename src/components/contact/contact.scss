@@ -7,6 +7,11 @@
 
 .folio-contact--item {
   @include center;
+  @include clickable;
 
   flex-direction: row;
+
+  &:hover {
+    @include transition-press;
+  }
 }

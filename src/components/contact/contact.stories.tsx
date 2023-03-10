@@ -52,11 +52,23 @@ Large.args = {
       link: "tel:+1-123-456-7890",
     },
     {
-      type: "linkedin",
+      type: "github",
       link: "tel:+1-123-456-7890",
     },
     {
-      type: "linkedin",
+      type: "email",
+      link: "tel:+1-123-456-7890",
+    },
+    {
+      type: "instagram",
+      link: "tel:+1-123-456-7890",
+    },
+    {
+      type: "facebook",
+      link: "tel:+1-123-456-7890",
+    },
+    {
+      type: "twitter",
       link: "tel:+1-123-456-7890",
     },
   ],

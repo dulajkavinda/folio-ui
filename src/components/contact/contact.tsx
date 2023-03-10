@@ -27,7 +27,9 @@ const renderContact = (contacts: ContactType[], size: IconSize = "5") => {
         key={contact.type}
         className={styles}
       >
-        <Icon size={size} symbol={contact.type} />
+        <a href={contact.link}>
+          <Icon size={size} symbol={contact.type} />
+        </a>
       </div>
     );
   });

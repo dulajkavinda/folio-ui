@@ -48,6 +48,9 @@ import JS from "../../assets/icons/js.svg";
 import Images from "../../assets/icons/images.svg";
 import Plus from "../../assets/icons/plus.svg";
 import Minus from "../../assets/icons/minus.svg";
+import Instagram from "../../assets/icons/instagram.svg";
+import Facebook from "../../assets/icons/facebook.svg";
+import Twitter from "../../assets/icons/twitter.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -116,7 +119,10 @@ export type IconSymbol =
   | "js"
   | "images"
   | "plus"
-  | "minus";
+  | "minus"
+  | "instagram"
+  | "facebook"
+  | "twitter";
 
 export interface Props {
   symbol: IconSymbol;
@@ -174,6 +180,9 @@ const images = {
   images: Images,
   plus: Plus,
   minus: Minus,
+  instagram: Instagram,
+  facebook: Facebook,
+  twitter: Twitter,
 };
 
 const Icon: React.FC<Props> = (props) => {
