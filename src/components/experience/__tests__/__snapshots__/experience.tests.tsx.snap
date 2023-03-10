@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/experience renders experience component 1`] = `
+<div
+  className="folio-experience"
+  data-testid="folio-experience"
+  style={{}}
+>
+  <div
+    className="conatiner"
+  >
+    <div
+      className="experience-header"
+    >
+      <div
+        className="experience-header-container"
+      >
+        <div
+          className="experience-header-image--gradient"
+        />
+        <div
+          className="experience-header-info"
+        >
+          <div>
+            <div
+              className="experience-header-info-title"
+            >
+              Software Engineer
+            </div>
+            <div
+              className="experience-header-info-company"
+              data-testid="folio-experience-company"
+            >
+              <a
+                data-testid="folio-experience-website"
+                href="https://www.google.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Google
+              </a>
+            </div>
+          </div>
+          <div
+            className="experience-header-info-duration"
+          >
+            2020
+             - 
+            Present
+          </div>
+        </div>
+      </div>
+      <div
+        className="experience-header-technologies"
+      >
+        <div
+          className="experience-header-technologies-description"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div
+          className="experience-header-technologies-items"
+        >
+          <div
+            className="experience-header-technologies-item"
+            data-testid="folio-experience-technology--reactjs"
+          >
+            <img
+              alt="reactjs"
+              className="folio-icon folio-icon--2 folio-icon--dark"
+              data-testid="folio-icon"
+              src=""
+              style={{}}
+            />
+            <span>
+               
+              React
+            </span>
+          </div>
+          <div
+            className="experience-header-technologies-item"
+            data-testid="folio-experience-technology--ts"
+          >
+            <img
+              alt="ts"
+              className="folio-icon folio-icon--2 folio-icon--dark"
+              data-testid="folio-icon"
+              src=""
+              style={{}}
+            />
+            <span>
+               
+              TypeScript
+            </span>
+          </div>
+          <div
+            className="experience-header-technologies-item"
+            data-testid="folio-experience-technology--node"
+          >
+            <img
+              alt="node"
+              className="folio-icon folio-icon--2 folio-icon--dark"
+              data-testid="folio-icon"
+              src=""
+              style={{}}
+            />
+            <span>
+               
+              NodeJS
+            </span>
+          </div>
+          <div
+            className="experience-header-technologies-item"
+            data-testid="folio-experience-technology--graphql"
+          >
+            <img
+              alt="graphql"
+              className="folio-icon folio-icon--2 folio-icon--dark"
+              data-testid="folio-icon"
+              src=""
+              style={{}}
+            />
+            <span>
+               
+              GraphQL
+            </span>
+          </div>
+          <div
+            className="experience-header-technologies-item"
+            data-testid="folio-experience-technology--docker"
+          >
+            <img
+              alt="docker"
+              className="folio-icon folio-icon--2 folio-icon--dark"
+              data-testid="folio-icon"
+              src=""
+              style={{}}
+            />
+            <span>
+               
+              Docker
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

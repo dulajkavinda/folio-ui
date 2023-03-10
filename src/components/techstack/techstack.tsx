@@ -1,13 +1,14 @@
-import * as React from "react";
+import React from "react";
 import * as classnames from "classnames";
 import Icon, { IconSymbol, IconSize } from "../icon/icon";
 
 export type TechStackProps = {
-  className?: string;
   icons: IconSymbol[];
   size: TechStackSize;
   disable?: IconSymbol[];
   type?: TechStackType;
+  className?: string;
+  customStyles?: React.CSSProperties;
 };
 
 export type TechStackSize = "medium" | "large" | "small";
@@ -43,6 +44,7 @@ const renderIcons = (
           "folio-tstack-item--disabled": disable?.includes(icon),
         },
       )}
+      data-testid={`folio-tstack-item--${icon}`}
     >
       <Icon size={getIconSize(size)} symbol={icon} />
     </div>
@@ -50,7 +52,7 @@ const renderIcons = (
 };
 
 const TechStack: React.FC<TechStackProps> = (props) => {
-  const { className, size, type, icons, disable } = props;
+  const { size, type, icons, disable, customStyles, className } = props;
   const styles = classnames.default(
     "folio-tstack",
     `folio-tstack--${size}`,
@@ -58,7 +60,11 @@ const TechStack: React.FC<TechStackProps> = (props) => {
     className,
   );
   return (
-    <div data-testid="folio-tstack" className={styles}>
+    <div
+      data-testid="folio-tstack"
+      style={{ ...customStyles }}
+      className={styles}
+    >
       {renderIcons(icons, size, disable)}
     </div>
   );
@@ -68,6 +74,7 @@ TechStack.defaultProps = {
   disable: [],
   type: "grid",
   className: "",
+  customStyles: {},
 };
 
 export default TechStack;

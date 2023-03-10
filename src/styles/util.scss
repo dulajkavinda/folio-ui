@@ -17,3 +17,7 @@
   width: inherit;
   object-fit: cover;
 }
+
+@mixin default-cursor {
+  cursor: default;
+}

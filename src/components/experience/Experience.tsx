@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import classnames from "classnames";
 import Icon, { IconSymbol } from "../icon/icon";
 import WindowSize from "../types/window-size";
 import useWindowSize from "../../lib/useWindowSize";
+import useOnLoadImages from "../../lib/useImageLoader";
 
 type ImageProp = {
   src: string;
@@ -46,14 +47,19 @@ const Experience: React.FC<ExperienceProps> = (props) => {
     technologies,
   } = props;
 
+  const imgElm = useRef<HTMLImageElement>(null);
+
   const styles = classnames("folio-experience", classname);
+
+  const loaded = useOnLoadImages(imgElm);
 
   const renderTechnologies = (technologiesItems: TechnologiesProp[]) => {
     return technologiesItems.map((technology: TechnologiesProp) => {
       return (
         <div
           key={technology.displayName}
-          className="experience_header__technologies__item"
+          data-testid={`folio-experience-technology--${technology.icon}`}
+          className="experience-header-technologies-item"
         >
           <Icon symbol={technology.icon} size="2" />
           {size !== WindowSize.MEDIUM && <span> {technology.displayName}</span>}
@@ -63,31 +69,57 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   };
 
   return (
-    <div style={{ ...customStyles }} className={styles}>
+    <div
+      style={{ ...customStyles }}
+      className={styles}
+      data-testid="folio-experience"
+    >
       <div className="conatiner">
-        <div className="experience_header">
-          <div className="experience_header__container">
-            <div className="experience_header__image">
-              <img src={logo.src} alt={logo.alt} />
+        <div className="experience-header">
+          <div className="experience-header-container">
+            <div
+              ref={imgElm}
+              className={
+                loaded
+                  ? "experience-header-image"
+                  : "experience-header-image--gradient"
+              }
+            >
+              {loaded && <img src={logo.src} alt={logo.alt} />}
             </div>
-            <div className="experience_header__info">
-              <div className="experience_header__info__title">{position}</div>
-              <div className="experience_header__info__company">{company}</div>
-              <div className="experience_header__info__company__link">
-                {website}
+            <div className="experience-header-info">
+              <div>
+                <div className="experience-header-info-title">{position}</div>
+                <div
+                  className="experience-header-info-company"
+                  data-testid="folio-experience-company"
+                >
+                  {website ? (
+                    <a
+                      href={website}
+                      target="_blank"
+                      rel="noreferrer"
+                      data-testid="folio-experience-website"
+                    >
+                      {company}
+                    </a>
+                  ) : (
+                    company
+                  )}
+                </div>
               </div>
-              <div className="experience_header__info__duration">
+              <div className="experience-header-info-duration">
                 {duration.start} - {duration.end}
               </div>
             </div>
           </div>
 
           {size !== WindowSize.MOBILE && (
-            <div className="experience_header__technologies">
-              <div className="experience_header__technologies__description">
+            <div className="experience-header-technologies">
+              <div className="experience-header-technologies-description">
                 {description}
               </div>
-              <div className="experience_header__technologies__items">
+              <div className="experience-header-technologies-items">
                 {renderTechnologies(technologies)}
               </div>
             </div>

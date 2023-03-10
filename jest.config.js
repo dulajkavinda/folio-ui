@@ -8,6 +8,7 @@ module.exports = {
     ".+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$":
       "jest-transform-stub",
   },
-  transformIgnorePatterns: ["<rootDir>/node_modules/"],
+  transformIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/build/"],
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.js"],
+  modulePathIgnorePatterns: ["<rootDir>/build/"],
 };

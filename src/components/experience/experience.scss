@@ -1,6 +1,7 @@
 .folio-experience {
   @include white;
   @include primary-font;
+  @include default-cursor;
 }
 
 .conatiner {
@@ -14,18 +15,20 @@
 }
 
 .experience {
-  &_header {
+  &-header {
     display: flex;
 
     height: 6em;
     justify-content: space-between;
     flex-direction: row;
 
-    &__image {
+    &-image {
+      @include br2;
+
       height: 100%;
       width: 6em;
 
-      margin-right: 0.5em;
+      margin-right: 1em;
 
       img {
         @include br2;
@@ -35,43 +38,83 @@
         max-width: 100%;
         object-fit: cover;
       }
+
+      &--gradient {
+        @include br2;
+
+        height: 100%;
+        width: 6em;
+
+        margin-right: 1em;
+
+        img {
+          @include br2;
+          @include dbo2;
+          @include no-drag;
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: cover;
+        }
+
+        background: linear-gradient(
+          90deg,
+          hsl(229, 17%, 12%),
+          hsl(240, 11%, 27%),
+          hsl(229, 17%, 12%)
+        );
+
+        background-size: 200%;
+        animation: loader 1s infinite reverse;
+      }
     }
 
-    &__info {
+    &-info {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       height: 100%;
 
-      &__title {
+      &-title {
         @include t10;
         @include semi-bold;
+        @include lhx5;
       }
 
-      &__company {
-        @include t8;
+      &-company {
+        @include t7;
         @include semi-bold;
-        @include secondary-white;
+        @include tertiary-white;
+        @include lhx5;
 
-        &__link {
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        a:hover {
+          @include transition-press;
+        }
+
+        &-link {
           @include t12;
           @include regular;
           @include clickable;
         }
 
-        &__link:hover {
+        &-link:hover {
           @include hover(1);
         }
       }
 
-      &__duration {
+      &-duration {
         @include t11;
         @include semi-bold;
+        @include secondary-white;
       }
     }
 
-    &__container {
+    &-container {
       @include mr2;
       display: flex;
       flex-direction: row;
@@ -80,18 +123,18 @@
       min-width: 17em;
     }
 
-    &__technologies {
+    &-technologies {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       width: 60%;
 
-      &__title {
+      &-title {
         @include t11;
         @include semi-bold;
       }
-      &__items {
+      &-items {
         @include center;
         @include mb1;
         justify-content: flex-start;
@@ -100,7 +143,7 @@
         gap: 1em;
       }
 
-      &__description {
+      &-description {
         @include secondary-white;
         @include t11;
         @include semi-bold;
@@ -109,7 +152,7 @@
         letter-spacing: 0.05em;
       }
 
-      &__items > div {
+      &-items > div {
         @include center;
         @include br1;
         @include p1;
@@ -117,15 +160,14 @@
         @include semi-bold;
         @include bg-tertiary-black;
 
-        border: 1px dashed $tertiary-white;
         letter-spacing: 0.1em;
       }
 
-      &__item {
+      &-item {
         @include center;
         height: 100%;
 
-        &__icon {
+        &-icon {
           @include mr1;
           @include t12;
         }
@@ -137,12 +179,12 @@
     }
   }
 
-  &_description {
+  &-description {
     @include semi-bold;
     @include mt2;
   }
 
-  &_products {
+  &-products {
     ul {
       margin: 0;
     }
@@ -153,15 +195,30 @@
   }
 }
 
+@keyframes loader {
+  from {
+    background-position: -100% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .experience-header-technologies-description {
+    @include lhx2;
+  }
+}
+
 @media only screen and (max-width: 800px) {
-  .experience_header__technologies__description {
+  .experience-header-technologies-description {
     @include t13;
     @include lhx1;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .experience_header__technologies__description {
+  .experience-header-technologies-description {
     @include t13;
     @include lhx1;
   }
