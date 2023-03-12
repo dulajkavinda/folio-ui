@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/modal renders modal 1`] = `
+<div
+  className="folio-modal"
+  data-testid="folio-modal"
+  role="presentation"
+>
+  <div
+    className="folio-modal-container folio-modal-container--medium"
+    role="presentation"
+    style={{}}
+  >
+    <div
+      className="folio-modal-header-close"
+    >
+      <div
+        onClick={[Function]}
+        role="presentation"
+      >
+        <img
+          alt="close"
+          className="folio-icon folio-icon--5 folio-icon--dark"
+          data-testid="folio-icon"
+          src=""
+          style={{}}
+        />
+      </div>
+    </div>
+    <div
+      className="folio-modal-header"
+    >
+      <div
+        className="folio-modal-header-title"
+        data-testid="folio-modal-header-title"
+      >
+        Test
+      </div>
+      <div
+        className="folio-modal-header-subtitle"
+        data-testid="folio-modal-header-subtitle"
+      />
+    </div>
+    <div
+      className="folio-modal-body"
+    />
+    <div
+      className="folio-modal-footer"
+      data-testid="folio-modal-footer"
+    >
+      <button
+        className="folio-button folio-button--dark folio-button--medium"
+        data-testid="folio-button"
+        disabled={false}
+        id="0"
+        onClick={[Function]}
+        style={{}}
+        type="button"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+`;

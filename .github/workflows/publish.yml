@@ -3,7 +3,7 @@ name: "🚀 release"
 on:
   push:
     branches:
-      - master
+      - deploy
 
 jobs:
   release:

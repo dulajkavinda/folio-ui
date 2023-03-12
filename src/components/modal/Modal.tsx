@@ -28,14 +28,14 @@ const Modal: React.FC<ModalProps> = (props) => {
   } = props;
 
   const styles = classnames(
-    "folio-modal__container",
-    `folio-modal__container--${size}`,
+    "folio-modal-container",
+    `folio-modal-container--${size}`,
     classname,
   );
   return (
-    <div className="folio-modal" role="presentation">
-      <div style={{ ...customStyles }} className={styles}>
-        <div className="folio-modal__header__close">
+    <div className="folio-modal" role="presentation" data-testid="folio-modal">
+      <div style={{ ...customStyles }} className={styles} role="presentation">
+        <div className="folio-modal-header-close">
           <div
             role="presentation"
             onClick={onClose ? () => onClose() : () => null}
@@ -43,13 +43,23 @@ const Modal: React.FC<ModalProps> = (props) => {
             <Icon size="5" symbol="close" />
           </div>
         </div>
-        <div className="folio-modal__header">
-          <div className="folio-modal__header__title">{title}</div>
-          <div className="folio-modal__header__subtitle">{subtitle}</div>
+        <div className="folio-modal-header">
+          <div
+            data-testid="folio-modal-header-title"
+            className="folio-modal-header-title"
+          >
+            {title}
+          </div>
+          <div
+            data-testid="folio-modal-header-subtitle"
+            className="folio-modal-header-subtitle"
+          >
+            {subtitle}
+          </div>
         </div>
-        <div className="folio-modal__body">{children}</div>
+        <div className="folio-modal-body">{children}</div>
         {onClose && showCloseButton && (
-          <div className="folio-modal__footer">
+          <div data-testid="folio-modal-footer" className="folio-modal-footer">
             <Button onClick={() => onClose()} color="dark">
               Close
             </Button>

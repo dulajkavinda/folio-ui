@@ -28,9 +28,13 @@
   bottom: 0;
   background-color: rgba(#1e262f, 0.6);
 
+  &:active {
+    scale: 1.003;
+  }
+
   animation: bg-color 0.3s;
 
-  &__container {
+  &-container {
     @include br2;
     @include px3;
     @include py3;
@@ -55,7 +59,7 @@
     }
   }
 
-  &__header {
+  &-header {
     @include center;
     @include primary-font;
     @include secondary-white;
@@ -64,7 +68,7 @@
     @include py2;
 
     flex-direction: column;
-    &__subtitle {
+    &-subtitle {
       @include t11;
       @include tertiary-white;
       @include regular;
@@ -74,7 +78,7 @@
       text-align: center;
     }
 
-    &__close {
+    &-close {
       @include center;
       justify-content: flex-end;
       width: 100%;
@@ -87,11 +91,11 @@
     }
   }
 
-  &__body {
+  &-body {
     @include center;
   }
 
-  &__footer {
+  &-footer {
     @include center;
     @include pt3;
     justify-content: flex-end;
