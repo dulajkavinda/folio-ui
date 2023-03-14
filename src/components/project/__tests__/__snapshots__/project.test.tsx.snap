@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/project renders correctly 1`] = `
+<div
+  className="folio-project folio-project--small"
+  data-testid="folio-project"
+  style={
+    {
+      "border": "none",
+    }
+  }
+>
+  <div
+    className="folio-project-header"
+  >
+    <div
+      className="folio-project-header--img--gradient"
+    />
+    <div
+      className="folio-project-header--detials"
+    >
+      <div
+        className="folio-project-header--detials--title"
+      >
+        title
+      </div>
+      <div
+        className="folio-project-header--detials--url"
+      >
+        <a
+          data-testid="folio-project-header--detials--url"
+          href="url"
+        >
+          url
+        </a>
+      </div>
+      <div
+        className="folio-label folio-label--light folio-label--small"
+        data-testid="folio-label"
+        style={{}}
+      />
+      <div
+        className="folio-project-header--detials--date"
+      >
+        date
+      </div>
+    </div>
+    <div
+      className="folio-project-header--stack"
+    >
+      <div
+        className="folio-tstack folio-tstack--small folio-tstack--grid"
+        data-testid="folio-tstack"
+        style={{}}
+      />
+    </div>
+  </div>
+  <div
+    className="folio-project-body"
+  />
+  <div
+    className="folio-project-media"
+    data-testid="folio-project-media"
+  />
+  <div
+    className="folio-project-footer"
+  >
+    <div
+      className="folio-project-footer--button"
+    >
+      <button
+        className="folio-button folio-button--dark folio-button--small"
+        data-testid="folio-button"
+        disabled={false}
+        id="0"
+        onClick={[Function]}
+        style={
+          {
+            "backgroundColor": "#1e262f",
+          }
+        }
+        type="button"
+      >
+        Case Study
+      </button>
+    </div>
+    <div
+      className="folio-project-footer--button"
+    >
+      <button
+        className="folio-button folio-button--dark folio-button--small folio-button--disabled"
+        data-testid="folio-button"
+        disabled={true}
+        id="0"
+        onClick={[Function]}
+        style={
+          {
+            "backgroundColor": "#1e262f",
+            "opacity": 0.5,
+          }
+        }
+        type="button"
+      >
+        <div
+          className="folio-button--icon"
+        >
+          <img
+            alt="github"
+            className="folio-icon folio-icon--3 folio-icon--dark"
+            data-testid="folio-icon"
+            src=""
+            style={{}}
+          />
+        </div>
+        Private
+      </button>
+    </div>
+    <div
+      className="folio-project-footer--button"
+    >
+      <button
+        className="folio-button folio-button--dark folio-button--small"
+        data-testid="folio-button"
+        disabled={false}
+        id="0"
+        onClick={[Function]}
+        style={
+          {
+            "backgroundColor": "#1e262f",
+          }
+        }
+        type="button"
+      >
+        <div
+          className="folio-button--icon"
+        >
+          <img
+            alt="link"
+            className="folio-icon folio-icon--3 folio-icon--dark"
+            data-testid="folio-icon"
+            src=""
+            style={{}}
+          />
+        </div>
+        Link
+      </button>
+    </div>
+  </div>
+</div>
+`;

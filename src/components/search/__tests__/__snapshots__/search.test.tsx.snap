@@ -18,7 +18,9 @@ exports[`components/search renders search 1`] = `
     />
     <input
       className="folio-search-input"
+      onBlur={[Function]}
       onChange={[Function]}
+      onFocus={[Function]}
       placeholder="Search"
       type="text"
     />

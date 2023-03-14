@@ -23,6 +23,36 @@
 
       img {
         @include br2;
+
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &--img--gradient {
+      @include center;
+      @include br2;
+      @include bg-black;
+      width: 6rem;
+      height: 6rem;
+
+      background: linear-gradient(
+        90deg,
+        hsl(229, 17%, 12%),
+        hsl(240, 11%, 27%),
+        hsl(229, 17%, 12%)
+      );
+
+      background-size: 200%;
+      animation: loader 1s infinite reverse;
+
+      img {
+        @include br2;
+
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
       }
     }
 
@@ -304,5 +334,14 @@
     @include semi-bold;
     @include black;
     @include tertiary-white;
+  }
+}
+
+@keyframes loader {
+  from {
+    background-position: -100% 0;
+  }
+  to {
+    background-position: 100% 0;
   }
 }

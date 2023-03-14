@@ -10,25 +10,37 @@ exports[`components/contact renders contact 1`] = `
     className="folio-contact--item-[object Object] folio-contact--item"
     data-testid="folio-contact--item-[object Object]"
   >
-    <img
-      alt="linkedin"
-      className="folio-icon folio-icon--5 folio-icon--dark"
-      data-testid="folio-icon"
-      src=""
-      style={{}}
-    />
+    <a
+      href="tel:+1-123-456-7890"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="linkedin"
+        className="folio-icon folio-icon--5 folio-icon--dark"
+        data-testid="folio-icon"
+        src=""
+        style={{}}
+      />
+    </a>
   </div>
   <div
     className="folio-contact--item-[object Object] folio-contact--item"
     data-testid="folio-contact--item-[object Object]"
   >
-    <img
-      alt="linkedin"
-      className="folio-icon folio-icon--5 folio-icon--dark"
-      data-testid="folio-icon"
-      src=""
-      style={{}}
-    />
+    <a
+      href="tel:+1-123-456-7890"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="linkedin"
+        className="folio-icon folio-icon--5 folio-icon--dark"
+        data-testid="folio-icon"
+        src=""
+        style={{}}
+      />
+    </a>
   </div>
 </div>
 `;

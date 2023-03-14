@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classnames from "classnames";
 import Icon from "../icon";
 import { IconSize } from "../icon/icon";
@@ -34,7 +34,20 @@ const Search: React.FC<SearchProps> = (props) => {
     }
   };
 
-  const styles = classnames("folio-search", `folio-search--${size}`, classname);
+  const [focused, setFocused] = useState(false);
+  const onFocus = () => setFocused(true);
+  const onBlur = () => setFocused(false);
+
+  const styles = classnames(
+    "folio-search",
+    `folio-search--${size}`,
+    classname,
+    focused && "folio-search--dashed",
+  );
+
+  useEffect(() => {
+    setFocused(focused);
+  }, [focused]);
 
   return (
     <div
@@ -45,6 +58,8 @@ const Search: React.FC<SearchProps> = (props) => {
       <div className="folio-search-container">
         <Icon symbol="search" size={getIconSize(size)} />
         <input
+          onBlur={onBlur}
+          onFocus={onFocus}
           onChange={onChangeText}
           placeholder="Search"
           className="folio-search-input"

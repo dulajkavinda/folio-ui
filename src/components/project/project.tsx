@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, useRef } from "react";
 import * as classNames from "classnames";
 import TechStack from "../techstack";
 import Label from "../label";
@@ -7,6 +7,7 @@ import Icon, { IconSymbol } from "../icon/icon";
 import Button from "../button";
 import { projectConstants, sizeConstants } from "../../common/constants";
 import { shortenLabel } from "../../utilities/common";
+import useOnLoadImages from "../../lib/useImageLoader";
 
 export type ProjectProps = {
   title: string;
@@ -62,6 +63,10 @@ const Project: React.FC<ProjectProps> = (props) => {
     showMedia,
   } = props;
 
+  const imgElm = useRef<HTMLImageElement>(null);
+
+  const loaded = useOnLoadImages(imgElm);
+
   const styles = classNames.default("folio-project", `folio-project--${size}`);
 
   const onClickYoutube = (e: MouseEvent) => {
@@ -77,15 +82,30 @@ const Project: React.FC<ProjectProps> = (props) => {
   };
 
   return (
-    <div style={{ border: "none" }} className={styles}>
+    <div
+      style={{ border: "none" }}
+      className={styles}
+      data-testid="folio-project"
+    >
       <div className="folio-project-header">
-        <div className="folio-project-header--img">
-          <img alt={alt} src={src} />
+        <div
+          ref={imgElm}
+          className={
+            loaded
+              ? "folio-project-header--img"
+              : "folio-project-header--img--gradient"
+          }
+        >
+          {loaded && (
+            <img data-testid="folio-project-header--img" alt={alt} src={src} />
+          )}
         </div>
         <div className="folio-project-header--detials">
           <div className="folio-project-header--detials--title">{title}</div>
           <div className="folio-project-header--detials--url">
-            <a href="https://google.lk">{url}</a>
+            <a data-testid="folio-project-header--detials--url" href={url}>
+              {url}
+            </a>
           </div>
           <Label color="light" size={size}>
             {category}
@@ -106,7 +126,7 @@ const Project: React.FC<ProjectProps> = (props) => {
       </div>
 
       {showMedia && (
-        <div className="folio-project-media">
+        <div className="folio-project-media" data-testid="folio-project-media">
           {previews && previews.length === 3 && renderPreviews(previews)}
           {previews && previews.length > 3 && (
             <>
@@ -115,9 +135,6 @@ const Project: React.FC<ProjectProps> = (props) => {
                 type="button"
                 className="folio-project-media--button--main"
               >
-                {/* <span className="folio-project-media--button--count">
-                  Screenshots
-                </span> */}
                 <span className="folio-project-media--button--text">
                   <Icon size="6" symbol="youtube" />
                 </span>

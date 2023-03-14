@@ -6,6 +6,10 @@
   @include transition-colors;
   @include bg-tertiary-black;
 
+  &--dashed {
+    outline: 1px dashed #7e8c9a;
+  }
+
   &-container {
     @include center;
     @include primary-font;
@@ -45,4 +49,8 @@
       @include t12;
     }
   }
+}
+
+.folio-search:focus {
+  border: 1px solid $white;
 }
