@@ -54,8 +54,8 @@ Primary.args = {
 };
 
 Small.args = {
-  title: "SIDED",
-  url: "sided.news",
+  title: "Silmarillions",
+  url: "silmarillions.com",
   date: "07/21 - 09/21",
   stack: [
     "graphql",

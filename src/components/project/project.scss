@@ -64,6 +64,11 @@
       @include center;
       width: 6rem;
       height: 6rem;
+
+      &--small {
+        @include mt1;
+        margin-bottom: -0.6em;
+      }
     }
   }
 

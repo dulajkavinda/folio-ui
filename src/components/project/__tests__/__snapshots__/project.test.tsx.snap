@@ -45,15 +45,19 @@ exports[`components/project renders correctly 1`] = `
         date
       </div>
     </div>
+  </div>
+  <div
+    className="folio-project-header--stack--small"
+  >
     <div
-      className="folio-project-header--stack"
-    >
-      <div
-        className="folio-tstack folio-tstack--small folio-tstack--grid"
-        data-testid="folio-tstack"
-        style={{}}
-      />
-    </div>
+      className="folio-tstack folio-tstack--small folio-tstack--bar"
+      data-testid="folio-tstack"
+      style={
+        {
+          "width": "inherit",
+        }
+      }
+    />
   </div>
   <div
     className="folio-project-body"

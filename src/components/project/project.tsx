@@ -112,14 +112,28 @@ const Project: React.FC<ProjectProps> = (props) => {
           </Label>
           <div className="folio-project-header--detials--date">{date}</div>
         </div>
-        <div className="folio-project-header--stack">
+        {size === sizeConstants.MEDIUM && (
+          <div className="folio-project-header--stack">
+            <TechStack
+              icons={stack || []}
+              disable={disable}
+              size={size || sizeConstants.SMALL}
+            />
+          </div>
+        )}
+      </div>
+
+      {size === sizeConstants.SMALL && (
+        <div className="folio-project-header--stack--small">
           <TechStack
+            type="bar"
             icons={stack || []}
             disable={disable}
-            size={size || sizeConstants.SMALL}
+            size={size || sizeConstants.MEDIUM}
+            customStyles={{ width: "inherit" }}
           />
         </div>
-      </div>
+      )}
 
       <div className="folio-project-body">
         {description?.substring(0, projectConstants.MAX_CHARACTERS_DESCRIPTION)}
