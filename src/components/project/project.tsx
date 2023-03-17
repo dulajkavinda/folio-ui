@@ -106,6 +106,13 @@ const Project: React.FC<ProjectProps> = (props) => {
             <a data-testid="folio-project-header--detials--url" href={url}>
               {url}
             </a>
+            <a style={{ marginTop: "5px" }} href={url}>
+              <Icon
+                customStyles={{ marginLeft: "2px" }}
+                symbol="link"
+                size="2"
+              />
+            </a>
           </div>
           <Label color="light" size={size}>
             {category}

@@ -219,7 +219,7 @@
     }
     &--detials {
       width: 6rem;
-      height: 5rem;
+      height: 5.2rem;
     }
     &--stack {
       width: 5rem;
@@ -229,15 +229,23 @@
 
   .folio-project-header--detials {
     &--title {
+      margin-bottom: -6px;
       @include t10;
     }
 
     &--url {
+      display: flex;
       @include t12;
       @include medium;
+      align-items: center;
+
+      flex-direction: row;
+      width: 13em;
     }
 
     &--date {
+      margin-bottom: 20px;
+      margin-top: 7px;
       @include t13;
     }
   }
@@ -321,9 +329,13 @@
     @include t9;
     @include bold;
     @include secondary-white;
+    margin-bottom: -10px;
   }
 
   &--url {
+    display: flex;
+    align-items: center;
+    margin-bottom: -1px;
     @include t12;
     @include semi-bold;
     @include secondary-white;
@@ -331,6 +343,10 @@
     a {
       color: rgb(175, 175, 175);
       text-decoration: none;
+    }
+
+    &:hover {
+      @include transition-opacity;
     }
   }
 

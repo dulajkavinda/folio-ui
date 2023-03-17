@@ -65,6 +65,7 @@ $op9: 0.9;
   transition-property: opacity;
   transition-duration: $short;
   transition-timing-function: $ease-out;
+  opacity: $op8;
 }
 
 @mixin transition-press {

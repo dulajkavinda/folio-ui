@@ -41,14 +41,6 @@ Medium.args = {
       label: "💼 News and Media",
       value: "category-1",
     },
-    {
-      label: "🦊 NPM Packages",
-      value: "category-2",
-    },
-    {
-      label: "👛 Case Studies",
-      value: "category-3",
-    },
   ],
   size: "medium",
 };

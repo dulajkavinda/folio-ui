@@ -33,6 +33,26 @@ exports[`components/project renders correctly 1`] = `
         >
           url
         </a>
+        <a
+          href="url"
+          style={
+            {
+              "marginTop": "5px",
+            }
+          }
+        >
+          <img
+            alt="link"
+            className="folio-icon folio-icon--2 folio-icon--dark"
+            data-testid="folio-icon"
+            src=""
+            style={
+              {
+                "marginLeft": "2px",
+              }
+            }
+          />
+        </a>
       </div>
       <div
         className="folio-label folio-label--light folio-label--small"

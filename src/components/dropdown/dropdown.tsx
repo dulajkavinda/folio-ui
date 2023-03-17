@@ -60,6 +60,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
       >
         {selectedItem ? selectedItem.label : "Select Category"}
       </span>
+
       {dropdownItems.map((item: DropdownData, index) => (
         // eslint-disable-next-line react/jsx-key
         <div
