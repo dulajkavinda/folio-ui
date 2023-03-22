@@ -19,6 +19,7 @@
     .blogpost_main__info {
       padding: 0;
       @include mt2;
+      background-color: red;
     }
     .blogpost_main__description {
       padding: 0;
@@ -59,10 +60,12 @@
       @include white;
       @include t11;
       @include bold;
-      @include py2;
       @include secondary-white;
+
+      margin-top: 0.6em;
       display: flex;
       gap: 1em;
+      padding: 0;
     }
 
     &__description {

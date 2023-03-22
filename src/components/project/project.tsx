@@ -7,7 +7,6 @@ import Icon, { IconSymbol } from "../icon/icon";
 import Button from "../button";
 import { projectConstants, sizeConstants } from "../../common/constants";
 import { shortenLabel } from "../../utilities/common";
-import useOnLoadImages from "../../lib/useImageLoader";
 
 export type ProjectProps = {
   title: string;
@@ -29,6 +28,8 @@ export type ProjectProps = {
   };
   category?: string;
   showMedia?: boolean;
+  classname?: string;
+  customStyles?: {};
 };
 
 type Image = {
@@ -61,13 +62,17 @@ const Project: React.FC<ProjectProps> = (props) => {
     buttonPress,
     category,
     showMedia,
+    classname,
+    customStyles,
   } = props;
 
   const imgElm = useRef<HTMLImageElement>(null);
 
-  const loaded = useOnLoadImages(imgElm);
-
-  const styles = classNames.default("folio-project", `folio-project--${size}`);
+  const styles = classNames.default(
+    "folio-project",
+    `folio-project--${size}`,
+    classname,
+  );
 
   const onClickYoutube = (e: MouseEvent) => {
     if (buttonPress?.onClickYoutube) {
@@ -83,22 +88,13 @@ const Project: React.FC<ProjectProps> = (props) => {
 
   return (
     <div
-      style={{ border: "none" }}
+      style={{ ...customStyles, border: "none" }}
       className={styles}
       data-testid="folio-project"
     >
       <div className="folio-project-header">
-        <div
-          ref={imgElm}
-          className={
-            loaded
-              ? "folio-project-header--img"
-              : "folio-project-header--img--gradient"
-          }
-        >
-          {loaded && (
-            <img data-testid="folio-project-header--img" alt={alt} src={src} />
-          )}
+        <div ref={imgElm} className="folio-project-header--img">
+          <img data-testid="folio-project-header--img" alt={alt} src={src} />
         </div>
         <div className="folio-project-header--detials">
           <div className="folio-project-header--detials--title">{title}</div>
@@ -244,6 +240,8 @@ Project.defaultProps = {
   },
   category: "",
   showMedia: true,
+  customStyles: {},
+  classname: "",
 };
 
 export default Project;

@@ -22,7 +22,7 @@
   &:active {
     @include transition-press;
     transition-duration: 0.2s;
-    outline: dashed 1px $secondary-white;
+    border: dashed 1px $secondary-white;
   }
 }
 

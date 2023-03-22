@@ -51,6 +51,12 @@ import Minus from "../../assets/icons/minus.svg";
 import Instagram from "../../assets/icons/instagram.svg";
 import Facebook from "../../assets/icons/facebook.svg";
 import Twitter from "../../assets/icons/twitter.svg";
+import Webpack from "../../assets/icons/webpack.svg";
+import Babel from "../../assets/icons/babel.svg";
+import MongoDB from "../../assets/icons/mongodb.svg";
+import Postgres from "../../assets/icons/postgres.svg";
+import Prisma from "../../assets/icons/prisma.svg";
+import Screenshots from "../../assets/icons/screenshots.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -122,7 +128,13 @@ export type IconSymbol =
   | "minus"
   | "instagram"
   | "facebook"
-  | "twitter";
+  | "twitter"
+  | "webpack"
+  | "babel"
+  | "mongodb"
+  | "postgres"
+  | "prisma"
+  | "screenshots";
 
 export interface Props {
   symbol: IconSymbol;
@@ -183,6 +195,12 @@ const images = {
   instagram: Instagram,
   facebook: Facebook,
   twitter: Twitter,
+  webpack: Webpack,
+  babel: Babel,
+  mongodb: MongoDB,
+  postgres: Postgres,
+  prisma: Prisma,
+  screenshots: Screenshots,
 };
 
 const Icon: React.FC<Props> = (props) => {

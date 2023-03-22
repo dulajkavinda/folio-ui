@@ -17,6 +17,7 @@ export interface Props {
   stack?: IconSymbol[];
   color?: ColorTypesDL;
   size?: SizeTypes;
+  showStack?: boolean;
   classname?: string;
   customStyles?: React.CSSProperties;
 }
@@ -32,6 +33,7 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
     stack,
     link,
     size,
+    showStack,
     customStyles,
   } = props;
 
@@ -47,9 +49,26 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
       <div data-testid="folio-blog" style={customStyles} className={styles}>
         <div className="folio-blog_main">
           <div className="folio-blog_main__title">{title}</div>
+          {(size === "small" || size === "medium") && showStack && (
+            <TechStack
+              customStyles={{
+                marginTop: "0.6rem",
+                marginBottom: "0.8rem",
+              }}
+              size="small"
+              type="bar"
+              icons={stack || []}
+            />
+          )}
           <div className="folio-blog_main__info">
             <div className="folio-blog_main__date">{date}</div>
-            <Label>{category}</Label>
+            <Label
+              customStyles={{
+                paddingTop: "0.1rem",
+              }}
+            >
+              {category}
+            </Label>
           </div>
 
           {description?.length > 0 && (
@@ -86,6 +105,7 @@ Blog.defaultProps = {
   stack: [],
   size: "small",
   customStyles: {},
+  showStack: false,
 };
 
 export default Blog;

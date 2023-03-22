@@ -11,7 +11,7 @@ export interface Props {
   disabled?: boolean;
   children: React.ReactNode;
   icon?: React.ReactNode;
-  customStyles?: {};
+  customStyles?: React.CSSProperties;
   classname?: string;
 }
 
@@ -66,7 +66,7 @@ Button.defaultProps = {
   id: "0",
   onClick: () => null,
   icon: null,
-  customStyles: "",
+  customStyles: {},
   classname: "",
 };
 

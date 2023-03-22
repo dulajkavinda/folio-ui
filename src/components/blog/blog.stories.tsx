@@ -35,6 +35,7 @@ Small.args = {
   stack: ["graphql", "graphql", "graphql", "graphql", "graphql", "graphql"],
   link: "/get",
   size: "small",
+  showStack: true,
 };
 
 Medium.args = {

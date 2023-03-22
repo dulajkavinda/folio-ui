@@ -13,7 +13,6 @@
   &-container {
     @include center;
     @include primary-font;
-    @include t11;
     @include p1;
     @include px2;
     @include br2;
@@ -41,12 +40,12 @@
   }
 
   &--medium {
-    @include p1;
+    padding: 0.5px;
     @include px3;
     width: 20em;
 
     input {
-      @include t12;
+      @include t10;
     }
   }
 }

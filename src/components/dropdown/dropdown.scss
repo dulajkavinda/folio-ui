@@ -2,7 +2,6 @@
   @include center;
   @include br2;
   @include clickable;
-  @include transition-opacity;
   @include transition-colors;
   @include bg-tertiary-black;
   @include p1;
@@ -48,16 +47,15 @@
     @include secondary-white;
     @include t11;
     @include semi-bold;
-    @include p1;
   }
 
   &--medium {
-    @include p1;
     @include px3;
+    padding: 0.5em;
     width: 20em;
 
     span {
-      @include t12;
+      @include t10;
     }
   }
 }
