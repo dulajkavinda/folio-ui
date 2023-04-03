@@ -6,7 +6,7 @@ import { SizeTypes } from "../types";
 import Icon, { IconSymbol } from "../icon/icon";
 import Button from "../button";
 import { projectConstants, sizeConstants } from "../../common/constants";
-import { shortenLabel } from "../../utilities/common";
+import { shortenLabel, createLinkWithHttps } from "../../utilities/common";
 
 export type ProjectProps = {
   title: string;
@@ -100,7 +100,12 @@ const Project: React.FC<ProjectProps> = (props) => {
           <div className="folio-project-header--detials">
             <div className="folio-project-header--detials--title">{title}</div>
             <div className="folio-project-header--detials--url">
-              <a data-testid="folio-project-header--detials--url" href={url}>
+              <a
+                data-testid="folio-project-header--detials--url"
+                href={createLinkWithHttps(url)}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {url}
               </a>
               <a style={{ marginTop: "5px" }} href={url}>

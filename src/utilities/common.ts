@@ -1,10 +1,14 @@
+import { IconSize } from "../components/icon/icon";
 import { SizeTypes } from "../types";
 
-function shortenLabel(label: string) {
-  return label.split(" ")[0];
-}
+const HTTP = "http://";
+const HTTPS = "https://";
 
-function getIconSizeFromSize(size: SizeTypes) {
+const shortenLabel = (label: string) => {
+  return label.split(" ")[0];
+};
+
+const getIconSizeFromSize = (size: SizeTypes): IconSize => {
   switch (size) {
     case "small":
       return "3";
@@ -13,7 +17,13 @@ function getIconSizeFromSize(size: SizeTypes) {
     default:
       return "4";
   }
-}
+};
 
-// eslint-disable-next-line import/prefer-default-export
-export { shortenLabel, getIconSizeFromSize };
+const createLinkWithHttps = (link: string): string => {
+  if (link.startsWith(HTTP) || link.startsWith(HTTPS)) {
+    return link;
+  }
+  return `${HTTPS}://${link}`;
+};
+
+export { shortenLabel, getIconSizeFromSize, createLinkWithHttps };

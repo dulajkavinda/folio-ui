@@ -17,7 +17,7 @@ export type TechStackSize = "medium" | "large" | "small";
 
 export type TechStackType = "grid" | "bar";
 
-const getIconSize = (size: TechStackSize): IconSize => {
+const getIconSizeForStackIcon = (size: TechStackSize): IconSize => {
   switch (size) {
     case "medium":
       return "4";
@@ -52,7 +52,7 @@ const renderIcons = (
         )}
         data-testid={`folio-tstack-item--${icon}`}
       >
-        <Icon size={getIconSize(size)} symbol={icon} />
+        <Icon size={getIconSizeForStackIcon(size)} symbol={icon} />
       </div>
     </Tooltip>
   ));
