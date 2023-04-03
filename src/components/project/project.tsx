@@ -93,27 +93,29 @@ const Project: React.FC<ProjectProps> = (props) => {
       data-testid="folio-project"
     >
       <div className="folio-project-header">
-        <div ref={imgElm} className="folio-project-header--img">
-          <img data-testid="folio-project-header--img" alt={alt} src={src} />
-        </div>
-        <div className="folio-project-header--detials">
-          <div className="folio-project-header--detials--title">{title}</div>
-          <div className="folio-project-header--detials--url">
-            <a data-testid="folio-project-header--detials--url" href={url}>
-              {url}
-            </a>
-            <a style={{ marginTop: "5px" }} href={url}>
-              <Icon
-                customStyles={{ marginLeft: "2px" }}
-                symbol="link"
-                size="2"
-              />
-            </a>
+        <div className="folio-project-header--left">
+          <div ref={imgElm} className="folio-project-header--img">
+            <img data-testid="folio-project-header--img" alt={alt} src={src} />
           </div>
-          <Label color="light" size={size}>
-            {category}
-          </Label>
-          <div className="folio-project-header--detials--date">{date}</div>
+          <div className="folio-project-header--detials">
+            <div className="folio-project-header--detials--title">{title}</div>
+            <div className="folio-project-header--detials--url">
+              <a data-testid="folio-project-header--detials--url" href={url}>
+                {url}
+              </a>
+              <a style={{ marginTop: "5px" }} href={url}>
+                <Icon
+                  customStyles={{ marginLeft: "2px" }}
+                  symbol="link"
+                  size="2"
+                />
+              </a>
+            </div>
+            <Label color="light" size={size}>
+              {category}
+            </Label>
+            <div className="folio-project-header--detials--date">{date}</div>
+          </div>
         </div>
         {size === sizeConstants.MEDIUM && (
           <div className="folio-project-header--stack">
@@ -162,7 +164,7 @@ const Project: React.FC<ProjectProps> = (props) => {
                 className="folio-project-media--button"
               >
                 <span className="folio-project-media--button--text">
-                  <Icon size="5" symbol="images" />
+                  <Icon size="5" symbol="screenshots" />
                 </span>
               </button>
             </>

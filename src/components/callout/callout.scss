@@ -1,0 +1,74 @@
+.folio-callout {
+  @include center;
+  @include px3;
+  @include py1;
+  @include bg-secondary-black;
+
+  border-radius: 1em;
+  justify-content: space-between;
+
+  &-icon {
+    @include p1;
+    @include t3;
+
+    box-sizing: border-box;
+    display: flex;
+    width: 1em;
+    height: 100%;
+  }
+
+  &-close {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    opacity: 0.6;
+
+    &:hover {
+      @include clickable;
+      @include transition-opacity;
+    }
+  }
+
+  &-text {
+    @include primary-font;
+    @include p1;
+    @include lhx4;
+    @include regular;
+    @include secondary-white;
+
+    font-size: 1.05rem;
+    margin-left: 0.5em;
+    opacity: 0.9;
+    font-weight: 600;
+    box-sizing: border-box;
+    display: flex;
+    height: 90%;
+    width: calc(100% - 5em);
+  }
+
+  &--small {
+    @include py0;
+    @include br1;
+    @include px1;
+
+    .folio-callout-icon {
+      @include t9;
+    }
+    .folio-callout-text {
+      @include t12;
+    }
+  }
+
+  &--large {
+    @include br2;
+    @include py2;
+    .folio-callout-icon {
+      @include t3;
+    }
+    .folio-callout-text {
+      @include t7;
+    }
+  }
+}

@@ -17,8 +17,8 @@ export const Primary = Template.bind({});
 export const Small = Template.bind({});
 
 Primary.args = {
-  title: "SIDED",
-  url: "sided.news",
+  title: "Silmarillions",
+  url: "silmarillions.com",
   date: "07/21 - 09/21",
   stack: [
     "graphql",

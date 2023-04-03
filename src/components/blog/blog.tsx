@@ -83,7 +83,7 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
           {size === "large" && (
             <div className="folio-blog_main__footer">
               <a style={{ textDecoration: "none" }} href={link}>
-                <Button icon={<Icon size="4" symbol="read" />} color="dark">
+                <Button icon={<Icon size="4" symbol="book" />} color="dark">
                   Read More
                 </Button>
               </a>

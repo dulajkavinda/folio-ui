@@ -57,6 +57,12 @@ import MongoDB from "../../assets/icons/mongodb.svg";
 import Postgres from "../../assets/icons/postgres.svg";
 import Prisma from "../../assets/icons/prisma.svg";
 import Screenshots from "../../assets/icons/screenshots.svg";
+import Book from "../../assets/icons/book.svg";
+import Redux from "../../assets/icons/redux.svg";
+import Redis from "../../assets/icons/redis.svg";
+import TS2 from "../../assets/icons/ts2.svg";
+import Chakra from "../../assets/icons/chakra.svg";
+import Express from "../../assets/icons/express.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -134,7 +140,13 @@ export type IconSymbol =
   | "mongodb"
   | "postgres"
   | "prisma"
-  | "screenshots";
+  | "screenshots"
+  | "book"
+  | "redux"
+  | "redis"
+  | "ts2"
+  | "chakra"
+  | "express";
 
 export interface Props {
   symbol: IconSymbol;
@@ -201,6 +213,12 @@ const images = {
   postgres: Postgres,
   prisma: Prisma,
   screenshots: Screenshots,
+  book: Book,
+  redux: Redux,
+  redis: Redis,
+  ts2: TS2,
+  chakra: Chakra,
+  express: Express,
 };
 
 const Icon: React.FC<Props> = (props) => {

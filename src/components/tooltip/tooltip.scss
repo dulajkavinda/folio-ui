@@ -1,0 +1,100 @@
+.folio-tooltip {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+
+  .icon {
+    cursor: pointer;
+  }
+
+  .description {
+    @include bg-secondary-black;
+    @include secondary-white;
+    @include primary-font;
+    @include medium;
+    @include br1;
+
+    width: 5em;
+    display: none;
+    text-align: center;
+    position: absolute;
+
+    padding: 0.5em 0.8em;
+    word-wrap: nowrap;
+    border: 1px solid $secondary-black;
+    word-wrap: break-word;
+    opacity: 1 !important;
+  }
+
+  &:hover {
+    .description {
+      display: block;
+    }
+  }
+}
+.right {
+  .description {
+    top: 7px;
+    margin-left: 110%;
+    &::before {
+      left: -10px;
+      top: 10px;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.bottom {
+  .description {
+    margin-top: 10%;
+    left: 30%;
+    &::before {
+      transform: rotate(0);
+      margin-top: -10%;
+    }
+  }
+}
+
+.top {
+  .description {
+    bottom: 100%;
+    margin-left: -100%;
+    &::before {
+      transform: rotate(90deg);
+      bottom: -8px;
+    }
+  }
+}
+
+.left {
+  .description {
+    right: 0;
+    margin-right: 110%;
+    top: 0;
+    &::before {
+      transform: rotate(90deg);
+      right: 0;
+      margin-right: -10px;
+      margin-top: 20%;
+    }
+  }
+}
+
+.medium {
+  .description {
+    width: 6em;
+    @include t11;
+  }
+}
+
+.small {
+  .description {
+    @include t13;
+  }
+}
+
+.large {
+  .description {
+    @include t9;
+  }
+}

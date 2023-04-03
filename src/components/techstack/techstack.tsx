@@ -1,6 +1,8 @@
 import React from "react";
 import * as classnames from "classnames";
+import Tooltip from "../tooltip/tooltip";
 import Icon, { IconSymbol, IconSize } from "../icon/icon";
+import { projectConstants } from "../../common/constants";
 
 export type TechStackProps = {
   icons: IconSymbol[];
@@ -34,20 +36,25 @@ const renderIcons = (
   disable?: IconSymbol[],
 ) => {
   return icons.map((icon: IconSymbol, index: number) => (
-    <div
+    <Tooltip
+      size={size}
       key={icon}
-      className={classnames.default(
-        "folio-tstack-item",
-        `folio-tstack-item--${size}`,
-        `folio-tstack-item-icon--${index}`,
-        {
-          "folio-tstack-item--disabled": disable?.includes(icon),
-        },
-      )}
-      data-testid={`folio-tstack-item--${icon}`}
+      description={projectConstants.STACK_ICON_MAP[icon]}
     >
-      <Icon size={getIconSize(size)} symbol={icon} />
-    </div>
+      <div
+        className={classnames.default(
+          "folio-tstack-item",
+          `folio-tstack-item--${size}`,
+          `folio-tstack-item-icon--${index}`,
+          {
+            "folio-tstack-item--disabled": disable?.includes(icon),
+          },
+        )}
+        data-testid={`folio-tstack-item--${icon}`}
+      >
+        <Icon size={getIconSize(size)} symbol={icon} />
+      </div>
+    </Tooltip>
   ));
 };
 
