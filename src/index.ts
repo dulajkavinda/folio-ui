@@ -12,6 +12,8 @@ import Dropdown from "./components/dropdown";
 import Search from "./components/search";
 import Experience from "./components/experience";
 import Modal from "./components/modal";
+import Callout from "./components/callout/callout";
+import Tooltip from "./components/tooltip/tooltip";
 
 export {
   Icon,
@@ -26,4 +28,6 @@ export {
   Search,
   Experience,
   Modal,
+  Callout,
+  Tooltip,
 };

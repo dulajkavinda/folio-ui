@@ -23,7 +23,7 @@ const createLinkWithHttps = (link: string): string => {
   if (link.startsWith(HTTP) || link.startsWith(HTTPS)) {
     return link;
   }
-  return `${HTTPS}://${link}`;
+  return `${HTTPS}${link}`;
 };
 
 export { shortenLabel, getIconSizeFromSize, createLinkWithHttps };
