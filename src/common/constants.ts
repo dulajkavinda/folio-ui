@@ -8,7 +8,7 @@ export const sizeConstants = {
   LARGE,
 };
 
-const MAX_CHARACTERS_DESCRIPTION = 160;
+const MAX_CHARACTERS_DESCRIPTION = 300;
 const PROJECT_CASE_BTN_TEXT = "Case Study" as const;
 const PROJECT_GITHUB_BTN_TEXT = "Github" as const;
 const PROJECT_LINK_BTN_TEXT = "Link" as const;
