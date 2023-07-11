@@ -63,6 +63,10 @@ import Redis from "../../assets/icons/redis.svg";
 import TS2 from "../../assets/icons/ts2.svg";
 import Chakra from "../../assets/icons/chakra.svg";
 import Express from "../../assets/icons/express.svg";
+import Java from "../../assets/icons/java.svg";
+import Spring from "../../assets/icons/spring.svg";
+import Socket from "../../assets/icons/socket.svg";
+import Swift from "../../assets/icons/swift.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -146,7 +150,11 @@ export type IconSymbol =
   | "redis"
   | "ts2"
   | "chakra"
-  | "express";
+  | "express"
+  | "java"
+  | "spring"
+  | "socket"
+  | "swift";
 
 export interface Props {
   symbol: IconSymbol;
@@ -219,6 +227,10 @@ const images = {
   ts2: TS2,
   chakra: Chakra,
   express: Express,
+  java: Java,
+  spring: Spring,
+  socket: Socket,
+  swift: Swift,
 };
 
 const Icon: React.FC<Props> = (props) => {
