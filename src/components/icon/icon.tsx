@@ -235,6 +235,8 @@ const images = {
   spring: Spring,
   socket: Socket,
   swift: Swift,
+  csharp: CSharp,
+  plsql: PLSQL,
 };
 
 const Icon: React.FC<Props> = (props) => {

@@ -28,6 +28,7 @@ export type ProjectProps = {
   };
   category?: string;
   showMedia?: boolean;
+  users?: string;
   classname?: string;
   customStyles?: {};
 };
@@ -62,6 +63,7 @@ const Project: React.FC<ProjectProps> = (props) => {
     buttonPress,
     category,
     showMedia,
+    users,
     classname,
     customStyles,
   } = props;
@@ -172,6 +174,14 @@ const Project: React.FC<ProjectProps> = (props) => {
                   <Icon size="5" symbol="screenshots" />
                 </span>
               </button>
+              <div className="folio-project-media--button--users">
+                <span className="folio-project-media--button--users--text--count">
+                  {users}
+                </span>
+                <span className="folio-project-media--button--users--text">
+                  users
+                </span>
+              </div>
             </>
           )}
         </div>
@@ -247,6 +257,7 @@ Project.defaultProps = {
   },
   category: "",
   showMedia: true,
+  users: "",
   customStyles: {},
   classname: "",
 };

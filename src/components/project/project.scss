@@ -171,6 +171,38 @@
       @include lhx1;
     }
 
+    &--users {
+      @include primary-font;
+      @include t11;
+      @include bold;
+      @include center;
+      @include secondary-white;
+      @include clickable;
+
+      border: none;
+
+      flex-direction: column;
+
+      height: 3.7rem;
+      width: 14%;
+
+      &--text {
+        @include t12;
+        @include semi-bold;
+        @include white;
+        @include tertiary-white;
+        @include lhx1;
+
+        &--count {
+          @include t10;
+          @include bold;
+          @include white;
+          @include secondary-white;
+          @include lhx1;
+        }
+      }
+    }
+
     &--main {
       @include bs1;
       @include primary-font;
@@ -196,7 +228,7 @@
       flex-direction: column;
 
       height: 3.7rem;
-      width: 65%;
+      width: 45%;
 
       &--count {
         @include t11;
@@ -291,6 +323,10 @@
       width: 5rem;
       border-radius: 0.7em;
 
+      &--users {
+        width: 13%;
+      }
+
       &--count {
         @include t11;
       }
@@ -298,6 +334,7 @@
       &--text {
         @include t13;
         @include bold;
+        margin-top: 0.4em;
       }
 
       &--main {
