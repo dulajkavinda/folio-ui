@@ -67,6 +67,8 @@ import Java from "../../assets/icons/java.svg";
 import Spring from "../../assets/icons/spring.svg";
 import Socket from "../../assets/icons/socket.svg";
 import Swift from "../../assets/icons/swift.svg";
+import CSharp from "../../assets/icons/csharp.svg";
+import PLSQL from "../../assets/icons/plsql.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -154,7 +156,9 @@ export type IconSymbol =
   | "java"
   | "spring"
   | "socket"
-  | "swift";
+  | "swift"
+  | "csharp"
+  | "plsql";
 
 export interface Props {
   symbol: IconSymbol;
