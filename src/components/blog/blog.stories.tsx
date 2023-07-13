@@ -24,6 +24,7 @@ Primary.args = {
   stack: ["graphql", "graphql", "graphql", "graphql", "graphql", "graphql"],
   link: "/get",
   size: "large",
+  views: <div>1.2k</div>,
 };
 
 Small.args = {
@@ -47,4 +48,5 @@ Medium.args = {
   stack: ["graphql", "graphql", "graphql", "graphql", "graphql", "graphql"],
   link: "/get",
   size: "medium",
+  views: <div>1.2k</div>,
 };

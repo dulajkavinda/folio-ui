@@ -48,6 +48,30 @@
   }
 
   &_main {
+    &__top {
+      display: flex;
+      @include mt1;
+      height: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__views {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 3em;
+      gap: 0.3em;
+
+      &__count {
+        @include tertiary-white;
+        @include semi-bold;
+      }
+    }
+
     &__title {
       @include white;
       @include semi-bold;

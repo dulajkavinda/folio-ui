@@ -18,6 +18,7 @@ export interface Props {
   color?: ColorTypesDL;
   size?: SizeTypes;
   showStack?: boolean;
+  views?: React.ReactNode;
   classname?: string;
   customStyles?: React.CSSProperties;
 }
@@ -33,6 +34,7 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
     stack,
     link,
     size,
+    views,
     showStack,
     customStyles,
   } = props;
@@ -48,7 +50,15 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
     <a style={{ textDecoration: "none" }} href={link}>
       <div data-testid="folio-blog" style={customStyles} className={styles}>
         <div className="folio-blog_main">
-          <div className="folio-blog_main__title">{title}</div>
+          <div className="folio-blog_main__top">
+            <div className="folio-blog_main__title">{title}</div>
+            {size === "large" && (
+              <div className="folio-blog_main__views">
+                <Icon symbol="eye" size="3" />
+                <span className="folio-blog_main__views__count">{views}</span>
+              </div>
+            )}
+          </div>
           {(size === "small" || size === "medium") && showStack && (
             <TechStack
               customStyles={{
@@ -69,6 +79,17 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
             >
               {category}
             </Label>
+            {size === "medium" && (
+              <div
+                style={{
+                  marginLeft: "auto",
+                }}
+                className="folio-blog_main__views"
+              >
+                <Icon symbol="eye" size="3" />
+                <span className="folio-blog_main__views__count">{views}</span>
+              </div>
+            )}
           </div>
 
           {description?.length > 0 && (
@@ -104,6 +125,7 @@ Blog.defaultProps = {
   classname: "",
   stack: [],
   size: "small",
+  views: null,
   customStyles: {},
   showStack: false,
 };
