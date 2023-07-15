@@ -1,7 +1,7 @@
 .folio-tstack {
   @include center-wrap;
   @include br2;
-  outline: 1px dashed $tertiary-white;
+  border: 1px dashed $tertiary-white;
 
   justify-content: space-between;
 
@@ -41,8 +41,8 @@
   height: 2rem;
 
   &--medium {
-    width: 2rem;
-    height: 2rem;
+    width: 1.95rem;
+    height: 1.95rem;
   }
 
   &--large {

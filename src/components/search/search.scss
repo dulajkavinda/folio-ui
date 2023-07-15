@@ -5,9 +5,9 @@
   @include transition-opacity;
   @include transition-colors;
   @include bg-tertiary-black;
-
+  border: 1px dashed transparent;
   &--dashed {
-    outline: 1px dashed #7e8c9a;
+    border: 1px dashed #7e8c9a;
   }
 
   &-container {
