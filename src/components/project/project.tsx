@@ -31,6 +31,8 @@ export type ProjectProps = {
   users?: string;
   classname?: string;
   customStyles?: {};
+  isYoutube?: boolean;
+  isScreenshots?: boolean;
 };
 
 type Image = {
@@ -66,6 +68,8 @@ const Project: React.FC<ProjectProps> = (props) => {
     users,
     classname,
     customStyles,
+    isYoutube,
+    isScreenshots,
   } = props;
 
   const imgElm = useRef<HTMLImageElement>(null);
@@ -159,7 +163,10 @@ const Project: React.FC<ProjectProps> = (props) => {
               <button
                 onClick={onClickYoutube}
                 type="button"
-                className="folio-project-media--button--main"
+                className={classNames.default(
+                  "folio-project-media--button--main",
+                  isYoutube && "folio-project-media--button--main--disabled",
+                )}
               >
                 <span className="folio-project-media--button--text">
                   <Icon size="6" symbol="youtube" />
@@ -168,7 +175,10 @@ const Project: React.FC<ProjectProps> = (props) => {
               <button
                 onClick={onClickImages}
                 type="button"
-                className="folio-project-media--button"
+                className={classNames.default(
+                  "folio-project-media--button",
+                  isScreenshots && "folio-project-media--button--disabled",
+                )}
               >
                 <span className="folio-project-media--button--text">
                   <Icon size="5" symbol="screenshots" />
@@ -260,6 +270,8 @@ Project.defaultProps = {
   users: "",
   customStyles: {},
   classname: "",
+  isYoutube: false,
+  isScreenshots: false,
 };
 
 export default Project;

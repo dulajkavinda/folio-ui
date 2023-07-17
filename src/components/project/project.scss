@@ -141,6 +141,23 @@
     background-color: #233242;
     border: none;
 
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    background-color: #233242;
+    border: none;
+
+    &:active:not(.folio-project-media--button--disabled) {
+      @include transition-press;
+      border: 1px dashed $tertiary-white;
+    }
+
+    &:hover:not(.folio-project-media--button--disabled) {
+      @include transition-opacity;
+    }
+
     &:active {
       @include transition-press;
       border: 1px dashed $tertiary-white;
@@ -213,15 +230,20 @@
       @include br2;
       @include clickable;
 
+      &--disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
       background-color: #233242;
       border: none;
 
-      &:active {
+      &:active:not(.folio-project-media--button--main--disabled) {
         @include transition-press;
         border: 1px dashed $tertiary-white;
       }
 
-      &:hover {
+      &:hover:not(.folio-project-media--button--main--disabled) {
         @include transition-opacity;
       }
 
