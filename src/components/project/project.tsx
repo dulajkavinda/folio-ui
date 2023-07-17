@@ -33,6 +33,7 @@ export type ProjectProps = {
   customStyles?: {};
   isYoutube?: boolean;
   isScreenshots?: boolean;
+  isCaseStudy?: boolean;
 };
 
 type Image = {
@@ -70,6 +71,7 @@ const Project: React.FC<ProjectProps> = (props) => {
     customStyles,
     isYoutube,
     isScreenshots,
+    isCaseStudy,
   } = props;
 
   const imgElm = useRef<HTMLImageElement>(null);
@@ -112,7 +114,7 @@ const Project: React.FC<ProjectProps> = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {url}
+                {url.slice(0, 22)}
               </a>
               <a style={{ marginTop: "5px" }} href={url}>
                 <Icon
@@ -203,7 +205,11 @@ const Project: React.FC<ProjectProps> = (props) => {
             color="dark"
             onClick={buttonPress?.onClickCaseStudy}
             size={size}
-            customStyles={{ backgroundColor: "#1e262f" }}
+            customStyles={{
+              backgroundColor: "#1e262f",
+              opacity: isCaseStudy ? 0.5 : 1,
+              cursor: isCaseStudy ? "not-allowed" : "pointer",
+            }}
           >
             {size === sizeConstants.SMALL &&
             projectConstants.PROJECT_CASE_BTN_TEXT.length > 10
@@ -272,6 +278,7 @@ Project.defaultProps = {
   classname: "",
   isYoutube: false,
   isScreenshots: false,
+  isCaseStudy: false,
 };
 
 export default Project;
