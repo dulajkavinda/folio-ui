@@ -7,8 +7,6 @@
   @include transition-colors;
   @include transition-opacity;
 
-  border: dashed 1px transparent;
-
   &:not(.folio-button--disabled) {
     cursor: pointer;
   }
@@ -45,7 +43,7 @@
   @include secondary-white;
   @include px3;
   @include py2;
-  border: none;
+  border: dashed 1px transparent;
 }
 
 .folio-button--small {
