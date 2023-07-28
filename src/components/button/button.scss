@@ -7,6 +7,8 @@
   @include transition-colors;
   @include transition-opacity;
 
+  border: dashed 1px transparent;
+
   &:not(.folio-button--disabled) {
     cursor: pointer;
   }
