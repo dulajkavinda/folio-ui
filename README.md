@@ -1,6 +1,6 @@
 <div align="center">
   <h1>FolioUI</h1>
-  <p>Folio UI is a simple, modular and minimalistic component library that gives you the building blocks you need to build your portfolio.</p>
+  <p>FolioUI is a simple, modular and minimalistic component library that gives you the building blocks you need to build your portfolio.</p>
   <a href="https://www.npmjs.com/package/folio-ui">
    <img src="https://img.shields.io/npm/dm/folio-ui.svg?color=%235599ff&style=for-the-badge" alt="npm Downloads per Month">
   <a>
