@@ -38,7 +38,7 @@ pnpm i folio-ui
 ## Usage
 
 ```js
-import { Button } from 'commandk'
+import { Button } from 'folio-ui'
 
 <Button>Hello</Button>
 ```
