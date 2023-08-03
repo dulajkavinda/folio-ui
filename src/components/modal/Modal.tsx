@@ -33,8 +33,18 @@ const Modal: React.FC<ModalProps> = (props) => {
     classname,
   );
   return (
-    <div className="folio-modal" role="presentation" data-testid="folio-modal">
-      <div style={{ ...customStyles }} className={styles} role="presentation">
+    <div
+      onClick={onClose ? () => onClose() : () => null}
+      className="folio-modal"
+      role="presentation"
+      data-testid="folio-modal"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        style={{ ...customStyles }}
+        className={styles}
+        role="presentation"
+      >
         <div className="folio-modal-header-close">
           <div
             role="presentation"

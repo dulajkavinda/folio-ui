@@ -19,20 +19,17 @@
 }
 
 .folio-modal {
-  @include center;
-  z-index: 1000000;
+  z-index: 99999;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(#1e262f, 0.6);
-
-  &:active {
-    scale: 1.003;
-  }
-
-  animation: bg-color 0.3s;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bg-color 0.1s;
 
   &-container {
     @include br2;
@@ -104,4 +101,21 @@
 
 .footer {
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .folio-modal {
+    align-items: end;
+  }
+
+  .folio-modal-container {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .folio-modal-body {
+    max-height: 30em;
+    overflow-y: scroll;
+  }
 }
