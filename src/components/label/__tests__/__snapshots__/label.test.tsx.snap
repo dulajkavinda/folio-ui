@@ -2,6 +2,7 @@
 
 exports[`conponents/Label should render the label 1`] = `
 <div
+  aria-label="Label"
   className="folio-label folio-label--light folio-label--medium"
   data-testid="folio-label"
   style={{}}

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/project renders correctly 1`] = `
-<div
+<article
+  aria-label="title"
   className="folio-project folio-project--small"
   data-testid="folio-project"
   style={
@@ -14,33 +15,36 @@ exports[`components/project renders correctly 1`] = `
     className="folio-project-header"
   >
     <div
-      className="folio-project-header--img--gradient"
-    />
-    <div
-      className="folio-project-header--detials"
+      className="folio-project-header--left"
     >
       <div
-        className="folio-project-header--detials--title"
+        className="folio-project-header--img"
       >
-        title
+        <img
+          alt="alt"
+          data-testid="folio-project-header--img"
+          src="src"
+        />
       </div>
       <div
-        className="folio-project-header--detials--url"
+        className="folio-project-header--detials"
       >
-        <a
-          data-testid="folio-project-header--detials--url"
-          href="url"
+        <h3
+          className="folio-project-header--detials--title"
         >
-          url
-        </a>
-        <a
-          href="url"
-          style={
-            {
-              "marginTop": "5px",
-            }
-          }
+          title
+        </h3>
+        <div
+          className="folio-project-header--detials--url"
         >
+          <a
+            data-testid="folio-project-header--detials--url"
+            href="https://url"
+            rel="noreferrer"
+            target="_blank"
+          >
+            url
+          </a>
           <img
             alt="link"
             className="folio-icon folio-icon--2 folio-icon--dark"
@@ -52,24 +56,25 @@ exports[`components/project renders correctly 1`] = `
               }
             }
           />
-        </a>
-      </div>
-      <div
-        className="folio-label folio-label--light folio-label--small"
-        data-testid="folio-label"
-        style={{}}
-      />
-      <div
-        className="folio-project-header--detials--date"
-      >
-        date
+        </div>
+        <div
+          aria-label="Label"
+          className="folio-label folio-label--light folio-label--small"
+          data-testid="folio-label"
+          style={{}}
+        />
+        <span
+          className="folio-project-header--detials--date"
+        >
+          date
+        </span>
       </div>
     </div>
   </div>
   <div
     className="folio-project-header--stack--small"
   >
-    <div
+    <aside
       className="folio-tstack folio-tstack--small folio-tstack--bar"
       data-testid="folio-tstack"
       style={
@@ -79,7 +84,8 @@ exports[`components/project renders correctly 1`] = `
       }
     />
   </div>
-  <div
+  <p
+    aria-label="Project description"
     className="folio-project-body"
   />
   <div
@@ -101,6 +107,8 @@ exports[`components/project renders correctly 1`] = `
         style={
           {
             "backgroundColor": "#1e262f",
+            "cursor": "pointer",
+            "opacity": 1,
           }
         }
         type="button"
@@ -170,5 +178,5 @@ exports[`components/project renders correctly 1`] = `
       </button>
     </div>
   </div>
-</div>
+</article>
 `;

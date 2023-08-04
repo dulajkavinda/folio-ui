@@ -32,13 +32,30 @@ const Modal: React.FC<ModalProps> = (props) => {
     `folio-modal-container--${size}`,
     classname,
   );
+
   return (
-    <div className="folio-modal" role="presentation" data-testid="folio-modal">
-      <div style={{ ...customStyles }} className={styles} role="presentation">
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events
+    <div
+      role="dialog"
+      onClick={onClose ? () => onClose() : () => null}
+      className="folio-modal"
+      data-testid="folio-modal"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDesc"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        style={{ ...customStyles }}
+        className={styles}
+        role="presentation"
+      >
         <div className="folio-modal-header-close">
           <div
-            role="presentation"
+            role="button"
+            onKeyDown={onClose ? () => onClose() : () => null}
             onClick={onClose ? () => onClose() : () => null}
+            tabIndex={0}
           >
             <Icon size="5" symbol="close" />
           </div>
@@ -60,7 +77,7 @@ const Modal: React.FC<ModalProps> = (props) => {
         <div className="folio-modal-body">{children}</div>
         {onClose && showCloseButton && (
           <div data-testid="folio-modal-footer" className="folio-modal-footer">
-            <Button onClick={() => onClose()} color="dark">
+            <Button ariaLabel="Close" onClick={() => onClose()} color="dark">
               Close
             </Button>
           </div>

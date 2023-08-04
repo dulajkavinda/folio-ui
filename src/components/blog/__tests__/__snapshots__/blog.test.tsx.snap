@@ -9,7 +9,7 @@ exports[`components/blog should render blog 1`] = `
     }
   }
 >
-  <div
+  <article
     className="folio-blog folio-blog--light folio-blog--small"
     data-testid="folio-blog"
     style={{}}
@@ -18,33 +18,42 @@ exports[`components/blog should render blog 1`] = `
       className="folio-blog_main"
     >
       <div
-        className="folio-blog_main__title"
+        className="folio-blog_main__top"
       >
-        title
+        <h3
+          className="folio-blog_main__title"
+        >
+          title
+        </h3>
       </div>
       <div
         className="folio-blog_main__info"
       >
-        <div
+        <h4
           className="folio-blog_main__date"
         >
           date
-        </div>
+        </h4>
         <div
+          aria-label="Label"
           className="folio-label folio-label--light folio-label--medium"
           data-testid="folio-label"
-          style={{}}
+          style={
+            {
+              "paddingTop": "0.1rem",
+            }
+          }
         >
           category
         </div>
       </div>
-      <div
+      <p
         className="folio-blog_main__description"
         data-testid="folio-blog-description"
       >
         description
-      </div>
+      </p>
     </div>
-  </div>
+  </article>
 </a>
 `;

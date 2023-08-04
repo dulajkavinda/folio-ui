@@ -11,6 +11,7 @@ export interface CalloutProps {
   classname?: string;
   customStyles?: {};
   children?: React.ReactNode;
+  ariaLabel?: string | undefined;
 }
 
 const Callout: React.FC<CalloutProps> = (props) => {
@@ -23,6 +24,7 @@ const Callout: React.FC<CalloutProps> = (props) => {
     customStyles,
     children,
     size = "medium",
+    ariaLabel,
   } = props;
 
   const styles = classnames(
@@ -32,7 +34,7 @@ const Callout: React.FC<CalloutProps> = (props) => {
   );
 
   return (
-    <div
+    <section
       style={{ display: isClosed ? "none" : "", ...customStyles }}
       className={styles}
     >
@@ -40,18 +42,28 @@ const Callout: React.FC<CalloutProps> = (props) => {
       <div className="folio-callout-text">{children}</div>
 
       <div
-        role="presentation"
+        role="button"
         onClick={() => {
           setIsClosed(true);
           if (onClose) {
             onClose();
           }
         }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            setIsClosed(true);
+            if (onClose) {
+              onClose();
+            }
+          }
+        }}
         className="folio-callout-close"
+        tabIndex={0}
+        aria-label={ariaLabel}
       >
         <Icon symbol="close" size={getIconSizeFromSize(size)} />
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -61,6 +73,7 @@ Callout.defaultProps = {
   onClose: () => {},
   children: null,
   size: "medium",
+  ariaLabel: undefined,
 };
 
 export default Callout;

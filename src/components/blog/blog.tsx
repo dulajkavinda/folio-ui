@@ -7,6 +7,7 @@ import Icon from "../icon";
 import { ColorTypesDL } from "../types";
 import { IconSymbol } from "../icon/icon";
 import { SizeTypes } from "../../types";
+import { openWebpage } from "../../utilities/common";
 
 export interface Props {
   title: string;
@@ -48,10 +49,10 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
 
   return (
     <a style={{ textDecoration: "none" }} href={link}>
-      <div data-testid="folio-blog" style={customStyles} className={styles}>
+      <article data-testid="folio-blog" style={customStyles} className={styles}>
         <div className="folio-blog_main">
           <div className="folio-blog_main__top">
-            <div className="folio-blog_main__title">{title}</div>
+            <h3 className="folio-blog_main__title">{title}</h3>
             {size === "large" && (
               <div className="folio-blog_main__views">
                 <Icon symbol="eye" size="3" />
@@ -71,7 +72,7 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
             />
           )}
           <div className="folio-blog_main__info">
-            <div className="folio-blog_main__date">{date}</div>
+            <h4 className="folio-blog_main__date">{date}</h4>
             <Label
               customStyles={{
                 paddingTop: "0.1rem",
@@ -93,21 +94,23 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
           </div>
 
           {description?.length > 0 && (
-            <div
+            <p
               data-testid="folio-blog-description"
               className="folio-blog_main__description"
             >
               {description}
-            </div>
+            </p>
           )}
 
           {size === "large" && (
             <div className="folio-blog_main__footer">
-              <a style={{ textDecoration: "none" }} href={link}>
-                <Button icon={<Icon size="4" symbol="book" />} color="dark">
-                  Read More
-                </Button>
-              </a>
+              <Button
+                onClick={() => openWebpage(link)}
+                icon={<Icon size="4" symbol="book" />}
+                color="dark"
+              >
+                Read More
+              </Button>
 
               {stack?.length !== 0 && (
                 <TechStack size="small" type="bar" icons={stack || []} />
@@ -115,7 +118,7 @@ const Blog: React.FunctionComponent<Props> = (props: Props) => {
             </div>
           )}
         </div>
-      </div>
+      </article>
     </a>
   );
 };

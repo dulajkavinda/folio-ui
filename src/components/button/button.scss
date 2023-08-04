@@ -16,7 +16,7 @@
   }
 
   &:focus {
-    outline: none;
+    border: dashed 1px $secondary-white;
   }
 
   &:active {

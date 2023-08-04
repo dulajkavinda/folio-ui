@@ -29,6 +29,13 @@
   .folio-dropdown-title {
     @include center;
     width: 100%;
+
+    @include center;
+    @include clickable;
+    @include primary-font;
+    @include secondary-white;
+    @include t11;
+    @include semi-bold;
   }
 
   .folio-dropdown-item:not(.folio-dropdown-item--close):hover {

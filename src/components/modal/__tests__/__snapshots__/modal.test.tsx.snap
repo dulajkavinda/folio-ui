@@ -2,12 +2,17 @@
 
 exports[`components/modal renders modal 1`] = `
 <div
+  aria-describedby="modalDesc"
+  aria-labelledby="modalTitle"
+  aria-modal="true"
   className="folio-modal"
   data-testid="folio-modal"
-  role="presentation"
+  onClick={[Function]}
+  role="dialog"
 >
   <div
     className="folio-modal-container folio-modal-container--medium"
+    onClick={[Function]}
     role="presentation"
     style={{}}
   >
@@ -16,7 +21,9 @@ exports[`components/modal renders modal 1`] = `
     >
       <div
         onClick={[Function]}
-        role="presentation"
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex={0}
       >
         <img
           alt="close"
@@ -49,6 +56,7 @@ exports[`components/modal renders modal 1`] = `
       data-testid="folio-modal-footer"
     >
       <button
+        aria-label="Close"
         className="folio-button folio-button--dark folio-button--medium"
         data-testid="folio-button"
         disabled={false}
