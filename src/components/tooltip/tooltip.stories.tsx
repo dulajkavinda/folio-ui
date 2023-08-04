@@ -25,7 +25,7 @@ Primary.args = {
 };
 Small.args = {
   classname: "primary",
-  description: "NextJS",
+  description: "Next-JS",
   children: <div>Hover me</div>,
   direction: "top",
   size: "small",

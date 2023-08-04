@@ -1,34 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/techstack renders techstack 1`] = `
-<div
+<aside
   className="folio-tstack folio-tstack--large folio-tstack--grid"
   data-testid="folio-tstack"
   style={{}}
 >
   <div
-    className="folio-tstack-item folio-tstack-item--large folio-tstack-item-icon--0"
-    data-testid="folio-tstack-item--reactjs"
+    className="folio-tooltip top large"
+    style={{}}
   >
-    <img
-      alt="reactjs"
-      className="folio-icon folio-icon--7 folio-icon--dark"
-      data-testid="folio-icon"
-      src=""
-      style={{}}
-    />
+    <div
+      className="folio-tstack-item folio-tstack-item--large folio-tstack-item-icon--0"
+      data-testid="folio-tstack-item--reactjs"
+    >
+      <img
+        alt="reactjs"
+        className="folio-icon folio-icon--7 folio-icon--dark"
+        data-testid="folio-icon"
+        src=""
+        style={{}}
+      />
+    </div>
+    <div
+      className="description"
+    >
+      ReactJS
+    </div>
   </div>
   <div
-    className="folio-tstack-item folio-tstack-item--large folio-tstack-item-icon--1"
-    data-testid="folio-tstack-item--ts"
+    className="folio-tooltip top large"
+    style={{}}
   >
-    <img
-      alt="ts"
-      className="folio-icon folio-icon--7 folio-icon--dark"
-      data-testid="folio-icon"
-      src=""
-      style={{}}
-    />
+    <div
+      className="folio-tstack-item folio-tstack-item--large folio-tstack-item-icon--1"
+      data-testid="folio-tstack-item--ts"
+    >
+      <img
+        alt="ts"
+        className="folio-icon folio-icon--7 folio-icon--dark"
+        data-testid="folio-icon"
+        src=""
+        style={{}}
+      />
+    </div>
+    <div
+      className="description"
+    >
+      TS
+    </div>
   </div>
-</div>
+</aside>
 `;

@@ -20,5 +20,5 @@ Primary.args = {
   className: "string",
   color: "dark",
   symbol: "graphql",
-  size: "8",
+  size: "9",
 };

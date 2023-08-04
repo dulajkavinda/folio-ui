@@ -67,13 +67,13 @@ const TechStack: React.FC<TechStackProps> = (props) => {
     className,
   );
   return (
-    <div
+    <aside
       data-testid="folio-tstack"
       style={{ ...customStyles }}
       className={styles}
     >
       {renderIcons(icons, size, disable)}
-    </div>
+    </aside>
   );
 };
 

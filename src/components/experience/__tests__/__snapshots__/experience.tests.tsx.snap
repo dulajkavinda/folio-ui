@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/experience renders experience component 1`] = `
-<div
+<article
   className="folio-experience"
   data-testid="folio-experience"
   style={{}}
@@ -22,12 +22,12 @@ exports[`components/experience renders experience component 1`] = `
           className="experience-header-info"
         >
           <div>
-            <div
+            <h3
               className="experience-header-info-title"
             >
               Software Engineer
-            </div>
-            <div
+            </h3>
+            <h4
               className="experience-header-info-company"
               data-testid="folio-experience-company"
             >
@@ -39,7 +39,7 @@ exports[`components/experience renders experience component 1`] = `
               >
                 Google
               </a>
-            </div>
+            </h4>
           </div>
           <div
             className="experience-header-info-duration"
@@ -53,11 +53,11 @@ exports[`components/experience renders experience component 1`] = `
       <div
         className="experience-header-technologies"
       >
-        <div
+        <p
           className="experience-header-technologies-description"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
+        </p>
         <div
           className="experience-header-technologies-items"
         >
@@ -145,5 +145,5 @@ exports[`components/experience renders experience component 1`] = `
       </div>
     </div>
   </div>
-</div>
+</article>
 `;

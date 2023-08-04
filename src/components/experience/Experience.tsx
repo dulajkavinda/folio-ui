@@ -69,7 +69,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   };
 
   return (
-    <div
+    <article
       style={{ ...customStyles }}
       className={styles}
       data-testid="folio-experience"
@@ -89,8 +89,8 @@ const Experience: React.FC<ExperienceProps> = (props) => {
             </div>
             <div className="experience-header-info">
               <div>
-                <div className="experience-header-info-title">{position}</div>
-                <div
+                <h3 className="experience-header-info-title">{position}</h3>
+                <h4
                   className="experience-header-info-company"
                   data-testid="folio-experience-company"
                 >
@@ -106,7 +106,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                   ) : (
                     company
                   )}
-                </div>
+                </h4>
               </div>
               <div className="experience-header-info-duration">
                 {duration.start} - {duration.end}
@@ -116,9 +116,9 @@ const Experience: React.FC<ExperienceProps> = (props) => {
 
           {size !== WindowSize.MOBILE && (
             <div className="experience-header-technologies">
-              <div className="experience-header-technologies-description">
+              <p className="experience-header-technologies-description">
                 {description}
-              </div>
+              </p>
               <div className="experience-header-technologies-items">
                 {renderTechnologies(technologies)}
               </div>
@@ -126,7 +126,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

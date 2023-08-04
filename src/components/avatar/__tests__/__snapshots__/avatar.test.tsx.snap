@@ -4,10 +4,10 @@ exports[`components/avatar should render a avatar 1`] = `
 <div
   className="folio-avatar folio-avatar--5 folio-avatar--circle"
   data-testid="folio-avatar"
+  role="img"
   style={{}}
 >
   <img
-    alt="avatar"
     src="https://avatars.githubusercontent.com/u/25279263?v=4"
   />
 </div>

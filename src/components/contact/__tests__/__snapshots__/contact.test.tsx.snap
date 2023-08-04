@@ -1,16 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/contact renders contact 1`] = `
-<div
+<ul
+  aria-label="Social Media Links"
   className="folio-contact folio-contact--5"
   data-testid="folio-contact"
+  role="group"
   style={{}}
 >
-  <div
+  <li
     className="folio-contact--item-[object Object] folio-contact--item"
     data-testid="folio-contact--item-[object Object]"
   >
     <a
+      aria-label="Icon for linkedin"
       href="tel:+1-123-456-7890"
       rel="noreferrer"
       target="_blank"
@@ -23,12 +26,13 @@ exports[`components/contact renders contact 1`] = `
         style={{}}
       />
     </a>
-  </div>
-  <div
+  </li>
+  <li
     className="folio-contact--item-[object Object] folio-contact--item"
     data-testid="folio-contact--item-[object Object]"
   >
     <a
+      aria-label="Icon for linkedin"
       href="tel:+1-123-456-7890"
       rel="noreferrer"
       target="_blank"
@@ -41,6 +45,6 @@ exports[`components/contact renders contact 1`] = `
         style={{}}
       />
     </a>
-  </div>
-</div>
+  </li>
+</ul>
 `;

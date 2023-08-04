@@ -25,6 +25,7 @@ const Label: React.FC<LabelProps> = (props) => {
       data-testid="folio-label"
       className={styles}
       style={{ ...customStyles }}
+      aria-label="Label"
     >
       {children}
     </div>

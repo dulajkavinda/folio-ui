@@ -95,10 +95,11 @@ const Project: React.FC<ProjectProps> = (props) => {
   };
 
   return (
-    <div
+    <article
       style={{ ...customStyles, border: "none" }}
       className={styles}
       data-testid="folio-project"
+      aria-label={title}
     >
       <div className="folio-project-header">
         <div className="folio-project-header--left">
@@ -106,7 +107,7 @@ const Project: React.FC<ProjectProps> = (props) => {
             <img data-testid="folio-project-header--img" alt={alt} src={src} />
           </div>
           <div className="folio-project-header--detials">
-            <div className="folio-project-header--detials--title">{title}</div>
+            <h3 className="folio-project-header--detials--title">{title}</h3>
             <div className="folio-project-header--detials--url">
               <a
                 data-testid="folio-project-header--detials--url"
@@ -116,18 +117,16 @@ const Project: React.FC<ProjectProps> = (props) => {
               >
                 {url.slice(0, 22)}
               </a>
-              <a style={{ marginTop: "5px" }} href={url}>
-                <Icon
-                  customStyles={{ marginLeft: "2px" }}
-                  symbol="link"
-                  size="2"
-                />
-              </a>
+              <Icon
+                customStyles={{ marginLeft: "2px" }}
+                symbol="link"
+                size="2"
+              />
             </div>
             <Label color="light" size={size}>
               {category}
             </Label>
-            <div className="folio-project-header--detials--date">{date}</div>
+            <span className="folio-project-header--detials--date">{date}</span>
           </div>
         </div>
         {size === sizeConstants.MEDIUM && (
@@ -153,9 +152,9 @@ const Project: React.FC<ProjectProps> = (props) => {
         </div>
       )}
 
-      <div className="folio-project-body">
+      <p aria-label="Project description" className="folio-project-body">
         {description?.substring(0, projectConstants.MAX_CHARACTERS_DESCRIPTION)}
-      </div>
+      </p>
 
       {showMedia && (
         <div className="folio-project-media" data-testid="folio-project-media">
@@ -253,7 +252,7 @@ const Project: React.FC<ProjectProps> = (props) => {
           </Button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

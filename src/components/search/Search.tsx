@@ -8,6 +8,7 @@ export interface SearchProps {
   size?: string;
   classname?: string;
   customStyles?: {};
+  ariaLabel?: string | undefined;
 }
 
 const getIconSize = (_size: string | undefined): IconSize => {
@@ -22,7 +23,7 @@ const getIconSize = (_size: string | undefined): IconSize => {
 };
 
 const Search: React.FC<SearchProps> = (props) => {
-  const { size, onChange, classname, customStyles } = props;
+  const { size, onChange, classname, customStyles, ariaLabel } = props;
 
   const onChangeText = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -58,6 +59,7 @@ const Search: React.FC<SearchProps> = (props) => {
       <div className="folio-search-container">
         <Icon symbol="search" size={getIconSize(size)} />
         <input
+          aria-label={ariaLabel || undefined}
           onBlur={onBlur}
           onFocus={onFocus}
           onChange={onChangeText}
@@ -75,6 +77,7 @@ Search.defaultProps = {
   onChange: () => {},
   classname: "",
   size: "small",
+  ariaLabel: undefined,
 };
 
 export default Search;

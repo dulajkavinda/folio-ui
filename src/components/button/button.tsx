@@ -13,6 +13,7 @@ export interface Props {
   icon?: React.ReactNode;
   customStyles?: React.CSSProperties;
   classname?: string;
+  ariaLabel?: string | undefined;
 }
 
 const Button: React.FunctionComponent<Props> = (props: Props) => {
@@ -26,6 +27,7 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
     id,
     customStyles,
     classname,
+    ariaLabel,
   } = props;
 
   const buttonPress = (e: React.MouseEvent) => {
@@ -52,6 +54,7 @@ const Button: React.FunctionComponent<Props> = (props: Props) => {
       className={styles}
       style={{ ...customStyles }}
       data-testid="folio-button"
+      aria-label={ariaLabel || undefined}
     >
       {icon && <div className="folio-button--icon">{icon}</div>}
       {children}
@@ -68,6 +71,7 @@ Button.defaultProps = {
   icon: null,
   customStyles: {},
   classname: "",
+  ariaLabel: undefined,
 };
 
 export default Button;

@@ -51,20 +51,28 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
       }}
       className={styles}
     >
-      <span
-        role="presentation"
+      <div
+        role="button"
+        tabIndex={0}
+        id="dropdownMenu"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-label="Select Category"
         className="folio-dropdown-title"
         data-testid="folio-dropdown-title"
         onKeyDown={() => openOrCloseDropdownMenu(data)}
         onClick={() => openOrCloseDropdownMenu(data)}
       >
         {selectedItem ? selectedItem.label : "Select Category"}
-      </span>
+      </div>
 
       {dropdownItems.map((item: DropdownData, index) => (
         // eslint-disable-next-line react/jsx-key
         <div
-          role="presentation"
+          role="menu"
+          aria-labelledby="dropdownMenuButton"
+          id="dropdownMenu"
+          tabIndex={0}
           className="folio-dropdown-item"
           data-testid={`folio-dropdown-item--${index + 1}`}
           onClick={() => {
@@ -75,8 +83,18 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
             setSeltectedItem(item);
             setDropdownItems([]);
           }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              if (value) {
+                value(item.value);
+              }
+
+              setSeltectedItem(item);
+              setDropdownItems([]);
+            }
+          }}
         >
-          <span>
+          <span role="menuitem">
             {`${item.label.split(" ")[0]}  ${item.label
               .split(" ")
               .slice(1)
@@ -86,7 +104,8 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
       ))}
       {dropdownItems.length > 0 && (
         <div
-          role="presentation"
+          role="menuitem"
+          tabIndex={0}
           className="folio-dropdown-item folio-dropdown-item--close"
           data-testid="folio-dropdown-item--close"
           onClick={() => {
@@ -97,8 +116,16 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
             setDropdownItems([]);
             setSeltectedItem(null);
           }}
+          onKeyDown={() => {
+            if (value) {
+              value(null);
+            }
+
+            setDropdownItems([]);
+            setSeltectedItem(null);
+          }}
         >
-          <span>Clear</span>
+          <span aria-label="Close dropdown">Clear</span>
         </div>
       )}
     </div>

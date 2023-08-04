@@ -26,4 +26,12 @@ const createLinkWithHttps = (link: string): string => {
   return `${HTTPS}${link}`;
 };
 
-export { shortenLabel, getIconSizeFromSize, createLinkWithHttps };
+const openWebpage = (url: string, newTab = false) => {
+  if (newTab) {
+    window.open(url, "_blank");
+  } else {
+    window.location.href = url;
+  }
+};
+
+export { shortenLabel, getIconSizeFromSize, createLinkWithHttps, openWebpage };

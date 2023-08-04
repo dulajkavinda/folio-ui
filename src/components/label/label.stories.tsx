@@ -16,7 +16,7 @@ export const Medium = Template.bind({});
 export const Large = Template.bind({});
 
 Primary.args = {
-  children: "🐶 Label",
+  children: "🐶 Labels",
   size: "medium",
   color: "light",
 };

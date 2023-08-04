@@ -35,7 +35,7 @@ describe("components/project", () => {
     render(<Project {...props} />);
 
     const project = screen.getByTestId("folio-project-header--detials--url");
-    expect(project).toHaveAttribute("href", "url");
+    expect(project).toHaveAttribute("href", "https://url");
   });
 
   it("renders date", () => {

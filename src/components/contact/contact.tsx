@@ -22,15 +22,20 @@ const renderContact = (contacts: ContactType[], size: IconSize = "5") => {
       "folio-contact--item",
     );
     return (
-      <div
+      <li
         data-testid={`folio-contact--item-${contact}`}
         key={contact.type}
         className={styles}
       >
-        <a href={contact.link} target="_blank" rel="noreferrer">
+        <a
+          aria-label={`Icon for ${contact.type}`}
+          href={contact.link}
+          target="_blank"
+          rel="noreferrer"
+        >
           <Icon size={size} symbol={contact.type} />
         </a>
-      </div>
+      </li>
     );
   });
 };
@@ -45,13 +50,15 @@ const Contact: React.FC<ContactProps> = (props) => {
   );
 
   return (
-    <div
+    <ul
+      role="group"
+      aria-label="Social Media Links"
       className={styles}
       style={{ ...customStyles }}
       data-testid="folio-contact"
     >
       {renderContact(contacts, size)}
-    </div>
+    </ul>
   );
 };
 

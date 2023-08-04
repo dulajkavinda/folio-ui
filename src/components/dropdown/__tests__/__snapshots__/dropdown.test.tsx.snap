@@ -10,14 +10,19 @@ exports[`components/dropdown should render a dropdown 1`] = `
     }
   }
 >
-  <span
+  <div
+    aria-expanded="false"
+    aria-haspopup="true"
+    aria-label="Select Category"
     className="folio-dropdown-title"
     data-testid="folio-dropdown-title"
+    id="dropdownMenu"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="presentation"
+    role="button"
+    tabIndex={0}
   >
     Select Category
-  </span>
+  </div>
 </div>
 `;
