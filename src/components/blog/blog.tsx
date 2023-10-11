@@ -12,7 +12,7 @@ import { openWebpage } from "../../utilities/common";
 export interface Props {
   title: string;
   description: string;
-  category: string;
+  category: any;
   date: string;
   link: string;
   stack?: IconSymbol[];

@@ -26,7 +26,7 @@ export type ProjectProps = {
     onClickYoutube?: Function | undefined;
     onClickImages?: Function | undefined;
   };
-  category?: string;
+  category?: any;
   showMedia?: boolean;
   users?: string;
   classname?: string;
