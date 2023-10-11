@@ -69,6 +69,7 @@ import Socket from "../../assets/icons/socket.svg";
 import Swift from "../../assets/icons/swift.svg";
 import CSharp from "../../assets/icons/csharp.svg";
 import PLSQL from "../../assets/icons/plsql.svg";
+import Resources from "../../assets/icons/resources.svg";
 
 import { ColorTypesDL } from "../../types";
 
@@ -158,7 +159,8 @@ export type IconSymbol =
   | "socket"
   | "swift"
   | "csharp"
-  | "plsql";
+  | "plsql"
+  | "resources";
 
 export interface Props {
   symbol: IconSymbol;
@@ -237,6 +239,7 @@ const images = {
   swift: Swift,
   csharp: CSharp,
   plsql: PLSQL,
+  resources: Resources,
 };
 
 const Icon: React.FC<Props> = (props) => {
